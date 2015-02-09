@@ -1,0 +1,117 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>es.uniovi.asw</groupId>
+    <artifactId>Trivial0</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>Trivial0</name>
+
+    <modules>
+        <module>extract</module>
+<!-- Other modules should be added here: <module>...</module> -->
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.5</source>
+                        <target>1.5</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+		<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<configuration>
+					<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+					<dependencyDetailsEnabled>false</dependencyDetailsEnabled>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.13</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.9.1</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.5.2</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>2.5.2</version>
+			</plugin>
+		</plugins>
+	</reporting>
+
+	<!--Project Management -->
+	<licenses>
+		<license>
+			<name>GNU LESSER GENERAL PUBLIC LICENSE</name>
+			<url>http://www.gnu.org/licenses/lgpl.html</url>
+			<distribution>repo</distribution>
+			<comments />
+		</license>
+	</licenses>
+
+	<!--Members -->
+	<developers>
+		<developer>
+			<id>labra</id>
+			<name>Jose Emilio Labra</name>
+			<email>labra@uniovi.es</email>
+			<organization>WESO-University of Oviedo</organization>
+			<organizationUrl>http://www.uniovi.es</organizationUrl>
+			<roles>
+				<role>Project Admin</role>
+				<role>Developer</role>
+			</roles>
+			<timezone>2</timezone>
+			<properties />
+		</developer>
+	</developers>
+
+
+	<organization>
+		<name>University of Oviedo</name>
+		<url>http://www.uniovi.es</url>
+	</organization>
+
+	
+</project>

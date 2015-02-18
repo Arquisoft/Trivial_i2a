@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>GTTJson</groupId>
-  <artifactId>GTTJson</artifactId>
+  <groupId>GIFTParsing</groupId>
+  <artifactId>GIFTParsing</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -16,12 +16,7 @@
       </plugin>
     </plugins>
   </build>
-<repositories>
-    <repository>
-      <id>typesafet</id>
-      <url>http://repo.typesafe.com/typesafe/releases/</url>
-    </repository>
- </repositories>
+
   <dependencies>
 <dependency>
 	<groupId>org.scala-lang</groupId>
@@ -42,6 +37,21 @@
 	<groupId>org.reactivemongo</groupId>
 	<artifactId>reactivemongo_2.11</artifactId>
 	<version>0.10.5.0.akka23</version>
+</dependency>
+<dependency>
+	<groupId>org.reactivemongo</groupId>
+	<artifactId>play2-reactivemongo_2.11</artifactId>
+	<version>0.10.5.0.akka23</version>
+</dependency>
+<dependency>
+	<groupId>com.typesafe.play</groupId>
+	<artifactId>play-iteratees_2.11</artifactId>
+	<version>2.4.0-M2</version>
+</dependency>
+<dependency>
+	<groupId>com.typesafe.play</groupId>
+	<artifactId>play_2.11</artifactId>
+	<version>2.4.0-M2</version>
 </dependency>
 </dependencies>
 </project>

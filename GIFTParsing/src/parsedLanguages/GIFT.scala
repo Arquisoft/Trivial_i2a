@@ -41,27 +41,27 @@ import models._
 
 
 
-object TestGIFT extends GIFT
-{
-  //implicit val formats = Serialization.formats(NoTypeHints)
-
-        
- def main(){
-           val testObj : String = """::Who is buried in Grants tomb in New York City{
-=Grant
-#Yesss
-~Ruben
-#Noooooo
-}
-::This is another question{
-~This is not the answer
-#This is a comment to the wrong answer
-=This is the right answer
-#YESSSSSS
-}"""
-    println(parse(questions, testObj))
-  }
-}
+//object TestGIFT extends GIFT
+//{
+//  //implicit val formats = Serialization.formats(NoTypeHints)
+//
+//        
+// def main(){
+//           val testObj : String = """::Who is buried in Grants tomb in New York City{
+//=Grant
+//#Yesss
+//~Ruben
+//#Noooooo
+//}
+//::This is another question{
+//~This is not the answer
+//#This is a comment to the wrong answer
+//=This is the right answer
+//#YESSSSSS
+//}"""
+//    println(parse(questions, testObj))
+//  }
+//}
 //       val driver = new MongoDriver
 //       val connection = driver.connection(List("localhost"))
 //       val db = connection.db("trivial")

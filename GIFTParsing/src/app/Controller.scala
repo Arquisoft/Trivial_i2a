@@ -24,8 +24,9 @@ object ApplicationJson extends GIFT{
 
         val filename = io.StdIn.readLine("Please enter the filename where the questions are:")
         val lines = io.Source.fromFile(filename).mkString
-        val language = io.StdIn.readLine("Which language should be questions be translated to?")
-        language match{
+        val inputLanguage = io.StdIn.readLine("Which is the input language?").toLowerCase()
+        val outputLanguage = io.StdIn.readLine("Which language should be questions be translated to?").toLowerCase()
+        outputLanguage match{
           case "json" =>  {
               val driver = new MongoDriver
               val connection = driver.connection(List("localhost:27017"))

@@ -13,7 +13,7 @@ import reactivemongo.api._
 // Reactive Mongo plugin, including the JSON-specialized collection
 import play.modules.reactivemongo.MongoController
 import play.modules.reactivemongo.json.collection.JSONCollection
-import parsedLanguages._
+import inputLanguages._
 
 object ApplicationJson extends GIFT{
    

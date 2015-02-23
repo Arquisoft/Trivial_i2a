@@ -18,7 +18,7 @@ import play.api.libs.json._
 import models._
 import inputLanguages._
 
-  class GIFT extends InputLanguage with JavaTokenParsers {
+  class GIFT extends InputLanguage {
 
   
    def questions: Parser[Seq[Question]] = rep(question) ^^ {_.toSeq}

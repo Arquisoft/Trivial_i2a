@@ -1,5 +1,6 @@
 package inputLanguages
 
-class XML extends InputLanguage{
+//class XML extends InputLanguage{
     
-}
+  
+//}

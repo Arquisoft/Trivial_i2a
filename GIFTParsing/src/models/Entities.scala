@@ -149,11 +149,6 @@ sealed trait Answer{
   case class SingleChoiceQuestion(title: String, wording: String, options: Seq[NonWeightedAnswer]) extends Question
   case class MultipleChoiceQuestion(title: String, wording: String, options: Seq[WeightedAnswer]) extends Question
   case class BooleanQuestion(title: String, wording: String, answer: BooleanAnswer) extends Question
-  /*
-  case class SingleChoiceQuestionOptionsType(value: Seq[SingleChoiceAnswer]) extends QuestionOptionsType
-  case class MultipleChoiceQuestionOptionsType(value: Seq[WeightedAnswer]) extends QuestionOptionsType
-  trait QuestionOptionsType{ def value: Seq[Answer]}
-  */
   object JsonFormats{
   
   

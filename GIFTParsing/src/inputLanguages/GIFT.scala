@@ -60,8 +60,8 @@ import inputLanguages._
     def wrongAnswerWording : Parser[String] = "~"~>"""[^%].*""".r ^^(_.toString)
     def answerComment : Parser[String] = "#"~>"[a-zA-z0-9_ ]*".r ^^ (_.toString)
     def percentage : Parser[Int] = "~%"~>"[-]{0,1}[0-9]+".r<~"%" ^^{ _.toInt}
-    def trueStatement : Parser[String] = "T\\b" | "TRUE\\b"
-    def falseStatement : Parser[String] = "bF\\b".r | "FALSE\\b".r
+    def trueStatement : Parser[String] = "T\\b".r | "TRUE\\b".r
+    def falseStatement : Parser[String] = "F\\b".r | "FALSE\\b".r
     def booleanStatement : Parser[String] = trueStatement | falseStatement
    
 }

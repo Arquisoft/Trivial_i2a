@@ -22,7 +22,7 @@ import inputLanguages._
 
   
    def questions: Parser[Seq[Question]] = rep(question) ^^ {_.toSeq}
-    def question : Parser[Question] = opt(questionTitle)~questionWording~options ^^ 
+    def question : Parser[Question] = opt(comment)~>opt(questionTitle)~questionWording~options ^^ 
     {case (None~q~o) => o(0) match{
       case a: SingleChoiceAnswer => SingleChoiceQuestion("", q, o.map { x => x.asInstanceOf[SingleChoiceAnswer] }.toSeq)
       case b: WeightedAnswer => MultipleChoiceQuestion("", q, o.map { x => x.asInstanceOf[WeightedAnswer] }.toSeq)
@@ -34,7 +34,7 @@ import inputLanguages._
       case c: BooleanAnswer => BooleanQuestion("", q, c)}
       
     }
-   
+   def comment: Parser[String] = """//[A-Za-z0-9_ ]*""".r ^^ {_.toString}
     def questionTitle : Parser[String] = "::"~>"[a-zA-z0-9_ ]*".r<~"::"
     def questionWording : Parser[String] = "[a-zA-z0-9?_ ]*".r ^^ (_.toString)
     def options : Parser[Seq[Answer]] = "{"~>rep(option)<~"}" ^^{_.toSeq}

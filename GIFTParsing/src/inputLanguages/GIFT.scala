@@ -57,22 +57,13 @@ import inputLanguages._
     }
     def answerWording: Parser[String] = "[a-zA-z0-9_ ]*".r
     def correctAnswerWording: Parser[String] = "="~>answerWording ^^(_.toString)
-    def wrongAnswerWording : Parser[String] = "^~[^%].*$".r~>answerWording ^^(_.toString)
+    def wrongAnswerWording : Parser[String] = "~"~>"""[^%].*""".r ^^(_.toString)
     def answerComment : Parser[String] = "#"~>"[a-zA-z0-9_ ]*".r ^^ (_.toString)
     def percentage : Parser[Int] = "~%"~>"[-]{0,1}[0-9]+".r<~"%" ^^{ _.toInt}
     def trueStatement : Parser[String] = "T\\b" | "TRUE\\b"
     def falseStatement : Parser[String] = "bF\\b".r | "FALSE\\b".r
     def booleanStatement : Parser[String] = trueStatement | falseStatement
-    
-    
-    
-    
-    
-    
    
-   
-    
-  
 }
 
 
@@ -84,11 +75,16 @@ object TestGIFT extends GIFT
 
         
  def main(){
-    val testObj = """FALSE"""
+    val testObj = """
+~%100%No one
+~%50%Grant
+~%50%Grants wife
+~%100%Grants father
+"""
 
 
    
-    println(parse(booleanStatement, testObj))
+    println(parse(option, testObj))
   }
 }
 //       val driver = new MongoDriver

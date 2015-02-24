@@ -13,6 +13,6 @@ class UnitSpec extends FlatSpec with Matchers{
       val parsed = parser.execute("files/test.gift")
       println(parsed)
       val shouldReturn = List(SingleChoiceQuestion("","Who is buried in Grants tomb in New York City",List(CorrectAnswer("Grant","Yesss",true), IncorrectAnswer("Ruben","Noooooo",false))))
-     
+      assert(parsed === shouldReturn)
       }
 }

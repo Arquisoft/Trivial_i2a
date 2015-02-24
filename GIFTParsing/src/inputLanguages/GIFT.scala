@@ -57,7 +57,7 @@ import inputLanguages._
     }
     def answerWording: Parser[String] = "[a-zA-z0-9_ ]*".r
     def correctAnswerWording: Parser[String] = "="~>answerWording ^^(_.toString)
-    def wrongAnswerWording : Parser[String] = "~[^%]".r~>answerWording ^^(_.toString)
+    def wrongAnswerWording : Parser[String] = "^~[^%].*$".r~>answerWording ^^(_.toString)
     def answerComment : Parser[String] = "#"~>"[a-zA-z0-9_ ]*".r ^^ (_.toString)
     def percentage : Parser[Int] = "~%"~>"[-]{0,1}[0-9]+".r<~"%" ^^{ _.toInt}
     def trueStatement : Parser[String] = "T\\b" | "TRUE\\b"

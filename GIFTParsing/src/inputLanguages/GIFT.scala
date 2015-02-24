@@ -34,9 +34,10 @@ import inputLanguages._
       case c: BooleanAnswer => BooleanQuestion("", q, c)}
       
     }
-   def comment: Parser[String] = """//[A-Za-z0-9_ ]*""".r ^^ {_.toString}
-    def questionTitle : Parser[String] = "::"~>"[a-zA-z0-9_ ]*".r<~"::"
-    def questionWording : Parser[String] = "[a-zA-z0-9?_ ]*".r ^^ (_.toString)
+    def allChars : Parser[String] = "[A-Za-z0-9 ¿?!¡@\"¨'%&$#*+-\\[\\]\\(\\);:,]*".r ^^{_.toString}
+   def comment: Parser[String] = allChars ^^ {_.toString}
+    def questionTitle : Parser[String] = "::"~>allChars<~"::"
+    def questionWording : Parser[String] = allChars ^^ {_.toString}
     def options : Parser[Seq[Answer]] = "{"~>rep(option)<~"}" ^^{_.toSeq}
     def option : Parser[Answer] = correctAnswer | wrongAnswer | weightedAnswer | booleanAnswer
     def correctAnswer: Parser[CorrectAnswer] = 
@@ -55,10 +56,10 @@ import inputLanguages._
       case (bs~Some(com)) => if(bs.equals("T") || bs.equals("TRUE")) BooleanAnswer(com,true) else BooleanAnswer(com, false)
       case(bs~None) => if(bs.equals("F") || bs.equals("FALSE")) BooleanAnswer("",true) else BooleanAnswer("", false)
     }
-    def answerWording: Parser[String] = "[a-zA-z0-9_ ]*".r
+    def answerWording: Parser[String] = allChars ^^{_.toString}
     def correctAnswerWording: Parser[String] = "="~>answerWording ^^(_.toString)
     def wrongAnswerWording : Parser[String] = "~"~>"""[^%].*""".r ^^(_.toString)
-    def answerComment : Parser[String] = "#"~>"[a-zA-z0-9_ ]*".r ^^ (_.toString)
+    def answerComment : Parser[String] = "#"~>allChars ^^ (_.toString)
     def percentage : Parser[Int] = "~%"~>"[-]{0,1}[0-9]+".r<~"%" ^^{ _.toInt}
     def trueStatement : Parser[String] = "T\\b".r | "TRUE\\b".r
     def falseStatement : Parser[String] = "F\\b".r | "FALSE\\b".r

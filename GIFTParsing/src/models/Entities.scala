@@ -151,13 +151,21 @@ sealed trait Answer{
             case bq: JsUndefined => BooleanQuestion((json \ "title").as[String], 
                 (json \ "wording").as[String],
                 (json \ "answer").as[BooleanAnswer])
-            case scq: JsValue => {
-              (json \ "options" \ "correct") match {
+            case a: JsValue => {
+              val options = (json \ "options").as[Seq[Answer]]
+              val option = options.head
+              option match {/*
                 case wq : JsUndefined => MultipleChoiceQuestion(
                     (json \ "title").as[String], (json \ "wording").as[String], (json \ "options").as[Seq[WeightedAnswer]])
                 case scq: JsValue => SingleChoiceQuestion(
                     (json \ "title").as[String], (json \ "wording").as[String], (json \ "options").as[Seq[SingleChoiceAnswer]])
-                
+                */
+                case WeightedAnswer(a,b,c) => MultipleChoiceQuestion(
+                    (json \ "title").as[String], (json \ "wording").as[String], 
+                    options.map{x => x.asInstanceOf[WeightedAnswer]})
+                case o: SingleChoiceAnswer => SingleChoiceQuestion(
+                    (json \ "title").as[String], (json \ "wording").as[String],
+                    options.map{x => x.asInstanceOf[SingleChoiceAnswer]})
               }
             }
           }

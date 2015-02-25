@@ -82,7 +82,7 @@ class UnitSpec extends FlatSpec with Matchers{
        val json = JsObject(Seq("title" -> JsString("The title"),
            "wording" -> JsString("The wording"), 
            "options" -> JsArray(Seq(Json.toJson(ca),Json.toJson(ia)))))
-       assert(scq === Json.fromJson[SingleChoiceQuestion](json).get)
+       assert(scq === Json.fromJson[Question](json).get)
       
      }
                                                 

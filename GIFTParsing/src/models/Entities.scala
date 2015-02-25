@@ -55,8 +55,33 @@ sealed trait Answer{
   }
 }
   
-  sealed trait NonWeightedAnswer extends Answer
+ sealed trait NonWeightedAnswer extends Answer
    
+  object NonWeightedAnswer{
+    implicit object nonWeightedAnswer extends Format[NonWeightedAnswer]{
+      override def reads(json: JsValue) = JsSuccess({
+        (json \ "correct") match{
+          case ba : JsUndefined => BooleanAnswer((json \ "comment").as[String], (json \ "answer").as[Boolean])
+          case b: JsValue => {
+          (json \ "correct").as[Boolean] match{
+            case true => CorrectAnswer((json \ "wording").as[String], (json \ "comment").as[String])
+            case false => IncorrectAnswer((json \ "wording").as[String], (json \ "comment").as[String])
+          }
+        }
+        }
+      })
+    
+    
+    override def writes(a: NonWeightedAnswer): JsValue = JsObject(Seq(
+       //"wording" -> JsString(a.wording),
+       "comment" -> JsString(a.comment),
+       a match{
+         case c: SingleChoiceAnswer => "correct" -> JsString(c.correct.toString)
+         case d: BooleanAnswer => "answer" -> JsString(d.answer.toString)
+       }
+    ))
+    }
+  }
   
   case class WeightedAnswer(wording: String, comment : String, weight: Int)
     extends Answer
@@ -113,6 +138,12 @@ sealed trait Answer{
   //implicit val questionFormat = Json.format[Question]
   implicit val weightedAnswerFormat = Json.format[WeightedAnswer]
   implicit val booleanAnswerFormat = Json.format[BooleanAnswer]
+  implicit val singleChoiceQuestionFormat = Json.format[SingleChoiceQuestion]
+  implicit val multipleChoiceQuestionFormat = Json.format[MultipleChoiceQuestion]
+  implicit val booleanQuestionFormat = Json.format[BooleanQuestion]
+  
+ 
+   
     
     implicit object questionFormat extends Format[Question]{
       override def reads(json: JsValue) = JsSuccess(
@@ -151,6 +182,7 @@ sealed trait Answer{
   case class BooleanQuestion(title: String, wording: String, answer: BooleanAnswer) extends Question
   object JsonFormats{
   
-  
+  implicit val correctAnswerFormat = Json.format[CorrectAnswer]
+  implicit val incorrectAnswerFormat = Json.format[IncorrectAnswer]
  
 }

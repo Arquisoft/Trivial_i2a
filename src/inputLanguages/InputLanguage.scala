@@ -1,5 +1,0 @@
-package inputLanguages
-
-trait InputLanguage {
-
-}

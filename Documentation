@@ -1,0 +1,11 @@
+DOCUMENTATION:
+
+1.- STAKEHOLDERS
+  A stakeholder is a person, group of persons, or organization that has a vested interest in the
+application and that share a common set of concerns and interests in the application. So, the stakeholders 
+of our applications are:
+    - Developers: (write here the names)
+    - Client: (teachers)
+    
+    Every stakeholder or group of stakeholders has a different viewpoint of the project and the
+architect has to model this viewpoint

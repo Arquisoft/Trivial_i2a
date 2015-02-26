@@ -85,6 +85,22 @@ class UnitSpec extends FlatSpec with Matchers{
        assert(scq === Json.fromJson[Question](json).get)
       
      }
+     
+     "A MultipleChoiceQuestion" should "be validated" in {
+       val wa = WeightedAnswer("Wording1", "", 50)
+       val wa1 = WeightedAnswer("Wording2", "", 50)
+       val wa2 = WeightedAnswer("Wording2", "", 100)
+       val mcq = MultipleChoiceQuestion("QuestionTitle", "QuestionWording", Seq(wa,wa1,wa2))
+       val json = JsObject(Seq("title" -> JsString("QuestionTitle"),
+           "wording" -> JsString("QuestionWording"),
+           "options" -> JsArray(Seq(Json.toJson(wa), Json.toJson(wa1), Json.toJson(wa2)))))
+      val obj = Json.fromJson[Question](json) 
+      assert(mcq === Json.fromJson[Question](json).get)
+     
+     
+     }
+     
+     
                                                 
                                                 
       

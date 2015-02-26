@@ -43,15 +43,18 @@ sealed trait Answer{
         )
       
     
-    override def writes(a: Answer): JsValue = JsObject(Seq(
+    override def writes(a: Answer): JsValue = JsObject(
        //"wording" -> JsString(a.wording),
-       "comment" -> JsString(a.comment),
+      
        a match{
-         case b: WeightedAnswer => "weight" -> JsString(b.weight.toString)
-         case c: SingleChoiceAnswer => "correct" -> JsString(c.correct.toString)
-         case d: BooleanAnswer => "answer" -> JsString(d.answer.toString)
+         case b: WeightedAnswer => Seq("weight" -> JsNumber(b.weight), "comment" -> JsString(b.comment),
+             "wording" -> JsString(b.wording))
+         case c: SingleChoiceAnswer => Seq(
+             "correct" -> JsBoolean(c.correct), 
+             "wording" -> JsString(c.wording), "comment" -> JsString(c.wording))
+         case d: BooleanAnswer => Seq("answer" -> JsBoolean(d.answer), "comment" -> JsString(d.comment))
        }
-    ))
+    )
   }
 }
   
@@ -76,16 +79,25 @@ sealed trait Answer{
        //"wording" -> JsString(a.wording),
        "comment" -> JsString(a.comment),
        a match{
-         case c: SingleChoiceAnswer => "correct" -> JsString(c.correct.toString)
-         case d: BooleanAnswer => "answer" -> JsString(d.answer.toString)
+         case c: SingleChoiceAnswer => "correct" -> JsBoolean(c.correct)
+         case d: BooleanAnswer => "answer" -> JsBoolean(d.answer)
        }
     ))
     }
   }
   
   case class WeightedAnswer(wording: String, comment : String, weight: Int)
-    extends Answer
-
+    extends Answer/*
+   object WeightedAnswer{
+    implicit object WeightedAnswer extends Writes[WeightedAnswer]{
+      override def writes(w: WeightedAnswer) : JsValue = JsObject(Seq(
+        "wording" -> JsString(w.wording),
+        "comment" -> JsString(w.comment),
+        "weight" -> JsNumber(w.weight)
+      ))
+    }
+  }
+*/
   sealed trait SingleChoiceAnswer extends NonWeightedAnswer{
         def wording: String
         def correct : Boolean 
@@ -133,10 +145,11 @@ sealed trait Answer{
   
   
 
-  implicit val correctAnswerFormat = Json.format[CorrectAnswer]
-  implicit val incorrectAnswerFormat = Json.format[IncorrectAnswer]
+ // implicit val correctAnswerFormat = Json.format[CorrectAnswer]
+ // implicit val incorrectAnswerFormat = Json.format[IncorrectAnswer]
   //implicit val questionFormat = Json.format[Question]
   implicit val weightedAnswerFormat = Json.format[WeightedAnswer]
+  implicit val weightedAnswerReads = Json.reads[WeightedAnswer]
   implicit val booleanAnswerFormat = Json.format[BooleanAnswer]
   implicit val singleChoiceQuestionFormat = Json.format[SingleChoiceQuestion]
   implicit val multipleChoiceQuestionFormat = Json.format[MultipleChoiceQuestion]
@@ -151,7 +164,7 @@ sealed trait Answer{
             case bq: JsUndefined => BooleanQuestion((json \ "title").as[String], 
                 (json \ "wording").as[String],
                 (json \ "answer").as[BooleanAnswer])
-            case a: JsValue => {
+           case a: JsValue => {
               val options = (json \ "options").as[Seq[Answer]]
               val option = options.head
               option match {/*
@@ -168,6 +181,9 @@ sealed trait Answer{
                     options.map{x => x.asInstanceOf[SingleChoiceAnswer]})
               }
             }
+              
+              
+            
           }
           )
           
@@ -177,7 +193,7 @@ sealed trait Answer{
           q match {
             case SingleChoiceQuestion(_,_,o) => "options" -> Json.toJson(o) 
             case MultipleChoiceQuestion(_,_,o) => "options" -> Json.toJson(o)
-            case BooleanQuestion(_,_,cAns) => "correctAnswer" -> Json.toJson(cAns)
+            case BooleanQuestion(_,_,cAns) => "answer" -> Json.toJson(cAns)
                  
             
           }))

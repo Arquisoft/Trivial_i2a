@@ -17,6 +17,7 @@ import org.json4s.native.JsonMethods._
 import org.json4s.native.Serialization
 import scala.concurrent.ExecutionContext.Implicits.global
 import models.JsonFormats._
+import scala.xml.XML
 
 // Reactive Mongo plugin, including the JSON-specialized collection
 import play.modules.reactivemongo.MongoController
@@ -107,6 +108,16 @@ class UnitSpec extends FlatSpec with Matchers{
               "wording" -> JsString("QuestionWording"), "answer" -> Json.toJson(ba)))
           assert(bq === Json.fromJson[Question](json).get)
      }
+     
+     "A SingleChoiceQuestion" should "be deserialized" in {
+       val filePath = "files/choice.xml"
+       val xml = XML.loadFile(filePath)
+       val scq = Question.fromXML(xml)
+       println(scq)
+       
+       
+     }
+     
      
      
                                                 

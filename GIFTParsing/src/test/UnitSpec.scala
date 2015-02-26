@@ -100,6 +100,14 @@ class UnitSpec extends FlatSpec with Matchers{
      
      }
      
+     "A BooleanQuestion" should "be validate" in {
+          val ba = BooleanAnswer("", true)
+          val bq = BooleanQuestion("QuestionTitle", "QuestionWording", ba)
+          val json = JsObject(Seq("title" -> JsString("QuestionTitle"),
+              "wording" -> JsString("QuestionWording"), "answer" -> Json.toJson(ba)))
+          assert(bq === Json.fromJson[Question](json).get)
+     }
+     
      
                                                 
                                                 

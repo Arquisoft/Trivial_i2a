@@ -1,11 +1,25 @@
 DOCUMENTATION:
 
-1.- STAKEHOLDERS
+1-. THE PROBLEM
+We have the task of do a trivial game, based on questions. To do that, we are going to create an application to do read the questions from a file and, process them and save them in a database.
+Processing the questions should warranting thtat there is no errors. 
+
+2-. METHODOLOGY
+We are going to use ADD method and SEI norm
+
+3-. PEOPLE INVOLVED ON THE DEVELOPMENT OF THE APPLICATION
+- Developers:   their purpose is to make the application previously described, as maintainable as possible
+-Teachers (clients): They are going to use (evaluate) the application.
+
+4.- STAKEHOLDERS
   A stakeholder is a person, group of persons, or organization that has a vested interest in the
 application and that share a common set of concerns and interests in the application. So, the stakeholders 
 of our applications are:
-    - Developers: (write here the names)
-    - Client: (teachers)
+    - Developers: the team of developers
+    - Client: the teachers
     
     Every stakeholder or group of stakeholders has a different viewpoint of the project and the
 architect has to model this viewpoint
+
+
+

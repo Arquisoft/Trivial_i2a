@@ -1,7 +1,7 @@
 package parsers
-import inputLanguages.GIFT
+import inputLanguages.GIFTGrammar
 
-class GIFTParser extends Parser with GIFT{
+class GIFTParser extends Parser with GIFTGrammar{
   
   def execute(filePath: String) = {
      val lines = io.Source.fromFile(filePath).mkString

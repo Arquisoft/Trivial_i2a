@@ -25,12 +25,12 @@ object ApplicationJson{
         
         val filename = io.StdIn.readLine("Please enter the filename where the questions are:")
         val lines = io.Source.fromFile(filename).mkString
-        val inputLanguage = io.StdIn.readLine("Which is the input language?").toLowerCase()
-        val outputLanguage = io.StdIn.readLine("Which language should be questions be translated to?").toLowerCase()
-        outputLanguage match{
-          case "json" =>  {
+       // val inputLanguage = io.StdIn.readLine("Which is the input language?").toLowerCase()
+      
+       // val outputLanguage = io.StdIn.readLine("Which language should be questions be translated to?").toLowerCase()
+      
              
-              if(inputLanguage.equals("gift")){
+              if(filename.endsWith(".xml")){/*
                 object giftParser extends GIFT{
                   
                   def execute() = {
@@ -48,9 +48,11 @@ object ApplicationJson{
                 
               }
               
-         }
+         */
+               
+              }
           
-        }
+        
         
    
       

@@ -17,6 +17,7 @@ import org.json4s.native.JsonMethods._
 import org.json4s.native.Serialization
 import scala.concurrent.ExecutionContext.Implicits.global
 import models.JsonFormats._
+import scala.xml.XML
 
 // Reactive Mongo plugin, including the JSON-specialized collection
 import play.modules.reactivemongo.MongoController
@@ -99,6 +100,33 @@ class UnitSpec extends FlatSpec with Matchers{
      
      
      }
+     
+     "A BooleanQuestion" should "be validate" in {
+          val ba = BooleanAnswer("", true)
+          val bq = BooleanQuestion("QuestionTitle", "QuestionWording", ba)
+          val json = JsObject(Seq("title" -> JsString("QuestionTitle"),
+              "wording" -> JsString("QuestionWording"), "answer" -> Json.toJson(ba)))
+          assert(bq === Json.fromJson[Question](json).get)
+     }
+     
+     "A SingleChoiceQuestion" should "be XML deserialized" in {
+       val filePath = "files/choice.xml"
+       val xml = XML.loadFile(filePath)
+       val scq = Question.fromXML(xml)
+       println(scq)
+       assert(scq.toString === "SingleChoiceQuestion(What does it say?,,List(CorrectAnswer(You must stay with your luggage at all times.,,true), IncorrectAnswer(Do not let someone else look after your luggage.,,false), IncorrectAnswer(Remember your luggage when you leave.,,false)))")
+       
+     }
+     
+     "A MultipleChoiceQuestion" should "be XML deserialized" in {
+        val filePath = "files/choice_multiple.xml"
+       val xml = XML.loadFile(filePath)
+       val mcq = Question.fromXML(xml)
+       println(mcq)
+       assert(mcq.toString === "MultipleChoiceQuestion(Which of the following elements are used to form water?,,List(WeightedAnswer(Hydrogen,,50), WeightedAnswer(Helium,,-100), WeightedAnswer(Carbon,,-100), WeightedAnswer(Oxygen,,50), WeightedAnswer(Nitrogen,,-100), WeightedAnswer(Chlorine,,-50)))")
+       
+     }
+     
      
      
                                                 

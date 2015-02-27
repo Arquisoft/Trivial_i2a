@@ -15,6 +15,8 @@ import play.api.libs.json._
  */
 sealed trait Answer{
   def comment: String
+  
+		
 }
 
   
@@ -56,6 +58,8 @@ sealed trait Answer{
        }
     )
   }
+  
+      
 }
   
  sealed trait NonWeightedAnswer extends Answer
@@ -87,7 +91,12 @@ sealed trait Answer{
   }
   
   case class WeightedAnswer(wording: String, comment : String, weight: Int)
-    extends Answer/*
+    extends Answer
+    
+    
+     
+  
+    /*
    object WeightedAnswer{
     implicit object WeightedAnswer extends Writes[WeightedAnswer]{
       override def writes(w: WeightedAnswer) : JsValue = JsObject(Seq(
@@ -123,7 +132,7 @@ sealed trait Answer{
 
     
   case class CorrectAnswer(wording : String, comment : String, correct: Boolean = true) 
-    extends SingleChoiceAnswer
+    extends SingleChoiceAnswer 
 
   
   case class IncorrectAnswer(wording : String, comment : String, correct: Boolean = false)
@@ -136,6 +145,8 @@ sealed trait Answer{
     def title : String 
     def wording: String
     //def options : Seq[Answer]
+    
+    
   }
   
   object Question{
@@ -199,9 +210,89 @@ sealed trait Answer{
           }))
     
   
-  }}
+  }
+   def fromXML(node: scala.xml.Node): Question = {
+        
+       val questionType = (node \ "responseDeclaration" \ "@cardinality").text
+       if(questionType.equals("single")){
+        val correct = (node \ "responseDeclaration" \ "correctResponse" \ "value").text
+      
+        val opts = (node \ 
+               "itemBody" \ "choiceInteraction" \ "simpleChoice")
+                .map { x => {
+          val id = (x \ "@identifier").text
+          if(id.equals(correct))
+            CorrectAnswer(x.text, "")
+          else IncorrectAnswer(x.text, "")
+        }.asInstanceOf[SingleChoiceAnswer] }
+        SingleChoiceQuestion((node \ "itemBody" \ "choiceInteraction" \ "prompt").text,
+           "",
+           opts)
+      
+      }
+       else if(questionType.equals("multiple")){
+         val correct = (node \ "responseDeclaration" \ "correctResponse" \ "value").map(
+             x => x.text)
+         val mapping = (node \ "responseDeclaration" \ "mapping")
+        
+         
+         val weights = (mapping \ "mapEntry") 
+            .map{x => Map((x \ "@mapKey").text -> (x \ "@mappedValue").text.toInt)}
+            .reduceLeft(_ ++ _)
+            
+         val lowerBound = (mapping \ "@lowerBound").text.toInt
+         val upperBound = (mapping \ "@upperBound").text.toInt
+         val defaultWeight = (mapping \ "@defaultValue").text.toInt
+         val wording = (node \ "itemBody" \ "choiceInteraction" \ "prompt").text
+         val opts = (node \ 
+               "itemBody" \ "choiceInteraction" \ "simpleChoice").map{ x => {
+                 val id = (x \ "@identifier").text
+                 
+                 weights get id match {
+                   case Some(weight) => WeightedAnswer(x.text, "", 
+                       (weight.toFloat / (lowerBound + upperBound)*100).toInt )
+                   case None => WeightedAnswer(x.text, "", 
+                       (defaultWeight.toFloat / (lowerBound + upperBound)*100).toInt)
+                 }
+               }}
+         MultipleChoiceQuestion(wording, "", opts)
+         
+         
+         
+        
+       }
+       
+       else{
+         BooleanQuestion("","", BooleanAnswer("", false))
+       }
+   }
+   
   
-  case class SingleChoiceQuestion(title: String, wording: String, options: Seq[NonWeightedAnswer]) extends Question
+  }
+  
+  case class SingleChoiceQuestion(title: String, wording: String, options: Seq[SingleChoiceAnswer]) extends Question{
+    def toXML() = <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+  <correctResponse>
+		<value>
+   {options.find { x => x.correct }.get.wording}
+    </value>
+  </correctResponse>
+</responseDeclaration>
+<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+	<defaultValue>
+	<value>0</value>
+	</defaultValue>
+</outcomeDeclaration>
+<itemBody>
+	<p>{this.title}</p>
+  <choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="1">
+			<prompt>{this.wording}</prompt>
+			{options.map(x => <simpleChoice identifier={x.wording}></simpleChoice>)}
+	</choiceInteraction>
+</itemBody>
+      
+ 
+  }
   case class MultipleChoiceQuestion(title: String, wording: String, options: Seq[WeightedAnswer]) extends Question
   case class BooleanQuestion(title: String, wording: String, answer: BooleanAnswer) extends Question
   object JsonFormats{

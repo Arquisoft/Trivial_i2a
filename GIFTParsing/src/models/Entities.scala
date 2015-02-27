@@ -212,22 +212,61 @@ sealed trait Answer{
   
   }
    def fromXML(node: scala.xml.Node): Question = {
-     
+        
+       val questionType = (node \ "responseDeclaration" \ "@cardinality").text
+       if(questionType.equals("single")){
         val correct = (node \ "responseDeclaration" \ "correctResponse" \ "value").text
       
         val opts = (node \ 
                "itemBody" \ "choiceInteraction" \ "simpleChoice")
-        val z = opts.map { x => {
+                .map { x => {
           val id = (x \ "@identifier").text
           if(id.equals(correct))
-            CorrectAnswer("", id)
-          else IncorrectAnswer("", id)
+            CorrectAnswer(x.text, "")
+          else IncorrectAnswer(x.text, "")
         }.asInstanceOf[SingleChoiceAnswer] }
-        SingleChoiceQuestion("",
-           (node \ "itemBody" \ "choiceInteraction" \ "prompt").text,
-           z)
+        SingleChoiceQuestion((node \ "itemBody" \ "choiceInteraction" \ "prompt").text,
+           "",
+           opts)
       
-      }  
+      }
+       else if(questionType.equals("multiple")){
+         val correct = (node \ "responseDeclaration" \ "correctResponse" \ "value").map(
+             x => x.text)
+         val mapping = (node \ "responseDeclaration" \ "mapping")
+        
+         
+         val weights = (mapping \ "mapEntry") 
+            .map{x => Map((x \ "@mapKey").text -> (x \ "@mappedValue").text.toInt)}
+            .reduceLeft(_ ++ _)
+            
+         val lowerBound = (mapping \ "@lowerBound").text.toInt
+         val upperBound = (mapping \ "@upperBound").text.toInt
+         val defaultWeight = (mapping \ "@defaultValue").text.toInt
+         val wording = (node \ "itemBody" \ "choiceInteraction" \ "prompt").text
+         val opts = (node \ 
+               "itemBody" \ "choiceInteraction" \ "simpleChoice").map{ x => {
+                 val id = (x \ "@identifier").text
+                 
+                 weights get id match {
+                   case Some(weight) => WeightedAnswer(x.text, "", 
+                       (weight.toFloat / (lowerBound + upperBound)*100).toInt )
+                   case None => WeightedAnswer(x.text, "", 
+                       (defaultWeight.toFloat / (lowerBound + upperBound)*100).toInt)
+                 }
+               }}
+         MultipleChoiceQuestion(wording, "", opts)
+         
+         
+         
+        
+       }
+       
+       else{
+         BooleanQuestion("","", BooleanAnswer("", false))
+       }
+   }
+   
   
   }
   

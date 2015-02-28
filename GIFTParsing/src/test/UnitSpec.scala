@@ -28,7 +28,7 @@ import scala.util.{Try, Success, Failure}
 class UnitSpec extends FlatSpec with Matchers{
   
       val parser : Parser = new GIFTParser()
-  
+  /*
       "The GIFTParser" should "correctly parse a single choice question in GIFT format" in {
       val parsed = parser.execute("files/test.gift")
       val scq = List(
@@ -112,7 +112,7 @@ class UnitSpec extends FlatSpec with Matchers{
      "A SingleChoiceQuestion" should "be XML deserialized" in {
        val filePath = "files/choice.xml"
        val xml = XML.loadFile(filePath)
-       val scq = Question.fromXML(xml)
+       val scq = Question.readSimpleQuestion(xml)
        println(scq)
        assert(scq.toString === "SingleChoiceQuestion(What does it say?,,List(CorrectAnswer(You must stay with your luggage at all times.,,true), IncorrectAnswer(Do not let someone else look after your luggage.,,false), IncorrectAnswer(Remember your luggage when you leave.,,false)))")
        
@@ -121,11 +121,18 @@ class UnitSpec extends FlatSpec with Matchers{
      "A MultipleChoiceQuestion" should "be XML deserialized" in {
         val filePath = "files/choice_multiple.xml"
        val xml = XML.loadFile(filePath)
-       val mcq = Question.fromXML(xml)
+       val mcq = Question.readMultipleChoiceQuestion(xml)
        println(mcq)
        assert(mcq.toString === "MultipleChoiceQuestion(Which of the following elements are used to form water?,,List(WeightedAnswer(Hydrogen,,50), WeightedAnswer(Helium,,-100), WeightedAnswer(Carbon,,-100), WeightedAnswer(Oxygen,,50), WeightedAnswer(Nitrogen,,-100), WeightedAnswer(Chlorine,,-50)))")
        
-     }
+     }*/
+     
+     "A XML test" should "be correctly read" in {
+       val filePath = "files/assessment.xml"
+       val xml = XML.loadFile(filePath)
+       val seqQuestions = Question.fromXML(xml)
+       assert(seqQuestions.toString === """List(SingleChoiceQuestion(What does it say?,,List(CorrectAnswer(You must stay with your luggage at all times.,,true), IncorrectAnswer(Do not let someone else look after your luggage.,,false), IncorrectAnswer(Remember your luggage when you leave.,,false))), MultipleChoiceQuestion(Which of the following elements are used to form water?,,List(WeightedAnswer(Hydrogen,,50), WeightedAnswer(Helium,,-100), WeightedAnswer(Carbon,,-100), WeightedAnswer(Oxygen,,50), WeightedAnswer(Nitrogen,,-100), WeightedAnswer(Chlorine,,-50))))""")
+    }
      
      
      

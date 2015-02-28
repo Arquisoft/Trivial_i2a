@@ -60,8 +60,8 @@ sealed trait Answer{
   }
   
       
-}
-  
+  }
+    
  sealed trait NonWeightedAnswer extends Answer
    
   object NonWeightedAnswer{
@@ -208,30 +208,45 @@ sealed trait Answer{
                  
             
           }))
+    }
     
   
-  }
-   def fromXML(node: scala.xml.Node): Question = {
-        
-       val questionType = (node \ "responseDeclaration" \ "@cardinality").text
-       if(questionType.equals("single")){
-        val correct = (node \ "responseDeclaration" \ "correctResponse" \ "value").text
+  
+    
+    def fromXML(node: scala.xml.Node): Seq[Question] = {
       
-        val opts = (node \ 
-               "itemBody" \ "choiceInteraction" \ "simpleChoice")
-                .map { x => {
-          val id = (x \ "@identifier").text
-          if(id.equals(correct))
-            CorrectAnswer(x.text, "")
-          else IncorrectAnswer(x.text, "")
-        }.asInstanceOf[SingleChoiceAnswer] }
-        SingleChoiceQuestion((node \ "itemBody" \ "choiceInteraction" \ "prompt").text,
-           "",
-           opts)
+      var questions = Seq[Question]()
+      (node \ "testPart" \ "assessmentSection" \ "assessmentItemRef").map { x => {
+          questions = questions :+ fromXMLQuestionFile(xml.XML.loadFile((x \ "@href").text))
+      }}
+      questions
+      
+    }
+    
+   
+    
+   def fromXMLQuestionFile(node: scala.xml.Node): Question = {
+     
+       val questionType = (node \ "responseDeclaration" \ "@cardinality").text
+       
+       if(questionType.equals("single")){
+        readSimpleQuestion(node)
       
       }
        else if(questionType.equals("multiple")){
-         val correct = (node \ "responseDeclaration" \ "correctResponse" \ "value").map(
+
+         readMultipleChoiceQuestion(node)
+
+       }
+      
+       else{
+         //NOT IMPLEMENTED
+         BooleanQuestion("","", BooleanAnswer("", false)) 
+       }
+   }
+   
+   def readMultipleChoiceQuestion(node: scala.xml.Node): Question = {
+     val correct = (node \ "responseDeclaration" \ "correctResponse" \ "value").map(
              x => x.text)
          val mapping = (node \ "responseDeclaration" \ "mapping")
         
@@ -256,20 +271,25 @@ sealed trait Answer{
                  }
                }}
          MultipleChoiceQuestion(wording, "", opts)
-         
-         
-         
-        
-       }
-       
-       else{
-         BooleanQuestion("","", BooleanAnswer("", false))
-       }
    }
    
-  
+   def readSimpleQuestion(node: scala.xml.Node): Question = {
+          val correct = (node \ "responseDeclaration" \ "correctResponse" \ "value").text
+      
+        val opts = (node \ 
+               "itemBody" \ "choiceInteraction" \ "simpleChoice")
+                .map { x => {
+          val id = (x \ "@identifier").text
+          if(id.equals(correct))
+            CorrectAnswer(x.text, "")
+          else IncorrectAnswer(x.text, "")
+        }.asInstanceOf[SingleChoiceAnswer] }
+        SingleChoiceQuestion((node \ "itemBody" \ "choiceInteraction" \ "prompt").text,
+           "",
+           opts)
+   }
+
   }
-  
   case class SingleChoiceQuestion(title: String, wording: String, options: Seq[SingleChoiceAnswer]) extends Question{
     def toXML() = <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
   <correctResponse>

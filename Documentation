@@ -2,7 +2,7 @@ DOCUMENTATION:
 
 1-. THE PROBLEM
 We have the task of do a trivial game, based on questions. To do that, we are going to create an application to do read the questions from a file and, process them and save them in a database.
-Processing the questions should warranting thtat there is no errors. 
+Processing the questions should warranting that there is no errors. 
 
 2-. METHODOLOGY
 We are going to use ADD method and SEI norm

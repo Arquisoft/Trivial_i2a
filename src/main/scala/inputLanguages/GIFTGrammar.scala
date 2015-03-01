@@ -75,48 +75,4 @@ import models._
 
 
 
-object TestGIFT extends GIFTGrammar
-{
-  
-  //implicit val formats = Serialization.formats(NoTypeHints)
-
-        
- def main(){
-    val testObj = """
-~%100%No one
-~%50%Grant
-~%50%Grants wife
-~%100%Grants father
-"""
-
-
-   
-    println(parse(option, testObj))
-  }
-}
-//       val driver = new MongoDriver
-//       val connection = driver.connection(List("localhost"))
-//       val db = connection.db("trivial")
-//       val collection : JSONCollection = db.collection[JSONCollection]("questions")
-//       def main() = {
-//        // val json = write(parse(questions, testObj).get)
-//         val a1 = CorrectAnswer("pregunta1", "hey")
-//         val a2 = IncorrectAnswer("pregunta2", "Comment to pregunta2")
-//         val a3 = IncorrectAnswer("pregunta3", "Comment to pregunta3")
-//         val opts = List(a1, a2, a3)
-//         val prueba = Question("theWording", opts)
-         
-        
-             
-          
-         
-         
-//  
-//        
-//  }
-//
-//}
-
-
-
 

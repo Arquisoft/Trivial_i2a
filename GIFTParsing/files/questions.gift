@@ -14,3 +14,19 @@ What two people are entombed in Grants tomb? {
 }
 //This is a boolean question
 Grant was buried in a tomb in New York City.{T}
+//comentario
+Which mountain range stretches almost 1,400 km (850 mi) along the length of Italy?{
+=PYRENEES
+#ALPS
+~APPENNINES
+#Italy has no mountains
+}
+//This is a multiple choice question
+One of the more unusual Olympic events is the biathlon. Which two athletic endeavors make up the Biathlon? {
+~%-100%CYCLING
+~%50%CROSS-COUNTRY SKIING
+~%50%RIFLE SHOOTING
+~%-100%SWIMMING
+}
+//This is a boolean question
+About one-tenth of the earth's surface is permanently covered with ice.{T}

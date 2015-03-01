@@ -24,7 +24,7 @@ class UnitSpec extends FlatSpec with Matchers{
   
     "The GIFTParser" should "correctly parse a single choice question in GIFT format" in {
       val parser = new GIFTParser()
-      val parsed = parser.execute("src/test/resources/test.gift")
+      val parsed = parser.execute("src/test/resources/test.gift").get
       val scq = List(
           SingleChoiceQuestion("","Who is buried in Grant's tomb in New York City?",
           List(CorrectAnswer("Grant","Yesss"), IncorrectAnswer("Ruben","Noooooo"))))

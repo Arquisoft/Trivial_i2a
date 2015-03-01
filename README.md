@@ -13,12 +13,23 @@ Software Architecture course - [University of Oviedo](http://www.uniovi.es), 201
 ###Supported formats
 
 #### GIFT
+
+The GIFT format is explained here: https://docs.moodle.org/23/en/GIFT_format
+The parser can read the following types of questions in GIFT format:
+
 * Single choice
 * Multiple choice
 * True-false
 * Matching
 
+
+
 #### QTI (XML)
+
+The QTI format is explained here: http://www.imsglobal.org/question/
+
+The parser can read the following types of questions in QTI format:
+
 * Single choice
 * Multiple choice
 

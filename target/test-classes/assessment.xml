@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    toolVersion="0.1" toolName="Spectatus" title="Simple Feedback Test"
+    identifier="SPECTATUS-GENERATED-TEST"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+    <outcomeDeclaration baseType="identifier" cardinality="single" identifier="s1FB"/>
+    <outcomeDeclaration baseType="identifier" cardinality="multiple" identifier="TEST_FEEDBACK"/>
+    <testPart submissionMode="simultaneous" navigationMode="nonlinear" identifier="TP">
+        <assessmentSection identifier="S1" visible="true" title="Section 1">
+            <assessmentItemRef identifier="choice"
+                href="src/test/resources/choice.xml"/>
+            <assessmentItemRef identifier="choice_multiple"
+                href="src/test/resources/choice_multiple.xml"/>
+        </assessmentSection>
+    </testPart>
+</assessmentTest>

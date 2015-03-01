@@ -4,7 +4,7 @@
  * @author rubcuevas
  */
 
-package inputLanguages
+package   inputLanguages
 
 import scala.util.parsing.combinator._
 import org.json4s._
@@ -16,7 +16,7 @@ import play.modules.reactivemongo.json.collection._
 import scala.concurrent.ExecutionContext.Implicits.global
 import play.api.libs.json._
 import models._
-import inputLanguages._
+
 
   trait GIFTGrammar extends InputLanguage with JavaTokenParsers {
 
@@ -27,11 +27,13 @@ import inputLanguages._
       case a: SingleChoiceAnswer => SingleChoiceQuestion("", q, o.map { x => x.asInstanceOf[SingleChoiceAnswer] }.toSeq)
       case b: WeightedAnswer => MultipleChoiceQuestion("", q, o.map { x => x.asInstanceOf[WeightedAnswer] }.toSeq)
       case c: BooleanAnswer => BooleanQuestion("", q, c)
+      case d: MatchingAnswer => MatchingQuestion("", q, o.map{x => x.asInstanceOf[MatchingAnswer]})
     }
-    case (t~q~o) => o(0) match{
-      case a: SingleChoiceAnswer => SingleChoiceQuestion("", q, o.map { x => x.asInstanceOf[SingleChoiceAnswer] }.toSeq)
-      case b: WeightedAnswer => MultipleChoiceQuestion("", q, o.map { x => x.asInstanceOf[WeightedAnswer] }.toSeq)
-      case c: BooleanAnswer => BooleanQuestion("", q, c)}
+    case (Some(t)~q~o) => o(0) match{
+      case a: SingleChoiceAnswer => SingleChoiceQuestion(t, q, o.map { x => x.asInstanceOf[SingleChoiceAnswer] }.toSeq)
+      case b: WeightedAnswer => MultipleChoiceQuestion(t, q, o.map { x => x.asInstanceOf[WeightedAnswer] }.toSeq)
+      case c: BooleanAnswer => BooleanQuestion(t, q, c)
+      case d: MatchingAnswer => MatchingQuestion(t,q, o.map {x => x.asInstanceOf[MatchingAnswer]})}
       
     }
     def allChars : Parser[String] = "[A-Za-z0-9 ¿?!¡@\"¨'%&$#*+-\\[\\]\\(\\);:,]*".r ^^{_.toString}
@@ -55,6 +57,10 @@ import inputLanguages._
     def booleanAnswer : Parser[BooleanAnswer] = (booleanStatement)~opt(answerComment) ^^ {
       case (bs~Some(com)) => if(bs.equals("T") || bs.equals("TRUE")) BooleanAnswer(com,true) else BooleanAnswer(com, false)
       case(bs~None) => if(bs.equals("F") || bs.equals("FALSE")) BooleanAnswer("",true) else BooleanAnswer("", false)
+    }
+    def matchingAnswer : Parser[MatchingAnswer] = "="~>allChars~("->"~>allChars)~opt(comment) ^^{
+      case(a~b~Some(com)) => MatchingAnswer(a,com,b)
+      case(a~b~None) => MatchingAnswer(a,"", b)
     }
     def answerWording: Parser[String] = allChars ^^{_.toString}
     def correctAnswerWording: Parser[String] = "="~>answerWording ^^(_.toString)

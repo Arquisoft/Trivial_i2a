@@ -1,4 +1,4 @@
-package test
+package test.scala
 
 import org.scalatest._
 import parsers._
@@ -6,37 +6,30 @@ import models._
 import scala.concurrent._
 import reactivemongo.api._
 import reactivemongo.bson._
-import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import play.api.libs.json._
 import play.api.libs.json.Json
-  import play.api.data._
+import play.api.data._
 import play.modules.reactivemongo.json.BSONFormats._
- import reactivemongo.api.FailoverStrategy
- import org.json4s._
+import play.modules.reactivemongo.json.collection._
+import org.json4s._
 import org.json4s.native.JsonMethods._
-import org.json4s.native.Serialization
-import scala.concurrent.ExecutionContext.Implicits.global
 import models.JsonFormats._
-import scala.xml.XML
-
-// Reactive Mongo plugin, including the JSON-specialized collection
-import play.modules.reactivemongo.MongoController
-import play.modules.reactivemongo.json.collection.JSONCollection
 import scala.concurrent.duration._
-import scala.util.{Try, Success, Failure}
-
+import scala.math.BigDecimal.int2bigDecimal
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.xml._
 class UnitSpec extends FlatSpec with Matchers{
   
       val parser : Parser = new GIFTParser()
-  /*
-      "The GIFTParser" should "correctly parse a single choice question in GIFT format" in {
+  
+    "The GIFTParser" should "correctly parse a single choice question in GIFT format" in {
       val parsed = parser.execute("files/test.gift")
       val scq = List(
           SingleChoiceQuestion("","Who is buried in Grant's tomb in New York City?",
           List(CorrectAnswer("Grant","Yesss"), IncorrectAnswer("Ruben","Noooooo"))))
       assert(parsed === scq)
       }
-      
+      /*
      "The GIFTParser" should "correctly read a SingleChoiceQuestion from MongoDB" in {
         val driver = new MongoDriver
         val connection = driver.connection(List("localhost:27017"))
@@ -50,13 +43,14 @@ class UnitSpec extends FlatSpec with Matchers{
           println(item)
         }}
         
-     }
+     }*/
      
      "A SingleChoiceAnswer" should "be validated" in {
        val json = JsObject(Seq("wording" -> JsString("the wording"),
            "comment" -> JsString(""), "correct" -> JsBoolean(true)))
        val sca = Json.fromJson[Answer](json).get
       // val b = CorrectAnswer("the wording", "")
+    
        assert(sca === CorrectAnswer("the wording", ""))
      }
      
@@ -75,6 +69,14 @@ class UnitSpec extends FlatSpec with Matchers{
       // val b = CorrectAnswer("the wording", "")
        assert(sca === BooleanAnswer("", true))
      }
+     
+     "A MatchingAnswer" should "be validated" in {
+       val json = JsObject(Seq("wording" -> JsString("the wording"),
+           "comment" -> JsString(""), "matching" -> JsString("the matching")))
+       val ma = Json.fromJson[Answer](json).get
+       assert(ma === MatchingAnswer("the wording", "", "the matching"))
+     }
+     
      
      "A SingleChoiceQuestion" should "be validated" in {
        val ca = CorrectAnswer("Correct", "")
@@ -125,13 +127,23 @@ class UnitSpec extends FlatSpec with Matchers{
        println(mcq)
        assert(mcq.toString === "MultipleChoiceQuestion(Which of the following elements are used to form water?,,List(WeightedAnswer(Hydrogen,,50), WeightedAnswer(Helium,,-100), WeightedAnswer(Carbon,,-100), WeightedAnswer(Oxygen,,50), WeightedAnswer(Nitrogen,,-100), WeightedAnswer(Chlorine,,-50)))")
        
-     }*/
+     }
+     "A MatchingQuestion" should "be correctly deserialized" in {
+       val ma1 = MatchingAnswer("wording1", "", "matching1")
+       val ma2 = MatchingAnswer("wording2", "", "matching2")
+       val qa = MatchingQuestion("", "questionWording", Seq(ma1, ma2))
+       val json = JsObject(Seq("title" -> JsString(""),
+           "wording" -> JsString("questionWording"),
+           "options" -> JsArray(Seq(Json.toJson(ma1), Json.toJson(ma2)))))
+       assert(qa === Json.fromJson[Question](json).get)
+     }
+     
      
      "A XML test" should "be correctly read" in {
        val filePath = "files/assessment.xml"
        val xml = XML.loadFile(filePath)
        val seqQuestions = Question.fromXML(xml)
-       assert(seqQuestions.toString === """List(SingleChoiceQuestion(What does it say?,,List(CorrectAnswer(You must stay with your luggage at all times.,,true), IncorrectAnswer(Do not let someone else look after your luggage.,,false), IncorrectAnswer(Remember your luggage when you leave.,,false))), MultipleChoiceQuestion(Which of the following elements are used to form water?,,List(WeightedAnswer(Hydrogen,,50), WeightedAnswer(Helium,,-100), WeightedAnswer(Carbon,,-100), WeightedAnswer(Oxygen,,50), WeightedAnswer(Nitrogen,,-100), WeightedAnswer(Chlorine,,-50))))""")
+       assert(seqQuestions.toString ==="""List(SingleChoiceQuestion(What does it say?,,List(CorrectAnswer(You must stay with your luggage at all times.,,true), IncorrectAnswer(Do not let someone else look after your luggage.,,false), IncorrectAnswer(Remember your luggage when you leave.,,false))), MultipleChoiceQuestion(Which of the following elements are used to form water?,,List(WeightedAnswer(Hydrogen,,50), WeightedAnswer(Helium,,-100), WeightedAnswer(Carbon,,-100), WeightedAnswer(Oxygen,,50), WeightedAnswer(Nitrogen,,-100), WeightedAnswer(Chlorine,,-50))))""")
     }
      
      

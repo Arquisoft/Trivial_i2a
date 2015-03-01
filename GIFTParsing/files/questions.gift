@@ -14,3 +14,10 @@ What two people are entombed in Grants tomb? {
 }
 //This is a boolean question
 Grant was buried in a tomb in New York City.{T}
+//A matching question
+Match the following countries with their corresponding capitals. {
+=Canada -> Ottawa
+=Italy  -> Rome
+=Japan  -> Tokyo
+=India  -> New Delhi
+}

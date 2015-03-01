@@ -4,13 +4,17 @@ import play.api._
 import play.api.mvc._
 import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import play.api.libs.json._
-import scala.concurrent.Future
+
+    import play.api.libs.functional.syntax._
+
 import scala.util.parsing.combinator._
 import parsers._
+import scala.util.{Try, Success, Failure}
+import scala.concurrent._
 
 // Reactive Mongo imports
 import reactivemongo.api._
-
+import reactivemongo.bson._
 // Reactive Mongo plugin, including the JSON-specialized collection
 import play.modules.reactivemongo.MongoController
 import play.modules.reactivemongo.json.collection.JSONCollection
@@ -22,32 +26,65 @@ object ApplicationJson{
     import models._
     import models.JsonFormats._
     def main() {
+      
+      val filename = Try{io.StdIn.readLine("\nPlease enter the filename where the questions are: ")}
+      filename match {
+        case Success(name) => {
+          getLanguageParser(name) match {
+            case Some(parser) => {
+               parser.execute(name) match {
+                 case Some(questions) => saveData(questions)
+                 case None => main
+               }
+                 
+            }
+            case None => {
+              System.err.println("File extension must be either .gift or .xml")
+              main
+            }
+          }}
+        case Failure(ex) => {
+           println("Something was wrong: " + ex.getMessage)
+           main
+        }
+      }
 
-    val filename = io.StdIn.readLine("Please enter the filename where the questions are:")
-    val lines = io.Source.fromFile(filename).mkString
-    //Now the input language is inferred from the name of the file
-    // val inputLanguage = io.StdIn.readLine("Which is the input language?").toLowerCase()
-    val FileName = """([^.]*)\.([^.]*)""".r
-    val FileName(name, extension) = filename
-    val parser: Parser = getLanguageParser(extension)
-    val questions = parser.execute(filename)
-    saveData(questions)
+     
     }
+  
+  
+
     
-    
-  def saveData(questions: Seq[Question]){
+  def saveData(questions: Seq[Question]) = {
     val driver = new MongoDriver
-    val connection = driver.connection(List("localhost:27017"))
-    val db = connection("trivial")
-    val collection: JSONCollection = db.collection[JSONCollection]("questions")
-    questions.map { question => { collection.insert(question) } }
-    connection.close()
+    Try{driver.connection(List("localhost:27017"))} match{
+      case Success(connection) => {
+        val db = connection("trivial")
+        val collection: JSONCollection = db.collection[JSONCollection]("questions")
+ 
+        questions.map { question => { collection.insert(question)
+           .onComplete { 
+             case Failure(e) => System.err.println(e.getMessage) 
+             case Success(lastError) => {}
+             }} 
+        
+      }
+        
+       }
+      case Failure(ex) => System.err.println("Could not connect to the database: " )
+    }
+   
+    
+   
   }
     
 
-  def getLanguageParser(string: String): Parser = string match {
-    case "gift" => new GIFTParser()
-    case "xml" => new XMLParser()
+  def getLanguageParser(filename: String): Option[Parser] = {
+    if(filename.endsWith(".gift"))
+      Some(new GIFTParser())
+    else if(filename.endsWith(".xml"))
+      Some(new XMLParser())
+    else None
   }
           
 }

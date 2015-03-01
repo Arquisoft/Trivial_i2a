@@ -5,6 +5,8 @@ import scala.util.parsing.combinator.JavaTokenParsers
 
 trait Parser {
 
-  def execute(filePath : String) : Seq[Question]
+  def execute(filePath : String) : Option[Seq[Question]]
+  
+
   
 }

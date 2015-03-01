@@ -1,7 +1,10 @@
-package inputLanguages
+/*package inputLanguages
 
 
 import com.thoughtworks.xstream._
+import parsers._
+import scala.util.parsing.combinator._
+import models._
 
 object XMLUtil {
   private val xstream = new XStream
@@ -15,3 +18,7 @@ object XMLUtil {
     
   } 
 }
+
+trait XMLGrammar extends Parser {
+  def questions: Parser[Seq[Question]] = rep(Question.fromXML(lines)) ^^ {_.toSeq}
+}*/

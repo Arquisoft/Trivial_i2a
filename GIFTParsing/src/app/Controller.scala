@@ -6,7 +6,7 @@ import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import play.api.libs.json._
 import scala.concurrent.Future
 import scala.util.parsing.combinator._
-import parsers.GIFTParser
+import parsers._
 
 // Reactive Mongo imports
 import reactivemongo.api._
@@ -29,27 +29,25 @@ object ApplicationJson{
     // val inputLanguage = io.StdIn.readLine("Which is the input language?").toLowerCase()
     val FileName = """([^.]*)\.([^.]*)""".r
     val FileName(name, extension) = filename
-    val parser: GIFTParser = getLanguageParser(extension)
-    val outputLanguage = io.StdIn.readLine("Which language should be questions be translated to?").toLowerCase()
-    
-    outputLanguage match {
-      case "json" => {
-        //If we add new output languages, the connection can be extracted
-        val driver = new MongoDriver
-        val connection = driver.connection(List("localhost:27017"))
-        val db = connection("trivial")
-        
-        val collection: JSONCollection = db.collection[JSONCollection]("questions")
-        
-        parser.parse(parser.questions, lines).get.map { question => { collection.insert(question) } }
-        connection.close()
-      }
+    val parser: Parser = getLanguageParser(extension)
+    val questions = parser.execute(filename)
+    saveData(questions)
     }
-
+    
+    
+  def saveData(questions: Seq[Question]){
+    val driver = new MongoDriver
+    val connection = driver.connection(List("localhost:27017"))
+    val db = connection("trivial")
+    val collection: JSONCollection = db.collection[JSONCollection]("questions")
+    questions.map { question => { collection.insert(question) } }
+    connection.close()
   }
-  def getLanguageParser(string: String): GIFTParser = string match {
+    
+
+  def getLanguageParser(string: String): Parser = string match {
     case "gift" => new GIFTParser()
-    //case "xml" => new XML()
+    case "xml" => new XMLParser()
   }
           
 }

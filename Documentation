@@ -1,23 +1,44 @@
 DOCUMENTATION:
 
 1-. THE PROBLEM
-We have the task of do a trivial game, based on questions. To do that, we are going to create an application to do read the questions from a file and, process them and save them in a database.
-Processing the questions should warranting thtat there is no errors. 
+We have the task of doing a trivial game, based on questions. To do that, we are going to create an application to read the questions from a file, process and save them in a database.
+Processing the questions should ensure that there are no errors. 
 
 2-. METHODOLOGY
-We are going to use ADD method and SEI norm
+We are going to use ADD method and SEI norm.
+
+The SEI Attribute-Driven Design (ADD) method is a systematic step-by-step method for designing the software architecture
+of a software-intensive system. It is an approach to defining software architectures by basing the design process on the architecture's
+quality attribute requirements.
+
+It follows a recursive decomposition process where, at each stage in the decomposition, tactics and architectural patterns
+are chosen to satisfy a set of quality attribute scenarios.
 
 3-. PEOPLE INVOLVED ON THE APPLICATION
-- Developers:   their purpose is to make the application previously described, as maintainable as possible
--Teachers (clients): They are going to use (evaluate) the application.
+- Developers: their purpose is to make the application previously described, as maintainable as possible
+- Teachers (clients): They are going to use (evaluate) the application.
 
 
 4.- STAKEHOLDERS
-  A stakeholder is a person, group of persons, or organization that has a vested interest in the
+A stakeholder is a person, group of persons, or organization that has a vested interest in the
 application and that share a common set of concerns and interests in the application. So, the stakeholders 
 of our applications are:
     - Developers: the group of developers
     - Client: the teachers
     
-    Every stakeholder or group of stakeholders has a different viewpoint of the project and the
-architect has to model this viewpoint
+Every stakeholder or group of stakeholders has a different viewpoint of the project and the
+architect has to model this viewpoint.
+
+5.- THE GAME
+Trivial Pursuit is a board game in which winning is determined by a player's ability to answer general knowledge and popular
+culture questions. The game was created in December 1979 in Montreal, Quebec, by Canadian Chris Haney, a photo editor for
+Montreal's The Gazette, and Scott Abbott, a sports editor for The Canadian Press. After finding pieces of their Scrabble game
+missing, they decided to create their own game.[1] With the help of John Haney and Ed Werner, they completed development of
+the game, which was released in 1982.
+
+Dozens of question sets have been released for the game. The question cards are organized into themes; for instance, in the
+standard Genus question set, questions in green deal with science and nature. Some question sets have been designed for
+younger players, and others for a specific time period or as promotional tie-ins (such as Star Wars, Saturday Night Live, and
+The Lord of the Rings movies).
+
+http://en.wikipedia.org/wiki/Trivial_Pursuit

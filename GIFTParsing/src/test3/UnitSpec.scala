@@ -20,9 +20,10 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import scala.xml._
 class UnitSpec extends FlatSpec with Matchers{
   
-      val parser : Parser = new GIFTParser()
+      
   
     "The GIFTParser" should "correctly parse a single choice question in GIFT format" in {
+      val parser = new GIFTParser()
       val parsed = parser.execute("files/test.gift")
       val scq = List(
           SingleChoiceQuestion("","Who is buried in Grant's tomb in New York City?",
@@ -46,6 +47,7 @@ class UnitSpec extends FlatSpec with Matchers{
      }*/
      
      "A SingleChoiceAnswer" should "be validated" in {
+      
        val json = JsObject(Seq("wording" -> JsString("the wording"),
            "comment" -> JsString(""), "correct" -> JsBoolean(true)))
        val sca = Json.fromJson[Answer](json).get
@@ -55,6 +57,7 @@ class UnitSpec extends FlatSpec with Matchers{
      }
      
      "A WeightedAnswer" should "be validated" in {
+     
        val json = JsObject(Seq("wording" -> JsString("the wording"),
        "comment" -> JsString(""), "weight" -> JsNumber(100)))
        val sca = Json.fromJson[Answer](json).get

@@ -21,3 +21,26 @@ Match the following countries with their corresponding capitals. {
 =Japan  -> Tokyo
 =India  -> New Delhi
 }
+//comentario
+Which mountain range stretches almost 1,400 km (850 mi) along the length of Italy?{
+=PYRENEES
+#ALPS
+~APPENNINES
+#Italy has no mountains
+}
+//This is a multiple choice question
+One of the more unusual Olympic events is the biathlon. Which two athletic endeavors make up the Biathlon? {
+~%-100%CYCLING
+~%50%CROSS-COUNTRY SKIING
+~%50%RIFLE SHOOTING
+~%-100%SWIMMING
+}
+//This is a boolean question
+About one-tenth of the earth's surface is permanently covered with ice.{T}
+//This is a boolean question
+A caterpillar is the larva of a butterfly or moth.{T}
+//This is a boolean question
+Wolves are the wild dogs, nocturnal hunters, native to Australia.{F}
+//This is a boolean question
+Egyptian pharaohs claim to be descended from the Egyptian god of the sun, whose name is Ra.{T}
+

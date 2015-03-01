@@ -1,0 +1,20 @@
+Quality Attributes and Scenarios
+
+Adaptability:
+
+	Scenario 1: The system must be able to receive questions written in different formats as those are requested by the client.
+
+Autonomy:
+
+	Scenario 1: The application may run without input from an user.
+
+Configurability:
+
+	Scenario 1: The system must allow the user to select the file to be loaded, as well as the format in which are written.
+
+	Scenario 2: The system must allow the user to change the name of the output file, as well as its language.
+
+Reliability:
+
+	Scenario 1: In the first phase, the one in which the internal representation is created, it is very important that the output has no failures. As stakeholders are not concerned by efficiency, non-perfect, fast algorithms are discouraged.
+

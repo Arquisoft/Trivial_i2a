@@ -2,10 +2,10 @@ DOCUMENTATION:
 
 1-. THE PROBLEM
 We have the task of doing a trivial game, based on questions. To do that, we are going to create an application to read the questions from a file, process and save them in a database.
-Processing the questions should warranting that there are no errors. 
+Processing the questions should ensure that there are no errors. 
 
 2-. METHODOLOGY
-We are going to use ADD method and SEI norm
+We are going to use ADD method and SEI norm.
 
 The SEI Attribute-Driven Design (ADD) method is a systematic step-by-step method for designing the software architecture
 of a software-intensive system. It is an approach to defining software architectures by basing the design process on the architecture's
@@ -15,7 +15,7 @@ It follows a recursive decomposition process where, at each stage in the decompo
 are chosen to satisfy a set of quality attribute scenarios.
 
 3-. PEOPLE INVOLVED ON THE APPLICATION
-- Developers:   their purpose is to make the application previously described, as maintainable as possible
+- Developers: their purpose is to make the application previously described, as maintainable as possible
 - Teachers (clients): They are going to use (evaluate) the application.
 
 
@@ -27,7 +27,7 @@ of our applications are:
     - Client: the teachers
     
 Every stakeholder or group of stakeholders has a different viewpoint of the project and the
-architect has to model this viewpoint
+architect has to model this viewpoint.
 
 5.- THE GAME
 Trivial Pursuit is a board game in which winning is determined by a player's ability to answer general knowledge and popular

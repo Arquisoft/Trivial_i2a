@@ -7,6 +7,13 @@ Processing the questions should warranting thtat there is no errors.
 2-. METHODOLOGY
 We are going to use ADD method and SEI norm
 
+The SEI Attribute-Driven Design (ADD) method is a systematic step-by-step method for designing the software architecture
+of a software-intensive system. It is an approach to defining software architectures by basing the design process on the architecture's
+quality attribute requirements.
+
+It follows a recursive decomposition process where, at each stage in the decomposition, tactics and architectural patterns
+are chosen to satisfy a set of quality attribute scenarios.
+
 3-. PEOPLE INVOLVED ON THE APPLICATION
 - Developers:   their purpose is to make the application previously described, as maintainable as possible
 -Teachers (clients): They are going to use (evaluate) the application.

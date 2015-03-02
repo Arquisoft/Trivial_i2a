@@ -12,7 +12,7 @@ import play.modules.reactivemongo.json.BSONFormats._
 import play.modules.reactivemongo.json.collection._
 import org.json4s._
 import org.json4s.native.JsonMethods._
-import models.JsonFormats._
+
 import scala.concurrent.duration._
 import scala.math.BigDecimal.int2bigDecimal
 import scala.xml._

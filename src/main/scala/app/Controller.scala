@@ -27,7 +27,7 @@ object Controller{
    
     
     import models._
-    import models.JsonFormats._
+    
     def main() {
       
       Try{io.StdIn.readLine("\nPlease enter the filename where the questions are: ")} match{

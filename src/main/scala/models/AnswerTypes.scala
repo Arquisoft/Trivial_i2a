@@ -10,7 +10,7 @@ import play.modules.reactivemongo.json.collection._
 import scala.concurrent.ExecutionContext.Implicits.global
 import play.api.libs.json._
 
-/*
+/**
  * Answer trait. It is the mother class of all kinds of answers
  */
 sealed trait Answer{
@@ -19,6 +19,9 @@ sealed trait Answer{
 		
 }
 
+/***
+ * JSON formats need for serialization/deserialization
+ */
 object JsonAnswerFormats{
      implicit val weightedAnswerFormat = Json.format[WeightedAnswer]
   implicit val weightedAnswerReads = Json.reads[WeightedAnswer]
@@ -74,9 +77,16 @@ object JsonAnswerFormats{
   
       
   }
-    
+  
+  /**
+   * Questions that do not have an associated weight
+   */
  sealed trait NonWeightedAnswer extends Answer
-   
+ 
+
+ /**
+  * This object contains the Json serialization/deserialization information
+  */
   object NonWeightedAnswer{
     implicit object nonWeightedAnswer extends Format[NonWeightedAnswer]{
       override def reads(json: JsValue) = JsSuccess({
@@ -97,6 +107,7 @@ object JsonAnswerFormats{
       })
     
     
+ 
     override def writes(a: NonWeightedAnswer): JsValue = JsObject(
      
        //"wording" -> JsString(a.wording),
@@ -114,6 +125,9 @@ object JsonAnswerFormats{
     }
   }
   
+ /**
+  * Answers with an associated weight
+  */
   case class WeightedAnswer(wording: String, comment : String, weight: Int)
     extends Answer
     
@@ -139,14 +153,36 @@ object JsonAnswerFormats{
     }
   }
   
+  /**
+   * These are answers of Matching type.
+   * @param wording The answer wording
+   * @param comment The answer comment
+   * @param matching The matching answer to the wording
+   */
   case class MatchingAnswer(wording: String, comment:String, matching: String) extends NonWeightedAnswer
   
+  /**
+   * BooleanAnswer is the True-False answer
+   * @param comment The comment
+   * @param answer The answer: True or false
+   */
   case class BooleanAnswer(comment: String, answer: Boolean) extends NonWeightedAnswer
 
-    
+  /**
+   * CorrectAnswer is the solution to a SingleChoiceQuestion. It's a SingleChoiceAnswer which "correct" value is true.
+   * @param wording The answer wording
+   * @param comment The answer comment
+   * @param correct The answer: It's always true
+   */
+   
   case class CorrectAnswer(wording : String, comment : String, correct: Boolean = true) 
     extends SingleChoiceAnswer 
 
-  
+   /**
+   * IncorrectAnswer is an incorrect answer for a SingleChoiceQuestion. It's a SingleChoiceAnswer which "correct" value is false.
+   * @param wording The answer wording
+   * @param comment The answer comment
+   * @param correct The answer: It's always false
+   */
   case class IncorrectAnswer(wording : String, comment : String, correct: Boolean = false)
     extends SingleChoiceAnswer

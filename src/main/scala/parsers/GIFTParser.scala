@@ -3,7 +3,9 @@ import inputLanguages.GIFTGrammar
 import scala.util.parsing.combinator.JavaTokenParsers
 import models.Question
 
-
+/**
+ * GIFTParser parses a GIFT file
+ */
 class GIFTParser extends Parser with JavaTokenParsers with GIFTGrammar{
   
   def execute(filePath: String) : Option[Seq[Question]]= {

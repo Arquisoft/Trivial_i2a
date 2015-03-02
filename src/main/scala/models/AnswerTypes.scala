@@ -10,7 +10,9 @@ import play.modules.reactivemongo.json.collection._
 import scala.concurrent.ExecutionContext.Implicits.global
 import play.api.libs.json._
 
-
+/*
+ * Answer trait. It is the mother class of all kinds of answers
+ */
 sealed trait Answer{
   def comment: String
   
@@ -24,7 +26,9 @@ object JsonAnswerFormats{
   implicit val booleanAnswer = Json.format[MatchingAnswer]
 }
 
-
+  /*
+   * Object answer that contains the formats
+   */
   object Answer{
   
 

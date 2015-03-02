@@ -22,23 +22,26 @@ import models._
 
   
    def questions: Parser[Seq[Question]] = rep(question) ^^ {_.toSeq}
-    def question : Parser[Question] = opt(comment)~>opt(questionTitle)~questionWording~options ^^ 
-    {case (None~q~o) => o(0) match{
-      case a: SingleChoiceAnswer => SingleChoiceQuestion("", q, o.map { x => x.asInstanceOf[SingleChoiceAnswer] }.toSeq)
-      case b: WeightedAnswer => MultipleChoiceQuestion("", q, o.map { x => x.asInstanceOf[WeightedAnswer] }.toSeq)
-      case c: BooleanAnswer => BooleanQuestion("", q, c)
-      case d: MatchingAnswer => MatchingQuestion("", q, o.map{x => x.asInstanceOf[MatchingAnswer]})
+    def question : Parser[Question] = opt(comment)~>opt(category)~opt(questionTitle)~questionWording~options ^^ 
+    {case (None~None~q~o) => o(0) match{
+      case a: SingleChoiceAnswer => SingleChoiceQuestion("","", q, o.map { x => x.asInstanceOf[SingleChoiceAnswer] }.toSeq)
+      case b: WeightedAnswer => MultipleChoiceQuestion("","", q, o.map { x => x.asInstanceOf[WeightedAnswer] }.toSeq)
+      case c: BooleanAnswer => BooleanQuestion("","", q, c)
+      case d: MatchingAnswer => MatchingQuestion("","", q, o.map{x => x.asInstanceOf[MatchingAnswer]})
     }
-    case (Some(t)~q~o) => o(0) match{
-      case a: SingleChoiceAnswer => SingleChoiceQuestion(t, q, o.map { x => x.asInstanceOf[SingleChoiceAnswer] }.toSeq)
-      case b: WeightedAnswer => MultipleChoiceQuestion(t, q, o.map { x => x.asInstanceOf[WeightedAnswer] }.toSeq)
-      case c: BooleanAnswer => BooleanQuestion(t, q, c)
-      case d: MatchingAnswer => MatchingQuestion(t,q, o.map {x => x.asInstanceOf[MatchingAnswer]})}
+    case (Some(cat)~Some(t)~q~o) => o(0) match{
+      case a: SingleChoiceAnswer => SingleChoiceQuestion(cat,t, q, o.map { x => x.asInstanceOf[SingleChoiceAnswer] }.toSeq)
+      case b: WeightedAnswer => MultipleChoiceQuestion(cat,t, q, o.map { x => x.asInstanceOf[WeightedAnswer] }.toSeq)
+      case c: BooleanAnswer => BooleanQuestion(cat,t, q, c)
+      case d: MatchingAnswer => MatchingQuestion(cat,t,q, o.map {x => x.asInstanceOf[MatchingAnswer]})}
+    
+   // case _ => SingleChoiceQuestion("c", "t", "w", Seq(CorrectAnswer("wording","comment")))
       
     }
+    def category: Parser[String] = "$CATEGORY:"~>"""[A-Za-z0-9 ]*""".r ^^(_.toString) 
     def allChars : Parser[String] = "[A-Za-z0-9 ¿?!¡@\"¨'%&$#*+-\\[\\]\\(\\);:,]*".r ^^{_.toString}
    def comment: Parser[String] = allChars ^^ {_.toString}
-    def questionTitle : Parser[String] = "::"~>allChars<~"::"
+    def questionTitle : Parser[String] = "::"~>"""[A-Za-z ]*""".r<~"::"
     def questionWording : Parser[String] = allChars ^^ {_.toString}
     def options : Parser[Seq[Answer]] = "{"~>rep(option)<~"}" ^^{_.toSeq}
     def option : Parser[Answer] = correctAnswer | wrongAnswer | weightedAnswer | booleanAnswer

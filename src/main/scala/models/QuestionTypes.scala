@@ -11,6 +11,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import play.api.libs.json._
 import models.JsonAnswerFormats._
 sealed trait Question{
+    def category: String
     def title : String 
     def wording: String
     //def options : Seq[Answer]
@@ -36,19 +37,20 @@ sealed trait Question{
     implicit object questionFormat extends Format[Question]{
       override def reads(json: JsValue) = JsSuccess(
           (json \ "options") match {
-            case bq: JsUndefined => BooleanQuestion((json \ "title").as[String], 
+            case bq: JsUndefined => BooleanQuestion((json \ "category").as[String],
+                (json \ "title").as[String], 
                 (json \ "wording").as[String],
                 (json \ "answer").as[BooleanAnswer])
            case a: JsValue => {
               val options = (json \ "options").as[Seq[Answer]]
               options.head match {
-                case WeightedAnswer(a,b,c) => MultipleChoiceQuestion(
+                case WeightedAnswer(a,b,c) => MultipleChoiceQuestion((json \ "category").as[String],
                     (json \ "title").as[String], (json \ "wording").as[String], 
                     options.map{x => x.asInstanceOf[WeightedAnswer]})
-                case o: SingleChoiceAnswer => SingleChoiceQuestion(
+                case o: SingleChoiceAnswer => SingleChoiceQuestion((json \ "category").as[String],
                     (json \ "title").as[String], (json \ "wording").as[String],
                     options.map{x => x.asInstanceOf[SingleChoiceAnswer]})
-                case MatchingAnswer(wor, com, opts) => MatchingQuestion(
+                case MatchingAnswer(wor, com, opts) => MatchingQuestion((json \ "category").as[String],
                     (json \ "title").as[String], (json \ "wording").as[String],
                     options.map{x => x.asInstanceOf[MatchingAnswer]})
               }
@@ -60,13 +62,14 @@ sealed trait Question{
           )
           
       override def writes(q: Question) : JsValue = JsObject(Seq(
+          "category" -> JsString(q.category),
           "title" -> JsString(q.title),
           "wording" -> JsString(q.wording),
           q match {
-            case SingleChoiceQuestion(_,_,o) => "options" -> Json.toJson(o) 
-            case MultipleChoiceQuestion(_,_,o) => "options" -> Json.toJson(o)
-            case BooleanQuestion(_,_,cAns) => "answer" -> Json.toJson(cAns)
-            case MatchingQuestion(_,_,opts) => "options" -> Json.toJson(opts)
+            case SingleChoiceQuestion(_,_,_,o) => "options" -> Json.toJson(o) 
+            case MultipleChoiceQuestion(_,_,_,o) => "options" -> Json.toJson(o)
+            case BooleanQuestion(_,_,_,cAns) => "answer" -> Json.toJson(cAns)
+            case MatchingQuestion(_,_,_,opts) => "options" -> Json.toJson(opts)
                  
             
           }))
@@ -103,7 +106,8 @@ sealed trait Question{
       
        else{
          //NOT IMPLEMENTED
-         BooleanQuestion("","", BooleanAnswer("", false)) 
+         //TODO
+         BooleanQuestion("","","", BooleanAnswer("", false)) 
        }
    }
    
@@ -132,7 +136,7 @@ sealed trait Question{
                        (defaultWeight.toFloat / (lowerBound + upperBound)*100).toInt)
                  }
                }}
-         MultipleChoiceQuestion(wording, "", opts)
+         MultipleChoiceQuestion("",wording, "", opts)
    }
    
    def readSimpleQuestion(node: scala.xml.Node): Question = {
@@ -146,13 +150,13 @@ sealed trait Question{
             CorrectAnswer(x.text, "")
           else IncorrectAnswer(x.text, "")
         }.asInstanceOf[SingleChoiceAnswer] }
-        SingleChoiceQuestion((node \ "itemBody" \ "choiceInteraction" \ "prompt").text,
+        SingleChoiceQuestion("",(node \ "itemBody" \ "choiceInteraction" \ "prompt").text,
            "",
            opts)
    }
 
   }
-  case class SingleChoiceQuestion(title: String, wording: String, options: Seq[SingleChoiceAnswer]) extends Question{
+  case class SingleChoiceQuestion(category: String, title: String, wording: String, options: Seq[SingleChoiceAnswer]) extends Question{
     def toXML() = <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
   <correctResponse>
 		<value>
@@ -175,9 +179,9 @@ sealed trait Question{
       
  
   }
-  case class MatchingQuestion(title: String, wording: String, options: Seq[MatchingAnswer]) extends Question
-  case class MultipleChoiceQuestion(title: String, wording: String, options: Seq[WeightedAnswer]) extends Question
-  case class BooleanQuestion(title: String, wording: String, answer: BooleanAnswer) extends Question
+  case class MatchingQuestion(category: String, title: String, wording: String, options: Seq[MatchingAnswer]) extends Question
+  case class MultipleChoiceQuestion(category: String, title: String, wording: String, options: Seq[WeightedAnswer]) extends Question
+  case class BooleanQuestion(category: String, title: String, wording: String, answer: BooleanAnswer) extends Question
   object JsonFormats{
   
   //implicit val correctAnswerFormat = Json.format[CorrectAnswer]

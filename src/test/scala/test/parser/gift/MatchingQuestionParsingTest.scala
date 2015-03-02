@@ -15,11 +15,11 @@ import org.json4s.native.JsonMethods._
 import models.JsonFormats._
 import scala.concurrent.duration._
 import scala.xml._
-
+/*
 /**
  * @author rubcuevas
  */
-/*
+
 class MatchingQuestionParsingTest extends FlatSpec with Matchers {
   
   val parser = new GIFTParser()
@@ -32,4 +32,5 @@ class MatchingQuestionParsingTest extends FlatSpec with Matchers {
     assert(shouldBe === question)
   }
   
-}*/
+}
+*/

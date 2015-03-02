@@ -59,7 +59,7 @@ import models._
     def options : Parser[Seq[Answer]] = "{"~>rep(option)<~"}" ^^{_.toSeq}
     def option : Parser[Answer] = correctAnswer | wrongAnswer | weightedAnswer | booleanAnswer | matchingAnswer
     def correctAnswer: Parser[CorrectAnswer] = 
-      correctAnswerWording~opt(answerComment) ^^
+      "="~>"""\w+""".r~opt(answerComment) ^^
         {case (wording~Some(comment)) => CorrectAnswer(wording, comment)
         case(wording~None) => CorrectAnswer(wording, "")}
     def wrongAnswer: Parser[IncorrectAnswer] = 
@@ -74,12 +74,12 @@ import models._
       case (bs~Some(com)) => if(bs.equals("T") || bs.equals("TRUE")) BooleanAnswer(com,true) else BooleanAnswer(com, false)
       case(bs~None) => if(bs.equals("F") || bs.equals("FALSE")) BooleanAnswer("",false) else BooleanAnswer("", true)
     }
-    def matchingAnswer : Parser[MatchingAnswer] = "="~>"[A-Za-z0-9_'. ]*".r~("->"~>"[A-Za-z0-9_'. ]*".r)~opt(comment) ^^{
-      case(a~b~Some(com)) => MatchingAnswer(a,com,b)
-      case(a~b~None) => MatchingAnswer(a,"", b)
+    def matchingAnswer : Parser[MatchingAnswer] = "="~>"""\w+->\w+""".r~opt(comment) ^^{
+      case(a~Some(com)) => MatchingAnswer(a.trim(),com,a.trim())
+      case(a~None) => MatchingAnswer(a.trim(),"", a.trim())
     }
     def answerWording: Parser[String] = "[A-Za-z0-9'?. ]*".r ^^{_.toString}
-    def correctAnswerWording: Parser[String] = "="~>answerWording ^^(_.toString)
+    def correctAnswerWording: Parser[String] = "="~>"""[^-].*""".r ^^(_.toString)
     def wrongAnswerWording : Parser[String] = "~"~>"""[^%].*""".r ^^(_.toString)
     def answerComment : Parser[String] = "#"~>allChars ^^ (_.toString)
     def percentage : Parser[Int] = "~%"~>"[-]{0,1}[0-9]+".r<~"%" ^^{ _.toInt}
@@ -92,7 +92,7 @@ import models._
 object TestGIFT extends GIFTGrammar {
   def main() = {
     val testObj = """
-=Canada -> Ottawa
+=Canada->Ottawa
 """
     parse(option, testObj)
   }

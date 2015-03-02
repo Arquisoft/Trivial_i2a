@@ -1,4 +1,4 @@
-Trivial0
+Trivial i2a
 ===============
 
 [![Build
@@ -20,8 +20,11 @@ The parser can read the following types of questions in GIFT format:
 * Single choice
 * Multiple choice
 * True-false
-* Matching
+* Matching (under revision)
 
+####Note about writing GIFT files
+
+Specifying the category is not mandatory. Comments and question titles are optional too.
 
 
 #### QTI (XML)

@@ -1,4 +1,4 @@
-package test
+package test.validation
 
 import org.scalatest._
 import parsers._
@@ -15,8 +15,6 @@ import org.json4s._
 import org.json4s.native.JsonMethods._
 import models.JsonFormats._
 import scala.concurrent.duration._
-import scala.math.BigDecimal.int2bigDecimal
-import scala.concurrent.ExecutionContext.Implicits.global
 import scala.xml._
 
 /**

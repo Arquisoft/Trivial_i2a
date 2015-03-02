@@ -20,7 +20,10 @@ import play.modules.reactivemongo.MongoController
 import play.modules.reactivemongo.json.collection.JSONCollection
 import inputLanguages._
 
-object ApplicationJson{
+/**
+ * Object Controller. This contains the app main method.
+ */
+object Controller{
    
     
     import models._

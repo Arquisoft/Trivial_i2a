@@ -92,4 +92,8 @@
 	<version>1.4.7</version>
 </dependency>
 </dependencies>
+<properties>
+        <scoverage.plugin.version>1.0.4</scoverage.plugin.version>
+        <scala.version>2.11.5</scala.version>
+    </properties>
 </project>

@@ -41,7 +41,7 @@ import models._
     def category: Parser[String] = "$CATEGORY:"~>"""[A-Za-z0-9 ]*""".r ^^(_.toString) 
     def allChars : Parser[String] = "[A-Za-z0-9 ¿?!¡@\"¨'%&$#*+-\\[\\]\\(\\);:,]*".r ^^{_.toString}
    def comment: Parser[String] = allChars ^^ {_.toString}
-    def questionTitle : Parser[String] = "::"~>"""[A-Za-z ]*""".r<~"::"
+    def questionTitle : Parser[String] = "::"~>"""[A-Za-z0-9!¡ ]*""".r<~"::"
     def questionWording : Parser[String] = allChars ^^ {_.toString}
     def options : Parser[Seq[Answer]] = "{"~>rep(option)<~"}" ^^{_.toSeq}
     def option : Parser[Answer] = correctAnswer | wrongAnswer | weightedAnswer | booleanAnswer

@@ -33,14 +33,17 @@ The parser can read the following types of questions in QTI format:
 * Single choice
 * Multiple choice
 
-## Installation
+## Get the project 
 
 First you will have to download Scala IDE for Eclipse: http://scala-ide.org/
 
 You will also need to install the ScalaTest Plugin for Scala IDE: https://github.com/scalatest/scalatest-eclipse-plugin
 
+If you have Git installed in your system, open a terminal and type:
+
 ```
 git clone https://github.com/Arquisoft/Trivial_i2a
 ```
 
+you can now open the project with Scala IDE
 

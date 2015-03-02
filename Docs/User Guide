@@ -1,0 +1,8 @@
+Requirements
+You need a computer with the JVM installed in order to run our Scala program.
+You need MongoDB to store the questions already parsed.
+
+Behaviour
+The program starts and asks for the path to the filename where the questions are.
+When the path is located, the program detects the format of the file.
+Then it is parsed into JSON and stored in MongoDB.

@@ -27,27 +27,27 @@ object ApplicationJson{
     import models.JsonFormats._
     def main() {
       
-      val filename = Try{io.StdIn.readLine("\nPlease enter the filename where the questions are: ")}
-      filename match {
-        case Success(name) => {
-          getLanguageParser(name) match {
-            case Some(parser) => {
-               parser.execute(name) match {
-                 case Some(questions) => saveData(questions)
-                 case None => main
-               }
-                 
-            }
-            case None => {
-              System.err.println("File extension must be either .gift or .xml")
-              main
-            }
-          }}
-        case Failure(ex) => {
-           println("Something was wrong: " + ex.getMessage)
-           main
+      Try{io.StdIn.readLine("\nPlease enter the filename where the questions are: ")} match{
+      
+          case Success(name) => {
+            getLanguageParser(name) match {
+              case Some(parser) => {
+                 parser.execute(name) match {
+                   case Some(questions) => saveData(questions)
+                   case None => main
+                 }
+                   
+              }
+              case None => {
+                System.err.println("File extension must be either .gift or .xml")
+                main
+              }
+            }}
+          case Failure(ex) => {
+             println("Something was wrong: " + ex.getMessage)
+             main
+          }
         }
-      }
 
      
     }

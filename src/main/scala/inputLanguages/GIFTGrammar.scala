@@ -33,14 +33,25 @@ import models._
       case a: SingleChoiceAnswer => SingleChoiceQuestion(cat,t, q, o.map { x => x.asInstanceOf[SingleChoiceAnswer] }.toSeq)
       case b: WeightedAnswer => MultipleChoiceQuestion(cat,t, q, o.map { x => x.asInstanceOf[WeightedAnswer] }.toSeq)
       case c: BooleanAnswer => BooleanQuestion(cat,t, q, c)
-      case d: MatchingAnswer => MatchingQuestion(cat,t,q, o.map {x => x.asInstanceOf[MatchingAnswer]})}
+      case d: MatchingAnswer => MatchingQuestion(cat,t,q, o.map {x => x.asInstanceOf[MatchingAnswer]})
+      }
+    case (Some(cat)~None~q~o) => o(0) match{
+      case a: SingleChoiceAnswer => SingleChoiceQuestion(cat,"", q, o.map { x => x.asInstanceOf[SingleChoiceAnswer] }.toSeq)
+      case b: WeightedAnswer => MultipleChoiceQuestion(cat,"", q, o.map { x => x.asInstanceOf[WeightedAnswer] }.toSeq)
+      case c: BooleanAnswer => BooleanQuestion(cat,"", q, c)
+      case d: MatchingAnswer => MatchingQuestion(cat,"",q, o.map {x => x.asInstanceOf[MatchingAnswer]})}
+    case (None~Some(t)~q~o) => o(0) match{
+      case a: SingleChoiceAnswer => SingleChoiceQuestion("",t, q, o.map { x => x.asInstanceOf[SingleChoiceAnswer] }.toSeq)
+      case b: WeightedAnswer => MultipleChoiceQuestion("",t, q, o.map { x => x.asInstanceOf[WeightedAnswer] }.toSeq)
+      case c: BooleanAnswer => BooleanQuestion("",t, q, c)
+      case d: MatchingAnswer => MatchingQuestion("",t,q, o.map {x => x.asInstanceOf[MatchingAnswer]})}
     
    // case _ => SingleChoiceQuestion("c", "t", "w", Seq(CorrectAnswer("wording","comment")))
       
     }
     def category: Parser[String] = "$CATEGORY:"~>"""[A-Za-z0-9 ]*""".r ^^(_.toString) 
     def allChars : Parser[String] = "[A-Za-z0-9 ¿?!¡@\"¨'%&$#*+-\\[\\]\\(\\);:,]*".r ^^{_.toString}
-   def comment: Parser[String] = allChars ^^ {_.toString}
+   def comment: Parser[String] = "//"~allChars ^^ {_.toString}
     def questionTitle : Parser[String] = "::"~>"""[A-Za-z0-9!¡ ]*""".r<~"::"
     def questionWording : Parser[String] = allChars ^^ {_.toString}
     def options : Parser[Seq[Answer]] = "{"~>rep(option)<~"}" ^^{_.toSeq}

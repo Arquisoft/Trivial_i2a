@@ -1,0 +1,14 @@
+package test.parser
+
+class MultipleChoiceAnswerParsingTest {
+  
+  "The parser" should "correctly read a multiple choice question" in {
+     val question = parser.execute("src/test/resources/multiplechoicequestion.gift").get(0)
+     val shouldBe = MultipleChoiceQuestion("category", "title", "What two people are entombed in Grants tomb?",
+         Seq(WeightedAnswer("No one", "", -100), WeightedAnswer("Grant", "", 50), WeightedAnswer("Grants wife","", 50),
+             WeightedAnswer("Grants father", "", -100)))
+             
+     assert (shouldBe === question)
+  }
+
+}

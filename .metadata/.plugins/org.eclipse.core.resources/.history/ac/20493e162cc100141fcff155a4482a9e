@@ -1,0 +1,14 @@
+package parsers
+import models.Question
+import scala.util.parsing.combinator.JavaTokenParsers
+
+/**
+ * A Parser is the entity that will parse the input file
+ */
+trait Parser {
+  
+  def execute(filePath : String) : Option[Seq[Question]]
+  
+
+  
+}

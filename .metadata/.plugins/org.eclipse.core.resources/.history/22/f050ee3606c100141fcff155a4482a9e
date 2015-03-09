@@ -1,0 +1,8 @@
+package test.parser.gift
+
+/**
+ * @author rubcuevas
+ */
+class BooleanQuestionTest {
+  
+}

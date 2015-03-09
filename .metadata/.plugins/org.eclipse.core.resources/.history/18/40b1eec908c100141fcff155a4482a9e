@@ -1,0 +1,8 @@
+$category:category
+//A matching question
+Match the following countries with their corresponding capitals. {
+=Canada -> Ottawa
+=Italy  -> Rome
+=Japan  -> Tokyo
+=India  -> New Delhi
+}

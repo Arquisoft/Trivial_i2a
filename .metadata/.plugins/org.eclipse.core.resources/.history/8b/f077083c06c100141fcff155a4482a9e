@@ -1,8 +1,0 @@
-package test.parser.gift
-
-/**
- * @author rubcuevas
- */
-class BooleanQuestionParsingTest extends FlatSpec with Matchers{
-  
-}

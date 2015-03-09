@@ -1,8 +1,0 @@
-//Matching question with all fields set
-$CATEGORY:category
-::title::Match the following countries with their corresponding capitals{
-=Canada -> Ottawa
-=Italy -> Rome
-=Japan -> Tokyo
-=India -> New Delhi
-}

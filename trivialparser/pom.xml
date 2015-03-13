@@ -7,6 +7,38 @@
     <sourceDirectory>${basedir}/src/main/scala</sourceDirectory>
         <testSourceDirectory>${basedir}/src/test/scala</testSourceDirectory>
     <plugins>
+    
+<plugin>
+    <artifactId>maven-jar-plugin</artifactId>
+    <version>2.3.1</version>
+    <configuration>
+        <archive>
+            <manifest>
+                <mainClass>run.Main</mainClass>
+                <addClasspath>true</addClasspath>
+                <classpathLayoutType>custom</classpathLayoutType>
+                <customClasspathLayout>lib/$${artifact.artifactId}-$${artifact.version}$${dashClassifier?}.$${artifact.extension}
+                </customClasspathLayout>
+            </manifest>
+        </archive>
+    </configuration>
+</plugin>
+<plugin>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <version>2.3</version>
+    <configuration>
+        <outputDirectory>${project.build.directory}/lib</outputDirectory>
+    </configuration>
+    <executions>
+        <execution>
+            <phase>package</phase>
+            <goals>
+                <goal>copy-dependencies</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
@@ -77,6 +109,7 @@
                 <artifactId>scoverage-maven-plugin</artifactId>
                 <version>${scoverage.plugin.version}</version>
             </plugin>
+            
         </plugins>
     </reporting>
 
@@ -86,6 +119,11 @@
             <artifactId>scala-library</artifactId>
             <version>${scala.version}</version>
         </dependency>
+        <dependency>
+	<groupId>net.alchim31.maven</groupId>
+	<artifactId>scala-maven-plugin</artifactId>
+	<version>3.2.0</version>
+</dependency>
 <dependency>
 	<groupId>org.scala-lang</groupId>
 	<artifactId>scala-parser-combinators</artifactId>
@@ -126,6 +164,12 @@
 	<artifactId>scalatest_2.11</artifactId>
 	<version>2.2.4</version>
 	<scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.github.scopt</groupId>
+    <artifactId>scopt_2.11.0-RC1</artifactId>
+    <version>3.2.0</version>
 </dependency>
 
 </dependencies>

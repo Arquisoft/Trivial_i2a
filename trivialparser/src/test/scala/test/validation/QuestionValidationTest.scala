@@ -24,7 +24,7 @@ class QuestionValidationTest extends FlatSpec with Matchers{
   
    "The GIFTParser" should "correctly parse a single choice question in GIFT format" in {
       val parser = new GIFTParser()
-      val parsed = parser.execute("src/test/resources/test.gift").get
+      val parsed = parser.readFile("src/test/resources/test.gift").get
       val scq = List(
           SingleChoiceQuestion("category","title","Who is buried in Grant's tomb in New York City?",
           List(CorrectAnswer("Grant","Yesss"), IncorrectAnswer("Ruben","Noooooo"))))
@@ -53,8 +53,8 @@ class QuestionValidationTest extends FlatSpec with Matchers{
           assert(bq === Json.fromJson[Question](json).get)
      }
      
-     "A SingleChoiceQuestion" should "be XML deserialized" in {
-       val filePath = "src/test/resources/choice.xml"
+     "A SingleChoiceQuestion" should "be read from QTI" in {
+       val filePath = "src/test/resources/choice.qti"
        val xml = XML.loadFile(filePath)
        val scq = Question.readSimpleQuestion(xml)
        println(scq)
@@ -63,7 +63,7 @@ class QuestionValidationTest extends FlatSpec with Matchers{
      }
      
      "A MultipleChoiceQuestion" should "be XML deserialized" in {
-        val filePath = "src/test/resources/choice_multiple.xml"
+        val filePath = "src/test/resources/choice_multiple.qti"
        val xml = XML.loadFile(filePath)
        val mcq = Question.readMultipleChoiceQuestion(xml)
        println(mcq)

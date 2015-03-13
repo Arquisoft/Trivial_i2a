@@ -29,7 +29,7 @@ sealed trait Question{
  * Formats needed for JSON serialization/deserialization
  */
  object JsonQuestionFormats {
-    implicit val singleChoiceQuestionFormat = Json.format[SingleChoiceQuestion]
+  implicit val singleChoiceQuestionFormat = Json.format[SingleChoiceQuestion]
   implicit val multipleChoiceQuestionFormat = Json.format[MultipleChoiceQuestion]
   implicit val booleanQuestionFormat = Json.format[BooleanQuestion]
   implicit val matchingQuestionFormat = Json.format[MatchingQuestion]
@@ -90,7 +90,7 @@ sealed trait Question{
   
   
     /**
-     * Load Questions from a QTI/XML file
+     * Load Questions from a QTI file
      * @param node: The XML source
      */
     def fromXML(node: scala.xml.Node): Seq[Question] = {

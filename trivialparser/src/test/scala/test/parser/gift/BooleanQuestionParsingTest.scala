@@ -23,25 +23,25 @@ class BooleanQuestionParsingTest extends FlatSpec with Matchers{
   val parser = new GIFTParser()
   
   "The parser" should "correctly read a Boolean Question " in {
-    val question = parser.execute("src/test/resources/booleanquestion.gift").get(0)
+    val question = parser.readFile("src/test/resources/booleanquestion.gift").get(0)
     val shouldBe = BooleanQuestion("category", "title", "Grant was buried in a tomb in New York City.", 
         BooleanAnswer("", true))
-    assert(shouldBe === question)
+    shouldBe should be === question
   }
   "The parser" should "correctly read a Boolean Question without category" in {
-    val question = parser.execute("src/test/resources/booleanquestion.gift").get(1)
+    val question = parser.readFile("src/test/resources/booleanquestion.gift").get(1)
     val shouldBe = BooleanQuestion("", "title", "Grant was buried in a tomb in New York City.", 
         BooleanAnswer("", true))
     assert(shouldBe === question)
   }
   "The parser" should "correctly read a Boolean Question with category but with title" in {
-    val question = parser.execute("src/test/resources/booleanquestion.gift").get(2)
+    val question = parser.readFile("src/test/resources/booleanquestion.gift").get(2)
     val shouldBe = BooleanQuestion("category", "", "Grant was buried in a tomb in New York City.", 
         BooleanAnswer("", true))
     assert(shouldBe === question)
   }
   "The parser" should "correctly read a Boolean Question without category nor title" in {
-    val question = parser.execute("src/test/resources/booleanquestion.gift").get(3)
+    val question = parser.readFile("src/test/resources/booleanquestion.gift").get(3)
     val shouldBe = BooleanQuestion("", "", "Grant was buried in a tomb in New York City.", 
         BooleanAnswer("", true))
     assert(shouldBe === question)

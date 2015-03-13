@@ -10,9 +10,9 @@
     <testPart submissionMode="simultaneous" navigationMode="nonlinear" identifier="TP">
         <assessmentSection identifier="S1" visible="true" title="Section 1">
             <assessmentItemRef identifier="choice"
-                href="src/test/resources/choice.xml"/>
+                href="src/test/resources/choice.qti"/>
             <assessmentItemRef identifier="choice_multiple"
-                href="src/test/resources/choice_multiple.xml"/>
+                href="src/test/resources/choice_multiple.qti"/>
         </assessmentSection>
     </testPart>
 </assessmentTest>

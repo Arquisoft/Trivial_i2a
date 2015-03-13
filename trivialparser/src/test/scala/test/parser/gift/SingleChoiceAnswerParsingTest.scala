@@ -26,11 +26,11 @@ class GIFTTest extends FlatSpec with Matchers{
   
   "The parser" should "correctly read this file" in {
     
-    val questions = parser.execute("src/test/resources/questions.gift")
+    val questions = parser.readFile("src/test/resources/questions.gift")
   }
   
     "The parser" should "be able to read a SingleChoiceQuestion" in {
-      val questions = parser.execute("src/test/resources/singlechoicequestion.gift")
+      val questions = parser.readFile("src/test/resources/singlechoicequestion.gift")
          val shouldBe = SingleChoiceQuestion("category", "title", "Who is buried in Grant's tomb in New York City?", Seq(
              CorrectAnswer("Grant", "Yesss"), IncorrectAnswer("Ruben", "Noooooo")))
          assert(shouldBe === questions.get(0))
@@ -38,21 +38,21 @@ class GIFTTest extends FlatSpec with Matchers{
      }
     
     "The parser" should "be able to read a SingleChoiceQuesiton without category" in {
-      val questions = parser.execute("src/test/resources/singlechoicequestion.gift")
+      val questions = parser.readFile("src/test/resources/singlechoicequestion.gift")
          val shouldBe = SingleChoiceQuestion("", "title", "Who is buried in Grant's tomb in New York City?", Seq(
              CorrectAnswer("Grant", "Yesss"), IncorrectAnswer("Ruben", "Noooooo")))
          assert(shouldBe === questions.get(1))
     }
     
     "The parser" should "be able to read a SingleChoiceQuesiton with without title nor category" in {
-      val questions = parser.execute("src/test/resources/singlechoicequestion.gift")
+      val questions = parser.readFile("src/test/resources/singlechoicequestion.gift")
          val shouldBe = SingleChoiceQuestion("", "", "Who is buried in Grant's tomb in New York City?", Seq(
              CorrectAnswer("Grant", "Yesss"), IncorrectAnswer("Ruben", "Noooooo")))
          assert(shouldBe === questions.get(2))
     }
     
      "The parser" should "be able to read a SingleChoiceQuesiton with category but without title" in {
-      val questions = parser.execute("src/test/resources/singlechoicequestion.gift")
+      val questions = parser.readFile("src/test/resources/singlechoicequestion.gift")
          val shouldBe = SingleChoiceQuestion("category", "", "Who is buried in Grant's tomb in New York City?", Seq(
              CorrectAnswer("Grant", "Yesss"), IncorrectAnswer("Ruben", "Noooooo")))
          assert(shouldBe === questions.get(3))
@@ -61,7 +61,7 @@ class GIFTTest extends FlatSpec with Matchers{
     
   
   "The parser" should "not be able to read a file that does not exist" in {
-     val questions = parser.execute("this/path/does/not/exist.gift")
+     val questions = parser.readFile("this/path/does/not/exist.gift")
      assert(questions === None)
   }
   

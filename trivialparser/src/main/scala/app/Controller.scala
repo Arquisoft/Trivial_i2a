@@ -27,30 +27,22 @@ object Controller{
    
     
     import models._
-    
-    def main() {
-      
-      Try{io.StdIn.readLine("\nPlease enter the filename where the questions are: ")} match{
-      
-          case Success(name) => {
-            getLanguageParser(name) match {
-              case Some(parser) => {
-                 parser.execute(name) match {
-                   case Some(questions) => saveData(questions)
-                   case None => main
-                 }
-                   
-              }
-              case None => {
-                System.err.println("File extension must be either .gift or .xml")
-                main
-              }
-            }}
-          case Failure(ex) => {
-             println("Something was wrong: " + ex.getMessage)
-             main
+   
+    def start(questionsFilename: String, db: String, collection: String) {
+        getLanguageParser(questionsFilename) match {
+          case Some(parser) => {
+             parser.readFile(questionsFilename) match {
+               case Some(questions) => saveData(questions, db, collection)
+               case None => System.err.println("An error ocurred")
+             }
+               
+          }
+          case None => {
+            System.err.println("File extension must be either .gift or .qti")
           }
         }
+       
+        
 
      
     }
@@ -58,17 +50,19 @@ object Controller{
   
 
     
-  def saveData(questions: Seq[Question]) = {
+  def saveData(questions: Seq[Question], dbName: String, collectionName: String) = {
     val driver = new MongoDriver
     Try{driver.connection(List("localhost:27017"))} match{
       case Success(connection) => {
-        val db = connection("trivial")
-        val collection: JSONCollection = db.collection[JSONCollection]("questions")
+        val db = connection(dbName)
+        val collection: JSONCollection = db.collection[JSONCollection](collectionName)
  
         questions.map { question => { collection.insert(question)
            .onComplete { 
              case Failure(e) => System.err.println(e.getMessage) 
-             case Success(lastError) => {}
+             case Success(lastError) => {
+               System.out.println(
+                   "Questions have been correctly inserted in database " + dbName + "and collection " + collectionName)}
              }} 
         
       }
@@ -85,8 +79,8 @@ object Controller{
   def getLanguageParser(filename: String): Option[Parser] = {
     if(filename.endsWith(".gift"))
       Some(new GIFTParser())
-    else if(filename.endsWith(".xml"))
-      Some(new XMLParser())
+    else if(filename.endsWith(".qti"))
+      Some(new QTIParser())
     else None
   }
           

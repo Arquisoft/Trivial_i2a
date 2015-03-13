@@ -8,15 +8,9 @@ import models.Question
  */
 class GIFTParser extends Parser with JavaTokenParsers with GIFTGrammar{
   
-  def execute(filePath: String) : Option[Seq[Question]]= {
+  def readFile(filePath: String): Option[Seq[Question]]= {
    util.Try{io.Source.fromFile(filePath).mkString} match {
-      case util.Success(lines) => parse(questions, lines) match {
-        case Success(result, next) => Some(result)
-        case ns: NoSuccess => {
-          System.err.println("Parse could not parse de file. " + ns.msg)
-          None
-        }
-      }
+      case util.Success(lines) => readString(lines)
       case util.Failure(ex) => {
         System.err.println(ex.getMessage)
         None
@@ -26,5 +20,14 @@ class GIFTParser extends Parser with JavaTokenParsers with GIFTGrammar{
      
      
   }
-
+  
+  def readString(string: String) : Option[Seq[Question]] = {
+     parse(questions, string) match {
+        case Success(result, next) => Some(result)
+        case ns: NoSuccess => {
+          System.err.println("Could not read the questions. " + ns.msg)
+          None
+        }
+      }
+  }
 }

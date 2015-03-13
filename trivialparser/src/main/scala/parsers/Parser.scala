@@ -10,8 +10,9 @@ trait Parser {
   /**
    * Read a file an return the list of questions
    */
-  def execute(filePath : String) : Option[Seq[Question]]
+  def readFile(filePath : String) : Option[Seq[Question]]
   
+  def readString(string: String) : Option[Seq[Question]]
 
   
 }

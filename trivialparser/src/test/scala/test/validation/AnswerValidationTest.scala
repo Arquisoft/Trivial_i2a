@@ -24,9 +24,7 @@ class AnswerValidationTest extends FlatSpec with Matchers{
       
        val json = JsObject(Seq("wording" -> JsString("the wording"),
            "comment" -> JsString(""), "correct" -> JsBoolean(true)))
-       val sca = Json.fromJson[Answer](json).get
-      // val b = CorrectAnswer("the wording", "")
-    
+       val sca = Json.fromJson[Answer](json).get    
        assert(sca === CorrectAnswer("the wording", ""))
      }
      
@@ -35,15 +33,13 @@ class AnswerValidationTest extends FlatSpec with Matchers{
        val json = JsObject(Seq("wording" -> JsString("the wording"),
        "comment" -> JsString(""), "weight" -> JsNumber(100)))
        val sca = Json.fromJson[Answer](json).get
-      // val b = CorrectAnswer("the wording", "")
        assert(sca === WeightedAnswer("the wording", "", 100))
      }
      
      "A BooleanAnswer" should "be validated" in {
-          val json = JsObject(Seq(
+       val json = JsObject(Seq(
        "comment" -> JsString(""), "answer" -> JsBoolean(true)))
        val sca = Json.fromJson[Answer](json).get
-      // val b = CorrectAnswer("the wording", "")
        assert(sca === BooleanAnswer("", true))
      }
      

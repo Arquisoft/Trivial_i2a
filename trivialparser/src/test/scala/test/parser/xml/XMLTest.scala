@@ -42,10 +42,12 @@ class XMLTest extends FlatSpec with Matchers{
      
      
      "A XML test" should "be correctly read" in {
-       val filePath = "src/test/resources/assessment.xml"
+       val filePath = "src/test/resources/assessment.qti"
        val xml = XML.loadFile(filePath)
        val seqQuestions = Question.fromXML(xml)
        assert(seqQuestions.toString ==="""List(SingleChoiceQuestion(,What does it say?,,List(CorrectAnswer(You must stay with your luggage at all times.,,true), IncorrectAnswer(Do not let someone else look after your luggage.,,false), IncorrectAnswer(Remember your luggage when you leave.,,false))), MultipleChoiceQuestion(,Which of the following elements are used to form water?,,List(WeightedAnswer(Hydrogen,,50), WeightedAnswer(Helium,,-100), WeightedAnswer(Carbon,,-100), WeightedAnswer(Oxygen,,50), WeightedAnswer(Nitrogen,,-100), WeightedAnswer(Chlorine,,-50))))""")
+       
+       
     }
      
      

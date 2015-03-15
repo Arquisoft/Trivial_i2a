@@ -17,30 +17,7 @@ import scala.xml._
 
 class XMLTest extends FlatSpec with Matchers{
   
-      
-  
-   
-      /*
-     "The GIFTParser" should "correctly read a SingleChoiceQuestion from MongoDB" in {
-        val driver = new MongoDriver
-        val connection = driver.connection(List("localhost:27017"))
-        val db = connection("trivial")
-        val collection: JSONCollection = db.collection[JSONCollection]("questions")
-        val query = BSONDocument(
-            "wording" -> "Who is buried in Grants tomb in New York City")
-        val q = Await.result(collection.find(query).one[JsValue], 50 seconds)
-        q match{case Some(item) => {
-          //val obj = Json.fromJson[SingleChoiceQuestion](item)
-          println(item)
-        }}
-        
-     }*/
-     
 
-     
-     
-     
-     
      "A XML test" should "be correctly read" in {
        val filePath = "src/test/resources/assessment.qti"
        val xml = XML.loadFile(filePath)

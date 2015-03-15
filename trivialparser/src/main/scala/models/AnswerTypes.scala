@@ -23,7 +23,7 @@ sealed trait Answer{
  * JSON formats need for serialization/deserialization
  */
 object JsonAnswerFormats{
-     implicit val weightedAnswerFormat = Json.format[WeightedAnswer]
+  implicit val weightedAnswerFormat = Json.format[WeightedAnswer]
   implicit val weightedAnswerReads = Json.reads[WeightedAnswer]
   implicit val booleanAnswerFormat = Json.format[BooleanAnswer]
   implicit val booleanAnswer = Json.format[MatchingAnswer]

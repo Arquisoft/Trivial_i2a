@@ -693,7 +693,8 @@ You can optionally specify the name of the database and the collection; if not, 
 Example:
 
 ```
-java -jar trivialparser-1.0.jar insert -d mydb -c mycollection -i questions.gift```
+java -jar trivialparser-1.0.jar insert -d mydb -c mycollection -i questions.gift
+```
 
 Now go to your mongoDB console:
 

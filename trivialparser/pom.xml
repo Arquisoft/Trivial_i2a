@@ -4,25 +4,48 @@
   <artifactId>trivialparser</artifactId>
   <version>1.0</version>
   <build>
+  
+
     <sourceDirectory>${basedir}/src/main/scala</sourceDirectory>
         <testSourceDirectory>${basedir}/src/test/scala</testSourceDirectory>
     <plugins>
-    
-<plugin>
-    <artifactId>maven-jar-plugin</artifactId>
-    <version>2.3.1</version>
-    <configuration>
-        <archive>
-            <manifest>
-                <mainClass>run.Main</mainClass>
-                <addClasspath>true</addClasspath>
-                <classpathLayoutType>custom</classpathLayoutType>
-                <customClasspathLayout>lib/$${artifact.artifactId}-$${artifact.version}$${dashClassifier?}.$${artifact.extension}
-                </customClasspathLayout>
-            </manifest>
-        </archive>
-    </configuration>
+    <plugin>
+ <groupId>org.apache.maven.plugins</groupId>
+ <artifactId>maven-shade-plugin</artifactId>
+ <version>1.5</version>
+ <executions>
+  <execution>
+   <phase>package</phase>
+   <goals>
+    <goal>shade</goal>
+   </goals>
+   <configuration>
+    <shadedArtifactAttached>true</shadedArtifactAttached>
+    <shadedClassifierName>allinone</shadedClassifierName>
+    <artifactSet>
+     <includes>
+      <include>*:*</include>
+     </includes>
+    </artifactSet>
+    <transformers>
+      <transformer
+       implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+       <resource>reference.conf</resource>
+      </transformer>
+      <transformer
+       implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+       <manifestEntries>
+        <Main-Class>run.Main</Main-Class>
+       </manifestEntries>
+      </transformer>
+    </transformers>
+   </configuration>
+  </execution>
+ </executions>
 </plugin>
+    
+    
+
 <plugin>
     <artifactId>maven-dependency-plugin</artifactId>
     <version>2.3</version>
@@ -56,6 +79,28 @@
     <skipTests>true</skipTests>
   </configuration>
 </plugin>
+
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <archive>
+            <manifest>
+              <mainClass>run.Main</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
 
 <plugin>
  <groupId>org.scalatest</groupId>
@@ -114,11 +159,7 @@
     </reporting>
 
   <dependencies>
-          <dependency>
-            <groupId>org.scala-lang</groupId>
-            <artifactId>scala-library</artifactId>
-            <version>${scala.version}</version>
-        </dependency>
+         
         <dependency>
 	<groupId>net.alchim31.maven</groupId>
 	<artifactId>scala-maven-plugin</artifactId>
@@ -139,16 +180,13 @@
 	<artifactId>lift-json</artifactId>
 	<version>2.0</version>
 </dependency>
+
 <dependency>
-	<groupId>org.reactivemongo</groupId>
-	<artifactId>reactivemongo_2.11</artifactId>
-	<version>0.10.5.0.akka23</version>
+    <groupId>org.mongodb</groupId>
+    <artifactId>casbah-core_2.11</artifactId>
+    <version>2.8.0</version>
 </dependency>
-<dependency>
-	<groupId>org.reactivemongo</groupId>
-	<artifactId>play2-reactivemongo_2.11</artifactId>
-	<version>0.10.5.0.akka23</version>
-</dependency>
+
 <dependency>
 	<groupId>com.typesafe.play</groupId>
 	<artifactId>play-iteratees_2.11</artifactId>

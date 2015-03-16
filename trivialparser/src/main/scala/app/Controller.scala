@@ -12,15 +12,17 @@ import parsers._
 import scala.util.{Try, Success, Failure}
 import scala.concurrent._
 
-// Reactive Mongo imports
-import reactivemongo.api._
-import reactivemongo.bson._
-// Reactive Mongo plugin, including the JSON-specialized collection
-import play.modules.reactivemongo.MongoController
-import play.modules.reactivemongo.json.collection.JSONCollection
+
+
 import inputLanguages._
 import java.nio.file.{Paths, Files}
 import java.nio.charset.StandardCharsets
+import akka._
+import scala.concurrent.duration._
+// Imports core, which grabs everything including Query DSL
+import com.mongodb.casbah.Imports._
+import com.mongodb.util.JSON
+
 
 
 /**
@@ -37,8 +39,10 @@ object Controller{
           case Some(parser) => {
              parser.readFile(questionsFilename) match {
                case Some(questions) => {
-                 if(mode.equals("insert")) saveData(questions, db, collection, verbose)
-                 if(!output.isEmpty) writeToFile(questions, output, verbose)
+                 if(mode.equals("insert")) saveData(questions, db, collection)
+                 if(!output.isEmpty) writeToFile(questions, output)
+                 if(verbose) questions.foreach { x => println(Json.prettyPrint(Json.toJson(x))) }
+                
                }
                case None => System.err.println("An error ocurred")
              }
@@ -57,36 +61,24 @@ object Controller{
   
 
     
-  def saveData(questions: Seq[Question], dbName: String, collectionName: String, verbose: Boolean) = {
-    val driver = new MongoDriver
-    Try{driver.connection(List("localhost:27017"))} match{
-      case Success(connection) => {
-        val db = connection(dbName)
-        val collection: JSONCollection = db.collection[JSONCollection](collectionName)
- 
-        questions.map { question => { collection.insert(question)
-           .onComplete { 
-             case Failure(e) => System.err.println(e.getMessage) 
-             case Success(lastError) => {
-               if(verbose)
-                 System.out.println(
-                   "Questions have been correctly inserted in database " + dbName + "and collection " + collectionName)}
-             }} 
-        
-      }
-        
-       }
-      case Failure(ex) => System.err.println("Could not connect to the database: " )
-    }
-   
+  def saveData(questions: Seq[Question], dbName: String, collectionName: String) = {
     
+   val mongoClient = MongoClient("localhost", 27017)
+   val db = mongoClient(dbName)
+   val coll = db(collectionName)
+ 
+   questions.foreach { x => {
+     val obj: JsValue = Json.toJson(x)
+     val doc: DBObject = JSON.parse(obj.toString).asInstanceOf[DBObject]
+     coll.insert(doc)
+   } }
+   mongoClient.close
    
   }
   
-  def writeToFile(questions: Seq[Question], outputFilename: String, verbose: Boolean) = {
-    val qj = questions.map { x => Json.toJson(x).toString }
+  def writeToFile(questions: Seq[Question], outputFilename: String) = {
+    val qj = questions.map { x => Json.prettyPrint(Json.toJson(x)) }
     val txt = qj.reduceLeft(_ + "\n" + _)
-    if(verbose) println("txt")
     Files.write(Paths.get(outputFilename), txt.getBytes(StandardCharsets.UTF_8))
   }
     

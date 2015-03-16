@@ -4,9 +4,7 @@ import scala.util.parsing.combinator._
 import org.json4s._
 import org.json4s.native.JsonMethods._
 import org.json4s.native.Serialization
-import reactivemongo.api.MongoDriver
-import reactivemongo.bson._
-import play.modules.reactivemongo.json.collection._
+
 import scala.concurrent.ExecutionContext.Implicits.global
 import play.api.libs.json._
 

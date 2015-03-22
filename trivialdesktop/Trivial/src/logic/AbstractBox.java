@@ -1,13 +1,23 @@
+package logic;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class Box {
+public abstract class AbstractBox implements Box{
 	
-		private List<Box> adjacentBoxes;
-		private String colour;
-		private boolean possibleMove;
-		private boolean marked;
+		protected List<Box> adjacentBoxes;
+		protected String colour;
+		protected boolean possibleMove;
+		protected boolean marked;
+		
+		/* (non-Javadoc)
+		 * @see logic.Box#getQuestion()
+		 */
+		/* (non-Javadoc)
+		 * @see logic.Box#getQuestion()
+		 */
+		@Override
+		public abstract Question getQuestion();
 		
 		/**
 		public Box(String colour,Box ... args){
@@ -18,10 +28,14 @@ public class Box {
 			this.colour=colour;
 		}*/
 		
-		public Box(String colour){
+		public AbstractBox(String colour){
 			this.colour=colour;
 		}
 		
+		/* (non-Javadoc)
+		 * @see logic.Box#setAdjacents(logic.AbstractBox)
+		 */
+		@Override
 		public void setAdjacents(Box ... args){
 			adjacentBoxes = new ArrayList<>();
 			for(Box b :args){
@@ -29,18 +43,34 @@ public class Box {
 			}
 		}
 
+		/* (non-Javadoc)
+		 * @see logic.Box#getAdjacentBoxes()
+		 */
+		@Override
 		public List<Box> getAdjacentBoxes() {
 			return adjacentBoxes;
 		}
 
+		/* (non-Javadoc)
+		 * @see logic.Box#setAdjacentBoxes(java.util.List)
+		 */
+		@Override
 		public void setAdjacentBoxes(List<Box> adjacentBoxes) {
 			this.adjacentBoxes = adjacentBoxes;
 		}
 
+		/* (non-Javadoc)
+		 * @see logic.Box#getColour()
+		 */
+		@Override
 		public String getColour() {
 			return colour;
 		}
 
+		/* (non-Javadoc)
+		 * @see logic.Box#setColour(java.lang.String)
+		 */
+		@Override
 		public void setColour(String colour) {
 			this.colour = colour;
 		}
@@ -62,7 +92,7 @@ public class Box {
 				return false;
 			if (getClass() != obj.getClass())
 				return false;
-			Box other = (Box) obj;
+			AbstractBox other = (AbstractBox) obj;
 			if (colour == null) {
 				if (other.colour != null)
 					return false;
@@ -71,18 +101,34 @@ public class Box {
 			return true;
 		}
 
+		/* (non-Javadoc)
+		 * @see logic.Box#setPossibleMove(boolean)
+		 */
+		@Override
 		public void setPossibleMove(boolean b) {
 			this.possibleMove = b;
 		}
 		
+		/* (non-Javadoc)
+		 * @see logic.Box#getPossibleMove()
+		 */
+		@Override
 		public boolean getPossibleMove(){
 			return this.possibleMove;
 		}
 
+		/* (non-Javadoc)
+		 * @see logic.Box#isMarked()
+		 */
+		@Override
 		public boolean isMarked() {
 			return marked;
 		}
 		
+		/* (non-Javadoc)
+		 * @see logic.Box#mark(boolean)
+		 */
+		@Override
 		public void mark(boolean marked){
 			this.marked = marked;
 		}

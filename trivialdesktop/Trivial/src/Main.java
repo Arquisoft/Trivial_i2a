@@ -17,6 +17,11 @@ import java.util.Map;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import logic.Box;
+import logic.Box;
+import logic.Game;
+import logic.SkipBox;
+
 public class Main extends Canvas implements Runnable{
 
 
@@ -110,31 +115,31 @@ public class Main extends Canvas implements Runnable{
 
 	public static void main (String[] args) {
 		Map<String,Box> list = new HashMap<String, Box>();
-		Box b1 = new Box("404040");
-		Box b2 = new Box("FF0000");
-		Box b3 = new Box("FF6A00");
-		Box b4 = new Box("FFD800");
-		Box b5 = new Box("B6FF00");
+		Box b1 = new SkipBox("404040");
+		Box b2 = new SkipBox("FF0000");
+		Box b3 = new SkipBox("FF6A00");
+		Box b4 = new SkipBox("FFD800");
+		Box b5 = new SkipBox("B6FF00");
 		
-		Box b6 = new Box("4CFF00");
-		Box b7 = new Box("0094FF");
-		Box b8 = new Box("B200FF");
+		Box b6 = new SkipBox("4CFF00");
+		Box b7 = new SkipBox("0094FF");
+		Box b8 = new SkipBox("B200FF");
 		
-		Box b9 = new Box("00FF21");
-		Box b10 = new Box("00FF90");
-		Box b11 = new Box("00FFFF");
-		Box b12 = new Box("0026FF");
-		Box b13 = new Box("4800FF");
+		Box b9 = new SkipBox("00FF21");
+		Box b10 = new SkipBox("00FF90");
+		Box b11 = new SkipBox("00FFFF");
+		Box b12 = new SkipBox("0026FF");
+		Box b13 = new SkipBox("4800FF");
 		
-		Box b14 = new Box("FF00DC");
-		Box b15 = new Box("7F6A00");
-		Box b16 = new Box("007F0E");
+		Box b14 = new SkipBox("FF00DC");
+		Box b15 = new SkipBox("7F6A00");
+		Box b16 = new SkipBox("007F0E");
 		
-		Box b17 = new Box("FF006E");
-		Box b18 = new Box("7F0000");
-		Box b19 = new Box("7F3300");
-		Box b20 = new Box("5B7F00");
-		Box b21 = new Box("267F00");
+		Box b17 = new SkipBox("FF006E");
+		Box b18 = new SkipBox("7F0000");
+		Box b19 = new SkipBox("7F3300");
+		Box b20 = new SkipBox("5B7F00");
+		Box b21 = new SkipBox("267F00");
 		
 		b1.setAdjacents(b2,b6);
 		b2.setAdjacents(b1,b3);
@@ -215,13 +220,15 @@ public class Main extends Canvas implements Runnable{
 		
 		start.start();
 		synchronized (monitor) {
-			try {
+			try {  
 				monitor.wait();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
 		frame.dispose();
+		
+		
 		
 		return game;
 	}

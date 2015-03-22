@@ -2,6 +2,8 @@
 
 import java.awt.Point;
 
+import logic.Game;
+
 public class Screen extends Bitmap {
 	public Representation viewport;
 	

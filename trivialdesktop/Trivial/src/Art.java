@@ -5,8 +5,8 @@ import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 
 public class Art {
-	public static Bitmap skin = loadBitmap("/tex/skin.png");
-	public static Bitmap click = loadBitmap("/tex/click.png");
+	public static Bitmap skin = loadBitmap("/res/tex/skin.png");
+	public static Bitmap click = loadBitmap("/res/tex/click.png");
 	
 	public static Bitmap loadBitmap(String fileName) {
 		try {

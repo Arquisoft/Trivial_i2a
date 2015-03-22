@@ -2,6 +2,8 @@
 
 import java.awt.Point;
 
+import logic.Game;
+
 public class Representation extends Bitmap {
 
 

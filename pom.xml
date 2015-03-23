@@ -11,6 +11,7 @@
     <name>Trivial Game Project</name>
 
     <modules>
-		<module>trivialparser</module>
+		<module>extract</module>
+		<module>game</module>
     </modules>
 </project>

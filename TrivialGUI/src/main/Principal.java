@@ -1,20 +1,29 @@
-package gui;
+package main;
+
+import gui.BoardGui;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import java.awt.GridLayout;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import model.Board;
+import model.Game;
 
 public class Principal extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4741437948991199474L;
 	private JPanel contentPane;
 	private JPanel pnTitle;
 	private JLabel label;
@@ -24,6 +33,7 @@ public class Principal extends JFrame {
 	private JButton btnNewButton_2;
 	private JPanel panel;
 	private JButton btnNewButton_3;
+	private static Game game;
 
 	/**
 	 * Launch the application.
@@ -45,8 +55,30 @@ public class Principal extends JFrame {
 	
 
 	private void showShowBoardSmall() {
-
-		BoardSmall small = new BoardSmall(this);
+		Board board = new Board(9);
+		Game game = new Game(board);
+		Principal.game = game;
+		BoardGui small = new BoardGui(this,9,game);
+		small.setLocationRelativeTo(this);
+		small.setVisible(true);
+		
+	}
+	
+	private void showShowBoardBig() {
+		Board board = new Board(17);
+		Game game = new Game(board);
+		Principal.game = game;
+		BoardGui small = new BoardGui(this,17,game);
+		small.setLocationRelativeTo(this);
+		small.setVisible(true);
+		
+	}
+	
+	private void showShowBoardMid() {
+		Board board = new Board(13);
+		Game game = new Game(board);
+		Principal.game = game;
+		BoardGui small = new BoardGui(this,13,game);
 		small.setLocationRelativeTo(this);
 		small.setVisible(true);
 		
@@ -96,12 +128,22 @@ public class Principal extends JFrame {
 	private JButton getBtnNewButton() {
 		if (btnNewButton == null) {
 			btnNewButton = new JButton("Tama\u00F1o grande");
+			btnNewButton.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					showShowBoardBig();
+				}
+			});
 		}
 		return btnNewButton;
 	}
 	private JButton getBtnNewButton_1() {
 		if (btnNewButton_1 == null) {
 			btnNewButton_1 = new JButton("Tama\u00F1o estandar");
+			btnNewButton_1.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					showShowBoardMid();
+				}
+			});
 		}
 		return btnNewButton_1;
 	}
@@ -133,5 +175,12 @@ public class Principal extends JFrame {
 			});
 		}
 		return btnNewButton_3;
+	}
+
+
+
+
+	public static Game getGame() {
+		return game;
 	}
 }

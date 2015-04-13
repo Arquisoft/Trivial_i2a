@@ -1,19 +1,26 @@
 package model;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 import javax.swing.JButton;
 
+import questions.Question;
+import questions.QuestionFactory;
 import model.Board.BoxType;
 
 public class Box extends JButton{
+	
+	
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -6017704654638528564L;
+
+	private static final File f = null;
 	
 	private int column;
 	private int row;
@@ -57,7 +64,16 @@ public class Box extends JButton{
 	public void setAdjacentBoxes(List<Box> adjacentBoxes) {
 		this.adjacentBoxes = adjacentBoxes;
 	}
-	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + column;
+		result = prime * result + row;
+		return result;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -67,10 +83,9 @@ public class Box extends JButton{
 		if (getClass() != obj.getClass())
 			return false;
 		Box other = (Box) obj;
-		if (getType() == null) {
-			if (other.getType() != null)
-				return false;
-		} else if (!getType().equals(other.getType()))
+		if (column != other.column)
+			return false;
+		if (row != other.row)
 			return false;
 		return true;
 	}
@@ -96,5 +111,9 @@ public class Box extends JButton{
 		for(Box b :args){
 			this.adjacentBoxes.add(b);
 		}
+	}
+
+	public Question getQuestion() {
+		return QuestionFactory.createQuestions(f).get(0);
 	}
 }

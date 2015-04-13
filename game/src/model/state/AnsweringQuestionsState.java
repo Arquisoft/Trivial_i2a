@@ -1,7 +1,7 @@
-package logic.state;
+package model.state;
 
-import logic.Box;
-import logic.Game;
+import model.Box;
+import model.Game;
 
 public class AnsweringQuestionsState implements State {
 

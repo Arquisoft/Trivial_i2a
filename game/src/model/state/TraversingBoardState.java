@@ -1,8 +1,8 @@
-package logic.state;
+package model.state;
 
-import logic.Box;
-import logic.Game;
-import logic.Question;
+import questions.Question;
+import model.Box;
+import model.Game;
 
 public class TraversingBoardState implements State {
 
@@ -13,16 +13,10 @@ public class TraversingBoardState implements State {
 					{
 			game.getBoard().getActualPlayer().setActualBox(boxPressed);
 			
-			Question question = game.getBoard().getActualPlayer().getActualBox().getQuestion();
+			Question question = game.getRandomQuestion();
 			
-			question.answer();
-			
-			if(question.isCorrectlyAnswered())
-				return this;
-			else
-				game.nextTurn();
-		
-			
+			question.answer(game);
+
 					}
 		
 		return this;

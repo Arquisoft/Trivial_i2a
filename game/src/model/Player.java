@@ -1,28 +1,31 @@
 package model;
-import java.util.ArrayList;
-import model.Board.BoxType;
 
-public class Player 
-{
-	private Box currentBox;
-	private ArrayList<BoxType> prizes = new ArrayList<BoxType>();
+import model.Box;
+
+public class Player {
 	
-	public Box getCurrentBox() {
-		return currentBox;
+	private Box actualBox;
+	private String name;
+
+	public Player(String name) {
+		this.name = name;
 	}
-	public void setCurrentBox(Box currentBox) {
-		this.currentBox = currentBox;
+
+	public Box getActualBox() {
+		return actualBox;
 	}
-	public ArrayList<BoxType> getPrizes() {
-		return prizes;
+
+	public void setActualBox(Box actualBox) {
+		this.actualBox = actualBox;
 	}
-	public void setPrizes(ArrayList<BoxType> prizes) {
-		this.prizes = prizes;
+
+	public String getName() {
+		return name;
 	}
-	
-	
-	public void move(Box box)
-	{
-		setCurrentBox(box);
+
+	public void setName(String name) {
+		this.name = name;
 	}
+ 
+		
 }

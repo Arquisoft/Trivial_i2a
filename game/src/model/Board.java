@@ -1,18 +1,17 @@
 package model;
-
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 import main.Principal;
+import model.Box;
 
 public class Board {
-
-	private ArrayList<Box> finalMoves;
-	
 	public enum BoxType
 	{
 		blue_normal, 
@@ -27,15 +26,20 @@ public class Board {
 		center;
 	}
 	
+	private Map<String, Box> boxes;
+	int counter;
+	private ArrayList<Box> finalMoves;
+	private Player[] players = new Player[4];
+	private Box startingBox;
+	
+	private int indexOfActualPlayer;
+	private Player actualPlayer;
 	private Box[][] board;
 	private ArrayList<BoxType> boxTypes = new ArrayList<BoxType>();
 	BoxType[] prizeTypes;
 	int prizeTypesIterator = 0;
 
-	public Box[][] getBoard() {
-		return board;
-	}
-
+	
 	public Board(int number) {
 		this.board = new Box[number][number];
 		initializeTypes(number);
@@ -59,7 +63,102 @@ public class Board {
 					}
 				});
 			}
+		
+			startingBox =  board[board.length/2][board.length/2];
+			
+			prepareBoard();
 		}
+	}
+
+	public Player[] getPlayers() {
+		return players;
+	}
+
+	public void setPlayers(Player[] players) {
+		this.players = players;
+	}
+
+	public Map<String, Box> getBoxes() {
+		return boxes;
+	}
+
+	public void setBoxes(Map<String, Box> boxes) {
+		this.boxes = boxes;
+	}
+
+	public Board(Map<String, Box> list) {
+		this.boxes = list;
+		
+		startingBox = list.get("00FFFF");
+		
+		prepareBoard();
+	}
+	
+	private void prepareBoard() {
+		generatePlayers();
+	}
+
+	private void generatePlayers() {
+		for(int i=0; i<players.length; i++)
+		{
+			players[i] = new Player("Player "+String.valueOf(i+1));
+			players[i].setActualBox(startingBox);
+		}
+		
+		indexOfActualPlayer = 0;
+		actualPlayer = players[indexOfActualPlayer];
+	}
+	
+	public void nextPlayer()
+	{
+		if(indexOfActualPlayer==players.length-1)
+			indexOfActualPlayer = 0;
+		else
+			indexOfActualPlayer++;
+		
+		actualPlayer = players[indexOfActualPlayer];
+	}
+
+	public List<Box> getMovesOfPlayer(int playerIndex,int dice){
+		finalMoves = new ArrayList<Box>();
+		
+		Box boxOfThePlayer = players[playerIndex].getActualBox();
+		
+		return possibleMoves(boxOfThePlayer,boxOfThePlayer, dice);
+	}
+
+	public List<Box> getMoves(Box box,int dice){
+		finalMoves = new ArrayList<Box>();
+		return possibleMoves(box,box, dice);
+	}
+	
+	private List<Box> possibleMoves(Box current,Box box,int dice) {
+			
+			List<Box> adBoxes = getAdjacentBoxes(box);
+			for (Box bo : adBoxes) {
+				if(dice>0){
+					if (!bo.equals(current)) {
+						possibleMoves(box,bo,dice-1);
+					}
+				}
+				else{
+					if (!bo.equals(current)) 
+						finalMoves.add(box);
+				}
+			}
+			return finalMoves;
+		}
+
+	public Player getActualPlayer() {
+		return actualPlayer;
+	}
+
+	public void setActualPlayer(Player actualPlayer) {
+		this.actualPlayer = actualPlayer;
+	}
+
+	public Box[][] getBoard() {
+		return board;
 	}
 	
 	private void assignType(int number, Box box) 
@@ -215,25 +314,6 @@ public class Board {
 	}
 	
 	
-	
-	private List<Box> possibleMoves(Box current,Box box,int dice) 
-	{	
-		List<Box> adBoxes = getAdjacentBoxes(box);
-		for (Box bo : adBoxes) {
-			if(dice>0){
-				if (!bo.equals(current)) {
-					possibleMoves(box,bo,dice-1);
-				}
-			}
-			else{
-				if (!bo.equals(current)) 
-					finalMoves.add(box);
-			}
-		}
-		return finalMoves;
-	}
-	
-	
 	private List<Box> getAdjacentBoxes(Box box) 
 	{
 		int row = box.getRow();
@@ -265,15 +345,5 @@ public class Board {
 		if(box.isVisible())
 			array.add(box);
 	}
-
-	public List<Box> getMoves(Box box,int dice)
-	{
-		finalMoves = new ArrayList<Box>();
-		finalMoves = (ArrayList<Box>) possibleMoves(box,box, dice);
-//		for(Box finalBox : finalMoves)
-//		{
-//			finalBox.setBackground(Color.BLACK);
-//		}
-		return finalMoves;
 	}
-}
+

@@ -1,5 +1,7 @@
 package model;
 
+import gui.BoardGui;
+
 import java.awt.Color;
 import java.io.File;
 import java.util.Iterator;
@@ -7,6 +9,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
+
+import javax.swing.border.LineBorder;
 
 import questions.Question;
 import questions.QuestionFactory;
@@ -20,7 +24,7 @@ public class Game {
 	
 	private State state;
 	
-	int diceValue = 3;
+	int diceValue;
 	
 	private Random generator= new Random();
 
@@ -43,9 +47,9 @@ public class Game {
 		
 	} 
 	
-	private void onNewTurn() {
-		System.out.println("Turn of "+board.getActualPlayer().getName());
-		
+	private void onNewTurn() 
+	{
+		BoardGui.getLblTurnOfPlayer().setText("Turn of "+board.getActualPlayer().getName());
 	}
 
 	public void pressed(Box boxPressed) {
@@ -53,13 +57,14 @@ public class Game {
 		{
 			//cleanPossibleMovements(board.getBoxes());
 			state = state.onGamePressed(this, boxPressed);
-			//Draws where the player  can move
+			//Draws where the player can move
 			playerCanMove(board.getActualPlayer().getActualBox());
 		}
 	}
 	
-	public void nextTurn() {
-		diceValue = new Random().nextInt(3)+1;
+	public void nextTurn() 
+	{
+		diceValue = new Random().nextInt(6)+1;
 		
 		board.nextPlayer();
 		
@@ -68,25 +73,20 @@ public class Game {
 
 	public void playerCanMove(Box boxOfPlayer) {
 		
-		//Draws in black the different possible movements
-		colourPossibleMovements(boxOfPlayer );
-		
+		//Draws in black the border of the different possible movements
+		colourPossibleMovements(boxOfPlayer);
 	}
 	
-	private void colourPossibleMovements(Box boxPressed ) {
+	private void colourPossibleMovements(Box boxPressed) {
 		List<Box> list = board.getMoves(boxPressed, diceValue);
 		for (Box b : list) 
 		{
 			b.setPossibleMove(true);
-			b.setBackground(Color.BLACK);
+			b.setBorder(new LineBorder(Color.BLACK, 6));
 		}
 	}
 
 
-
-
-
-	
 	private void cleanPossibleMovements(Map<String, Box> map){
 		Iterator<Entry<String, Box>> it = map.entrySet().iterator();
 	    while (it.hasNext()) {
@@ -108,8 +108,4 @@ public class Game {
 		
 		return questions.get(randomPosition);
 	}
-	
-	
-	
-
 }

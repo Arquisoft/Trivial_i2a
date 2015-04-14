@@ -22,6 +22,7 @@ import javax.swing.border.TitledBorder;
 import main.Principal;
 import model.Board;
 import model.Game;
+import java.awt.Font;
 
 
 
@@ -50,14 +51,14 @@ public class BoardGui extends JFrame {
 	private JMenuBar menuBar;
 	private JMenu mnNewMenu;
 	private JMenu mnNewMenu_1;
-	private JMenuItem mntmNewMenuItem;
 	private JMenuItem mntmExit;
 	private JMenuItem mntmAboutTrivialPursuit;
 	private JLabel lblAcoreDado;
-	private JButton btnNewButton_3;
+	private JButton btnDado;
 	
 	public Principal vP = null;
 	private int numberOfPlayers;
+	private static JLabel lblTurnOfPlayer;
 
 	
 	/**
@@ -91,6 +92,7 @@ public class BoardGui extends JFrame {
 		if (pnTitle == null) {
 			pnTitle = new JPanel();
 			pnTitle.add(getLbTitle());
+			pnTitle.add(getLblTurnOfPlayer());
 		}
 		return pnTitle;
 	}
@@ -133,8 +135,8 @@ public class BoardGui extends JFrame {
 		if (pnLabelScore == null) {
 			pnLabelScore = new JPanel();
 			pnLabelScore.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-			pnLabelScore.add(getBtnNewButton_3());
-			pnLabelScore.add(getLblAcoreDado());
+			pnLabelScore.add(getBtnDado());
+			pnLabelScore.add(getLblScoreDado());
 		}
 		return pnLabelScore;
 	}
@@ -224,7 +226,6 @@ public class BoardGui extends JFrame {
 	private JMenu getMnNewMenu() {
 		if (mnNewMenu == null) {
 			mnNewMenu = new JMenu("Play");
-			mnNewMenu.add(getMntmNewMenuItem());
 			mnNewMenu.add(getMntmExit());
 		}
 		return mnNewMenu;
@@ -235,17 +236,6 @@ public class BoardGui extends JFrame {
 			mnNewMenu_1.add(getMntmAboutTrivialPursuit());
 		}
 		return mnNewMenu_1;
-	}
-	private JMenuItem getMntmNewMenuItem() {
-		if (mntmNewMenuItem == null) {
-			mntmNewMenuItem = new JMenuItem("Initialize");
-			mntmNewMenuItem.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent arg0) {
-					System.exit(0);
-				}
-			});
-		}
-		return mntmNewMenuItem;
 	}
 	private JMenuItem getMntmExit() {
 		if (mntmExit == null) {
@@ -263,27 +253,38 @@ public class BoardGui extends JFrame {
 			mntmAboutTrivialPursuit = new JMenuItem("About Trivial pursuit...");
 			mntmAboutTrivialPursuit.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					JOptionPane.showMessageDialog(null, "Hello!");
+					JOptionPane.showMessageDialog(null, "Arquisoft/Trivial_i2a did this");
 				}
 			});
 		}
 		return mntmAboutTrivialPursuit;
 	}
-	private JLabel getLblAcoreDado() {
+	public JLabel getLblScoreDado() {
 		if (lblAcoreDado == null) {
-			lblAcoreDado = new JLabel("Score dado");
-			
+			lblAcoreDado = new JLabel("Press");
 		}
 		return lblAcoreDado;
 	}
-	private JButton getBtnNewButton_3() {
-		if (btnNewButton_3 == null) {
-			btnNewButton_3 = new JButton("");
+	public JButton getBtnDado() {
+		if (btnDado == null) {
+			btnDado = new JButton("");
+			btnDado.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					getLblScoreDado().setText("1");
+				}
+			});
 			
-			btnNewButton_3.setBackground(Color.WHITE);
-			btnNewButton_3.setIcon(new ImageIcon(BoardGui.class.getResource("/img/dado.png")));
+			btnDado.setBackground(Color.WHITE);
+			btnDado.setIcon(new ImageIcon(BoardGui.class.getResource("/img/dado.png")));
 			
 		}
-		return btnNewButton_3;
+		return btnDado;
+	}
+	public static JLabel getLblTurnOfPlayer() {
+		if (lblTurnOfPlayer == null) {
+			lblTurnOfPlayer = new JLabel("");
+			lblTurnOfPlayer.setFont(new Font("Consolas", Font.BOLD, 16));
+		}
+		return lblTurnOfPlayer;
 	}
 }

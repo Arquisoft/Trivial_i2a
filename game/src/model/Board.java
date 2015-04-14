@@ -1,4 +1,6 @@
 package model;
+import gui.BoardGui;
+
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
@@ -7,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+
+import javax.swing.ImageIcon;
 
 import main.Principal;
 import model.Box;
@@ -184,19 +188,19 @@ public class Board {
 			{
 				case blue_prize:
 					box.setBackground(Color.BLUE);
-					box.setText("1");
+					box.setIcon(new ImageIcon(Board.class.getResource("/img/star.png")));
 					break;
 				case red_prize:
 					box.setBackground(Color.RED);
-					box.setText("2");
+					box.setIcon(new ImageIcon(Board.class.getResource("/img/star.png")));
 					break;
 				case yellow_prize:
 					box.setBackground(Color.YELLOW);
-					box.setText("3");
+					box.setIcon(new ImageIcon(Board.class.getResource("/img/star.png")));
 					break;
 				case green_prize:
 					box.setBackground(Color.GREEN);
-					box.setText("4");
+					box.setIcon(new ImageIcon(Board.class.getResource("/img/star.png")));
 					break;
 			default:
 				break;

@@ -112,6 +112,13 @@ public class Box extends JButton{
 			this.adjacentBoxes.add(b);
 		}
 	}
+	
+	public boolean tieneEstrella()
+	{
+	   if(getIcon()!=null)
+	      return true;
+	   return false;
+	}
 
 	public Question getQuestion() {
 		return QuestionFactory.createQuestions(f).get(0);

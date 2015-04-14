@@ -64,6 +64,8 @@ public class Game {
 	
 	public void nextTurn() 
 	{
+		hasSomeoneWon();
+		
 		diceValue = new Random().nextInt(6)+1;
 		
 		board.nextPlayer();
@@ -71,6 +73,18 @@ public class Game {
 		onNewTurn();
 		cleanPossibleMovements();
 		playerCanMove(board.getActualPlayer().getActualBox());
+	}
+
+	private void hasSomeoneWon() {
+		for(Player player: board.getPlayers())
+		{
+			if(player.isWon())
+				winner(player);
+		}
+	}
+
+	private void winner(Player player) {
+		System.exit(0);
 	}
 
 	public void playerCanMove(Box boxOfPlayer) {
@@ -118,5 +132,5 @@ public class Game {
 		int randomPosition = generator.nextInt(questions.size());
 		
 		return questions.get(randomPosition);
-	}
+	} 
 }

@@ -151,18 +151,25 @@ public class SingleChoiceAnswer extends JDialog{
 		JButton confirmJButton = new JButton("CONFIRM");
 		confirmJButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) { 
-				AbstractButton but;
+				AbstractButton but = null;
 				boolean correctlyAnswered = false;
 				for(int i= 0; i<4;  i++)
-				{
+				{ 
 					 but =  buttonGroup.getElements().nextElement();
+					 buttonGroup.remove(but);
 					 if(but.isSelected())
 					 if(but.getText().compareTo(rightAnswer)==0)
 						 correctlyAnswered = true;
 				}
 			
 				if(correctlyAnswered)
-					;
+				{
+					if(game.getBoard().getActualPlayer().getActualBox().tieneEstrella())
+						game.getBoard().getActualPlayer().setScore(game.getBoard()
+								.getActualPlayer().getScore()+1);
+					if(game.getBoard().getActualPlayer().isWon())
+						game.nextTurn();
+				}
 				else
 					game.nextTurn();
 				

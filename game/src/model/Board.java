@@ -26,10 +26,11 @@ public class Board {
 		center;
 	}
 	
+	public int numberOfPlayers;
 	private Map<String, Box> boxes;
 	int counter;
 	private ArrayList<Box> finalMoves;
-	private Player[] players = new Player[4];
+	private Player[] players;
 	private Box startingBox;
 	
 	private int indexOfActualPlayer;
@@ -40,8 +41,10 @@ public class Board {
 	int prizeTypesIterator = 0;
 
 	
-	public Board(int number) {
+	public Board(int number, int numberOfPlayers) {
 		this.board = new Box[number][number];
+		this.numberOfPlayers = numberOfPlayers;
+		players = new Player[numberOfPlayers];
 		initializeTypes(number);
 		for(int i = 0;i<number;i++){
 			for(int j = 0;j<number;j++){

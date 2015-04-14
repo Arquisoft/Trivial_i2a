@@ -21,7 +21,6 @@ import javax.swing.border.TitledBorder;
 
 import main.Principal;
 import model.Board;
-import model.Box;
 import model.Game;
 
 
@@ -40,14 +39,14 @@ public class BoardGui extends JFrame {
 	private JLabel lbScore;
 	private JPanel pnLabelScore;
 	private JPanel pnPlayers;
-	private JLabel lblPlayer;
-	private JLabel lblScoreplayer;
-	private JLabel lblNewLabel;
-	private JLabel lblScorePlayer;
+	private JLabel lblScorePlayer_2;
+	private JLabel lblPlayer_4;
+	private JLabel lblPlayer_2;
+	private JLabel lblScorePlayer_1;
 	private JLabel lblPlayer_1;
-	private JLabel lblNewLabel_1;
-	private JLabel lblNewLabel_2;
-	private JLabel lblNewLabel_3;
+	private JLabel lblScorePlayer_4;
+	private JLabel lblScorePlayer_3;
+	private JLabel lblPlayer_3;
 	private JMenuBar menuBar;
 	private JMenu mnNewMenu;
 	private JMenu mnNewMenu_1;
@@ -58,35 +57,17 @@ public class BoardGui extends JFrame {
 	private JButton btnNewButton_3;
 	
 	public Principal vP = null;
+	private int numberOfPlayers;
 
-	
-
-	/**
-	 * Launch the application.
-	 */
-	/*public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					BoardSmall frame = new BoardSmall(padre);
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-*/
-	
-	
 	
 	/**
 	 * Create the frame.
 	 * @param i 
 	 * @param game 
 	 */
-	public BoardGui(Principal padre, int i, Game game) {
+	public BoardGui(Principal padre, int i, Game game, int numberOfPlayers) {
 		this.vP = padre;
+		this.numberOfPlayers = numberOfPlayers;
 		setBounds(100, 100, 772, 485);
 		setJMenuBar(getMenuBar_1());
 		contentPane = new JPanel();
@@ -162,41 +143,49 @@ public class BoardGui extends JFrame {
 			pnPlayers = new JPanel();
 			pnPlayers.setBorder(new TitledBorder(null, "Scores", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 			pnPlayers.setLayout(new GridLayout(4, 5, 0, 0));
-			pnPlayers.add(getLblPlayer_1());
-			pnPlayers.add(getLblScorePlayer());
-			pnPlayers.add(getLblNewLabel());
-			//pnPlayers.setBorder(new EmptyBorder(5, 5, 0, 0));
-			pnPlayers.add(getLblPlayer());
-			pnPlayers.add(getLblNewLabel_3());
-			pnPlayers.add(getLblNewLabel_2());
-			pnPlayers.add(getLblScoreplayer());
-			pnPlayers.add(getLblNewLabel_1());
+			if(numberOfPlayers >= 2)
+			{
+				pnPlayers.add(getLblPlayer_1());
+				pnPlayers.add(getLblScorePlayer_1());
+				pnPlayers.add(getLblPlayer_2());
+				pnPlayers.add(getLblScorePlayer_2());
+				if(numberOfPlayers >= 3)
+				{
+					pnPlayers.add(getLblPlayer_3());
+					pnPlayers.add(getLblScorePlayer_3());
+				}
+				if(numberOfPlayers == 4)
+				{
+					pnPlayers.add(getLblPlayer_4());
+					pnPlayers.add(getLblScorePlayer_4());
+				}
+			}
 		}
 		return pnPlayers;
 	}
-	private JLabel getLblPlayer() {
-		if (lblPlayer == null) {
-			lblPlayer = new JLabel("Score player 2");
+	private JLabel getLblScorePlayer_2() {
+		if (lblScorePlayer_2 == null) {
+			lblScorePlayer_2 = new JLabel("0");
 		}
-		return lblPlayer;
+		return lblScorePlayer_2;
 	}
-	private JLabel getLblScoreplayer() {
-		if (lblScoreplayer == null) {
-			lblScoreplayer = new JLabel("Player 4");
+	private JLabel getLblPlayer_4() {
+		if (lblPlayer_4 == null) {
+			lblPlayer_4 = new JLabel("Player 4:");
 		}
-		return lblScoreplayer;
+		return lblPlayer_4;
 	}
-	private JLabel getLblNewLabel() {
-		if (lblNewLabel == null) {
-			lblNewLabel = new JLabel("Player 2");
+	private JLabel getLblPlayer_2() {
+		if (lblPlayer_2 == null) {
+			lblPlayer_2 = new JLabel("Player 2:");
 		}
-		return lblNewLabel;
+		return lblPlayer_2;
 	}
-	private JLabel getLblScorePlayer() {
-		if (lblScorePlayer == null) {
-			lblScorePlayer = new JLabel("Score Player 1");
+	private JLabel getLblScorePlayer_1() {
+		if (lblScorePlayer_1 == null) {
+			lblScorePlayer_1 = new JLabel("0");
 		}
-		return lblScorePlayer;
+		return lblScorePlayer_1;
 	}
 	private JLabel getLblPlayer_1() {
 		if (lblPlayer_1 == null) {
@@ -204,23 +193,23 @@ public class BoardGui extends JFrame {
 		}
 		return lblPlayer_1;
 	}
-	private JLabel getLblNewLabel_1() {
-		if (lblNewLabel_1 == null) {
-			lblNewLabel_1 = new JLabel("Score player 4");
+	private JLabel getLblScorePlayer_4() {
+		if (lblScorePlayer_4 == null) {
+			lblScorePlayer_4 = new JLabel("0");
 		}
-		return lblNewLabel_1;
+		return lblScorePlayer_4;
 	}
-	private JLabel getLblNewLabel_2() {
-		if (lblNewLabel_2 == null) {
-			lblNewLabel_2 = new JLabel("Score player 3");
+	private JLabel getLblScorePlayer_3() {
+		if (lblScorePlayer_3 == null) {
+			lblScorePlayer_3 = new JLabel("0");
 		}
-		return lblNewLabel_2;
+		return lblScorePlayer_3;
 	}
-	private JLabel getLblNewLabel_3() {
-		if (lblNewLabel_3 == null) {
-			lblNewLabel_3 = new JLabel("Player 3");
+	private JLabel getLblPlayer_3() {
+		if (lblPlayer_3 == null) {
+			lblPlayer_3 = new JLabel("Player 3:");
 		}
-		return lblNewLabel_3;
+		return lblPlayer_3;
 	}
 	private JMenuBar getMenuBar_1() {
 		if (menuBar == null) {
@@ -250,6 +239,11 @@ public class BoardGui extends JFrame {
 	private JMenuItem getMntmNewMenuItem() {
 		if (mntmNewMenuItem == null) {
 			mntmNewMenuItem = new JMenuItem("Initialize");
+			mntmNewMenuItem.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					System.exit(0);
+				}
+			});
 		}
 		return mntmNewMenuItem;
 	}

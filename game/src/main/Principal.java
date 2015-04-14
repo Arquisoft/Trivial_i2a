@@ -1,6 +1,7 @@
 package main;
 
 import gui.BoardGui;
+import gui.SelectPlayers;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -55,31 +56,31 @@ public class Principal extends JFrame {
 	
 	
 
-	private void showShowBoardSmall() {
-		Board board = new Board(9);
+	public void showShowBoardSmall(int numberOfPlayers) {
+		Board board = new Board(9, numberOfPlayers);
 		Game game = new Game(board);
 		Principal.game = game;
-		BoardGui small = new BoardGui(this,9,game);
+		BoardGui small = new BoardGui(this,9,game, numberOfPlayers);
 		small.setLocationRelativeTo(this);
 		small.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		small.setVisible(true);
 	}
 	
-	private void showShowBoardBig() {
-		Board board = new Board(17);
+	public void showShowBoardBig(int numberOfPlayers) {
+		Board board = new Board(17, numberOfPlayers);
 		Game game = new Game(board);
 		Principal.game = game;
-		BoardGui big = new BoardGui(this,17,game);
+		BoardGui big = new BoardGui(this,17,game, numberOfPlayers);
 		big.setLocationRelativeTo(this);
 		big.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		big.setVisible(true);
 	}
 	
-	private void showShowBoardMid() {
-		Board board = new Board(13);
+	public void showShowBoardMid(int numberOfPlayers) {
+		Board board = new Board(13, numberOfPlayers);
 		Game game = new Game(board);
 		Principal.game = game;
-		BoardGui mid = new BoardGui(this,13,game);
+		BoardGui mid = new BoardGui(this,13,game, numberOfPlayers);
 		mid.setLocationRelativeTo(this);
 		mid.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		mid.setVisible(true);
@@ -128,11 +129,10 @@ public class Principal extends JFrame {
 	}
 	private JButton getBtnNewButton() {
 		if (btnNewButton == null) {
-			btnNewButton = new JButton("Tama\u00F1o grande");
+			btnNewButton = new JButton("BIG size");
 			btnNewButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					showShowBoardBig();
-					frame.dispose();
+					showSelectPlayers("big");
 				}
 			});
 		}
@@ -140,11 +140,10 @@ public class Principal extends JFrame {
 	}
 	private JButton getBtnNewButton_1() {
 		if (btnNewButton_1 == null) {
-			btnNewButton_1 = new JButton("Tama\u00F1o estandar");
+			btnNewButton_1 = new JButton("MEDIUM size");
 			btnNewButton_1.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					showShowBoardMid();
-					frame.dispose();
+					showSelectPlayers("mid");
 				}
 			});
 		}
@@ -152,16 +151,22 @@ public class Principal extends JFrame {
 	}
 	private JButton getBtnNewButton_2() {
 		if (btnNewButton_2 == null) {
-			btnNewButton_2 = new JButton("Tama\u00F1o peque\u00F1o");
+			btnNewButton_2 = new JButton("SMALL size");
 			btnNewButton_2.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					showShowBoardSmall();
-					frame.dispose();
+					showSelectPlayers("small");
 				}
 			});
 		}
 		return btnNewButton_2;
 	}
+	
+	protected void showSelectPlayers(String boardSize) 
+	{
+		SelectPlayers sp = new SelectPlayers(this, boardSize);
+		sp.setVisible(true);
+	}
+
 	private JPanel getPanel() {
 		if (panel == null) {
 			panel = new JPanel();

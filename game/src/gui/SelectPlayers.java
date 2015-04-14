@@ -24,7 +24,7 @@ public class SelectPlayers extends JDialog {
 	 * @param principal 
 	 * @param boardSize 
 	 */
-	public SelectPlayers(Principal principal, String boardSize) {
+	public SelectPlayers(final Principal principal, final String boardSize) {
 		setResizable(false);
 		setTitle("Select players");
 		setModal(true);

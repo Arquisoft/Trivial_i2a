@@ -24,11 +24,11 @@ public class Game {
 	
 	private State state;
 	
-	int diceValue;
+	int diceValue = 3;
 	
 	private Random generator= new Random();
 
-	private File f;
+	private File f = new File("preguntas.json");
 	
 	List<Question> questions = QuestionFactory.createQuestions(f);
 	
@@ -55,7 +55,7 @@ public class Game {
 	public void pressed(Box boxPressed) {
 		if(boxPressed!=null)
 		{
-			//cleanPossibleMovements(board.getBoxes());
+			cleanPossibleMovements();
 			state = state.onGamePressed(this, boxPressed);
 			//Draws where the player can move
 			playerCanMove(board.getActualPlayer().getActualBox());
@@ -69,6 +69,8 @@ public class Game {
 		board.nextPlayer();
 		
 		onNewTurn();
+		cleanPossibleMovements();
+		playerCanMove(board.getActualPlayer().getActualBox());
 	}
 
 	public void playerCanMove(Box boxOfPlayer) {
@@ -85,15 +87,24 @@ public class Game {
 			b.setBorder(new LineBorder(Color.BLACK, 6));
 		}
 	}
-
-
-	private void cleanPossibleMovements(Map<String, Box> map){
-		Iterator<Entry<String, Box>> it = map.entrySet().iterator();
-	    while (it.hasNext()) {
-	        Map.Entry<String,Box> pair = (Map.Entry<String,Box>)it.next();
-	        pair.getValue().setPossibleMove(false);
-	    }
+	private void cleanPossibleMovements( ){
+		Box[][] list = board.getBoard();
+		for(int i=0; i<board.getBoard().length; i++)
+			for(int j=0; j<board.getBoard()[0].length; j++)
+		{
+				Box b = list[i][j];
+			b.setPossibleMove(true);
+			b.setBorder(new LineBorder(Color.BLACK, 0));
+		}
 	}
+
+//	private void cleanPossibleMovements(Map<String, Box> map){
+//		Iterator<Entry<String, Box>> it = map.entrySet().iterator();
+//	    while (it.hasNext()) {
+//	        Map.Entry<String,Box> pair = (Map.Entry<String,Box>)it.next();
+//	        pair.getValue().setPossibleMove(false);
+//	    }
+//	}
 
 	public Board getBoard() {
 		return this.board;

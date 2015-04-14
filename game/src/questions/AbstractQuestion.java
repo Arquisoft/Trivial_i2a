@@ -44,6 +44,7 @@ public class AbstractQuestion implements Question {
 	@Override
 	public void answer(Game game) {
 		SingleChoiceAnswer sCA = new SingleChoiceAnswer(question, answers, getRightAnswer(), game);
+		 
 	} 
 
 }

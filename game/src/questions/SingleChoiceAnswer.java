@@ -18,6 +18,7 @@ import javax.swing.SwingConstants;
 import javax.swing.BoxLayout;
 import javax.swing.JLayeredPane;
 
+import java.awt.Button;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 
@@ -31,7 +32,9 @@ import javax.swing.GroupLayout.Alignment;
 
 import java.awt.Insets;
 
+import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
+import javax.swing.JDialog;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JDesktopPane;
@@ -45,19 +48,18 @@ import java.awt.event.ActionEvent;
 import java.util.Map;
 
 
-public class SingleChoiceAnswer {
-
-	private JFrame frmSingleChoiceAnswer;
+public class SingleChoiceAnswer extends JDialog{
+ 
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private String question;
 	private Map<String, Boolean> answers;
 	private String rightAnswer;
 	private Game game;
-	private JLabel questionJLabel;
-	private JRadioButton option1RButton;
-	private JRadioButton option2RButton;
-	private JRadioButton option3RButton;
-	private JRadioButton option4RButton;
+	public JLabel questionJLabel;
+	public JRadioButton option1RButton;
+	public JRadioButton option2RButton;
+	public JRadioButton option3RButton;
+	public JRadioButton option4RButton;
 
 	/**
 	 * Launch the application.
@@ -65,9 +67,7 @@ public class SingleChoiceAnswer {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				try {
-					SingleChoiceAnswer window = new SingleChoiceAnswer();
-					window.frmSingleChoiceAnswer.setVisible(true);
+				try { 
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -84,33 +84,38 @@ public class SingleChoiceAnswer {
 
 	public SingleChoiceAnswer(String question, Map<String, Boolean> answers,
 			String rightAnswer, Game game) {
+		
+		 
+		this.setVisible(true);
+		
 		this.question = question;
 		this.answers = answers;
 		this.rightAnswer = rightAnswer;
 		this.game = game;
 		
-		initialize();
+		this.initialize();
 		
-		option1RButton.setText((String) answers.keySet().toArray()[0]);
-		option2RButton.setText((String) answers.keySet().toArray()[1]);
-		option3RButton.setText((String) answers.keySet().toArray()[2]);
-		option4RButton.setText((String) answers.keySet().toArray()[3]);
+		this.option1RButton.setText((String) answers.keySet().toArray()[0]);
+		this.option2RButton.setText((String) answers.keySet().toArray()[1]);
+		this.option3RButton.setText((String) answers.keySet().toArray()[2]);
+		this.option4RButton.setText((String) answers.keySet().toArray()[3]);
 		
-		questionJLabel.setText(question);
+		this.questionJLabel.setText(question);
+		
+		
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
-		frmSingleChoiceAnswer = new JFrame();
-		frmSingleChoiceAnswer.setTitle("Single Choice Answer");
-		frmSingleChoiceAnswer.setBounds(100, 100, 623, 398);
-		frmSingleChoiceAnswer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frmSingleChoiceAnswer.getContentPane().setLayout(new BorderLayout(0, 0));
+	public void initialize() { 
+		this.setTitle("Single Choice Answer");
+		this.setBounds(100, 100, 623, 398);
+		this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		this.getContentPane().setLayout(new BorderLayout(0, 0));
 		
 		JPanel panel = new JPanel();
-		frmSingleChoiceAnswer.getContentPane().add(panel);
+		this.getContentPane().add(panel);
 		panel.setLayout(new GridLayout(0, 1, 0, 0));
 		
 		questionJLabel = new JLabel("Here goes the question");
@@ -145,24 +150,28 @@ public class SingleChoiceAnswer {
 		
 		JButton confirmJButton = new JButton("CONFIRM");
 		confirmJButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				game.nextTurn();
-				System.exit(0);
+			public void actionPerformed(ActionEvent arg0) { 
+				AbstractButton but;
+				boolean correctlyAnswered = false;
+				for(int i= 0; i<4;  i++)
+				{
+					 but =  buttonGroup.getElements().nextElement();
+					 if(but.isSelected())
+					 if(but.getText().compareTo(rightAnswer)==0)
+						 correctlyAnswered = true;
+				}
+			
+				if(correctlyAnswered)
+					;
+				else
+					game.nextTurn();
+				
+				dispose();
 			}
 		});
 		confirmJButton.setFont(new Font("Calibri", Font.BOLD, 20));
 		confirmJButton.setForeground(new Color(0, 128, 0));
 		panel.add(confirmJButton);
-		
-		JButton cancelJButton = new JButton("CANCEL");
-		cancelJButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
-			}
-		});
-		cancelJButton.setForeground(new Color(255, 0, 0));
-		cancelJButton.setFont(new Font("Calibri", Font.BOLD, 20));
-		panel.add(cancelJButton);
 	}
 
 }

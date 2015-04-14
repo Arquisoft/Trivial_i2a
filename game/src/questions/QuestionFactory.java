@@ -88,7 +88,8 @@ public class QuestionFactory {
 		else if(category.equals("sports"))
 			return new SportsQuestion(question, answers);
 		else
-			throw new RuntimeException("The category is not recognised.");
+			return new SportsQuestion(question, answers);
+			//throw new RuntimeException("The category is not recognised.");
 	}
 
 }

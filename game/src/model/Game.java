@@ -128,9 +128,13 @@ public class Game {
 		return diceValue;
 	}
 
-	public Question getRandomQuestion() {
-		int randomPosition = generator.nextInt(questions.size());
+	@SuppressWarnings("unchecked")
+	public Question getRandomQuestion(Box box) { 
+		List<Question > questionsOfThisCategory = QuestionFactory
+				.getCategoryQuestions(questions, box.getCategoria());
 		
-		return questions.get(randomPosition);
+		int randomPosition = generator.nextInt(questionsOfThisCategory.size());
+		 
+		return questionsOfThisCategory.get(randomPosition);
 	} 
 }

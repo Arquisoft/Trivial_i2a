@@ -101,6 +101,9 @@ public class QuestionFactory {
 	public static <T> List<Question> getCategoryQuestions (List<Question> quests, Class<T> cat) {
 		List<Question> ret = new ArrayList<>();
 		
+		if(cat==null)
+			return quests;
+		
 		if(!Question.class.isAssignableFrom(cat) || cat.equals(Question.class))
 			throw new RuntimeException("The class that you are passing as an "
 					+ "argument is NOT an implementation of Question interface.");

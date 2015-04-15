@@ -13,7 +13,8 @@ public class TraversingBoardState implements State {
 					{
 			game.getBoard().getActualPlayer().setActualBox(boxPressed);
 			
-			Question question = game.getRandomQuestion();
+			Question question = game.getRandomQuestion(game.getBoard()
+					.getActualPlayer().getActualBox());
 			
 			question.answer(game);
 

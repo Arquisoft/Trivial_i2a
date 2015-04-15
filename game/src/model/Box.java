@@ -7,8 +7,13 @@ import java.util.List;
 
 import javax.swing.JButton;
 
+import questions.ArtLiteratureQuestion;
+import questions.EntertainmentQuestion;
+import questions.GeographyQuestion;
+import questions.HistoryQuestion;
 import questions.Question;
 import questions.QuestionFactory;
+import questions.ScienceQuestion;
 import model.Board.BoxType;
 
 public class Box extends JButton{
@@ -122,5 +127,18 @@ public class Box extends JButton{
 
 	public Question getQuestion() {
 		return QuestionFactory.createQuestions(f).get(0);
+	}
+	
+	public Class  getCategoria()
+	{
+		if(type==BoxType.blue_normal || type==BoxType.blue_prize)
+			return GeographyQuestion.class;
+		if(type==BoxType.yellow_normal || type==BoxType.yellow_prize)
+			return HistoryQuestion.class;
+		if(type==BoxType.green_normal  || type==BoxType.green_prize)
+			return ScienceQuestion.class;
+		if(type==BoxType.red_normal || type==BoxType.red_prize)
+			return EntertainmentQuestion.class;
+		return null;
 	}
 }

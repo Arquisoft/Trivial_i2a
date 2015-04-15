@@ -3,6 +3,7 @@ package gui;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,7 +23,6 @@ import javax.swing.border.TitledBorder;
 import main.Principal;
 import model.Board;
 import model.Game;
-import java.awt.Font;
 
 
 
@@ -40,21 +40,21 @@ public class BoardGui extends JFrame {
 	private JLabel lbScore;
 	private JPanel pnLabelScore;
 	private JPanel pnPlayers;
-	private JLabel lblScorePlayer_2;
+	private static JLabel lblScorePlayer_2;
 	private JLabel lblPlayer_4;
 	private JLabel lblPlayer_2;
-	private JLabel lblScorePlayer_1;
+	private static JLabel lblScorePlayer_1;
 	private JLabel lblPlayer_1;
-	private JLabel lblScorePlayer_4;
-	private JLabel lblScorePlayer_3;
+	private static JLabel lblScorePlayer_4;
+	private static JLabel lblScorePlayer_3;
 	private JLabel lblPlayer_3;
 	private JMenuBar menuBar;
 	private JMenu mnNewMenu;
 	private JMenu mnNewMenu_1;
 	private JMenuItem mntmExit;
 	private JMenuItem mntmAboutTrivialPursuit;
-	private JLabel lblAcoreDado;
-	private JButton btnDado;
+	private static JLabel lblAcoreDado;
+	private static JButton btnDado;
 	
 	public Principal vP = null;
 	private int numberOfPlayers;
@@ -165,7 +165,7 @@ public class BoardGui extends JFrame {
 		}
 		return pnPlayers;
 	}
-	private JLabel getLblScorePlayer_2() {
+	public static JLabel getLblScorePlayer_2() {
 		if (lblScorePlayer_2 == null) {
 			lblScorePlayer_2 = new JLabel("0");
 		}
@@ -177,13 +177,13 @@ public class BoardGui extends JFrame {
 		}
 		return lblPlayer_4;
 	}
-	private JLabel getLblPlayer_2() {
+	private  JLabel getLblPlayer_2() {
 		if (lblPlayer_2 == null) {
 			lblPlayer_2 = new JLabel("Player 2:");
 		}
 		return lblPlayer_2;
 	}
-	private JLabel getLblScorePlayer_1() {
+	public static JLabel getLblScorePlayer_1() {
 		if (lblScorePlayer_1 == null) {
 			lblScorePlayer_1 = new JLabel("0");
 		}
@@ -195,13 +195,13 @@ public class BoardGui extends JFrame {
 		}
 		return lblPlayer_1;
 	}
-	private JLabel getLblScorePlayer_4() {
+	public static JLabel getLblScorePlayer_4() {
 		if (lblScorePlayer_4 == null) {
 			lblScorePlayer_4 = new JLabel("0");
 		}
 		return lblScorePlayer_4;
 	}
-	private JLabel getLblScorePlayer_3() {
+	public static JLabel getLblScorePlayer_3() {
 		if (lblScorePlayer_3 == null) {
 			lblScorePlayer_3 = new JLabel("0");
 		}
@@ -259,13 +259,13 @@ public class BoardGui extends JFrame {
 		}
 		return mntmAboutTrivialPursuit;
 	}
-	public JLabel getLblScoreDado() {
+	public static JLabel getLblScoreDado() {
 		if (lblAcoreDado == null) {
 			lblAcoreDado = new JLabel("Press");
 		}
 		return lblAcoreDado;
 	}
-	public JButton getBtnDado() {
+	public static JButton getBtnDado() {
 		if (btnDado == null) {
 			btnDado = new JButton("");
 			btnDado.addActionListener(new ActionListener() {

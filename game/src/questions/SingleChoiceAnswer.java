@@ -1,5 +1,7 @@
 package questions;
 
+import gui.BoardGui;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -164,9 +166,27 @@ public class SingleChoiceAnswer extends JDialog{
 			
 				if(correctlyAnswered)
 				{
-					if(game.getBoard().getActualPlayer().getActualBox().tieneEstrella())
+					if(game.getBoard().getActualPlayer().getActualBox().tieneEstrella()){
 						game.getBoard().getActualPlayer().setScore(game.getBoard()
 								.getActualPlayer().getScore()+1);
+						if(game.getBoard().getActualPlayer().getName().equals("Player 1")){
+							BoardGui.getLblScorePlayer_1().setText(String.valueOf(game.getBoard()
+								.getActualPlayer().getScore()));
+						}
+						else if(game.getBoard().getActualPlayer().getName().equals("Player 2")){
+							BoardGui.getLblScorePlayer_2().setText(String.valueOf(game.getBoard()
+									.getActualPlayer().getScore()));
+						}
+						else if(game.getBoard().getActualPlayer().getName().equals("Player 3")){
+							BoardGui.getLblScorePlayer_3().setText(String.valueOf(game.getBoard()
+									.getActualPlayer().getScore()));
+						}
+						else{
+							BoardGui.getLblScorePlayer_4().setText(String.valueOf(game.getBoard()
+									.getActualPlayer().getScore()));
+						}
+					}
+						
 					if(game.getBoard().getActualPlayer().isWon())
 						game.nextTurn();
 				}

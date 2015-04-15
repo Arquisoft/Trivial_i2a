@@ -65,8 +65,9 @@ public class Game {
 	public void nextTurn() 
 	{
 		hasSomeoneWon();
-		
-		diceValue = new Random().nextInt(6)+1;
+		diceValue = (int) (Math.random()*6+1);
+		//diceValue = new Random().nextInt(6)+1;
+		//diceValue = (int) (Math.random()*6+1);
 		
 		board.nextPlayer();
 		
@@ -94,7 +95,9 @@ public class Game {
 	}
 	
 	private void colourPossibleMovements(Box boxPressed) {
+		
 		List<Box> list = board.getMoves(boxPressed, diceValue);
+		BoardGui.getLblScoreDado().setText("Value: "+ String.valueOf(diceValue));
 		for (Box b : list) 
 		{
 			b.setPossibleMove(true);
@@ -136,5 +139,10 @@ public class Game {
 		int randomPosition = generator.nextInt(questionsOfThisCategory.size());
 		 
 		return questionsOfThisCategory.get(randomPosition);
+	}
+
+	public void setDiceValue(int i) {
+		this.diceValue = i;
+		
 	} 
 }

@@ -11,6 +11,7 @@ public class TraversingBoardState implements State {
 		if(game.getBoard().getMoves(game.getBoard().getActualPlayer().getActualBox(), game.getDiceValue())
 				.contains(boxPressed))
 					{
+			game.setDiceValue((int) (Math.random()*6+1));
 			game.getBoard().getActualPlayer().setActualBox(boxPressed);
 			
 			Question question = game.getRandomQuestion(game.getBoard()

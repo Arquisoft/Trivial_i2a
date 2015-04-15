@@ -1,7 +1,6 @@
 ass
 
-# Package Files #
-**/*.jar
+# Package Files # 
 **/*.war
 **/*.ear
 **/*.classpath

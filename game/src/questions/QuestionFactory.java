@@ -88,8 +88,28 @@ public class QuestionFactory {
 		else if(category.equals("sports"))
 			return new SportsQuestion(question, answers);
 		else
-			return new SportsQuestion(question, answers);
-			//throw new RuntimeException("The category is not recognised.");
+			throw new RuntimeException("The category is not recognised.");
+	}
+	
+	
+	/**
+	 * Returns a list of Questions that are from a given category. 
+	 * @param quests, the list of questions
+	 * @param cat, the category of the questions to get
+	 * @return a list with the questions of the category.
+	 */
+	public static <T> List<Question> getCategoryQuestions (List<Question> quests, Class<T> cat) {
+		List<Question> ret = new ArrayList<>();
+		
+		if(!Question.class.isAssignableFrom(cat) || cat.equals(Question.class))
+			throw new RuntimeException("The class that you are passing as an "
+					+ "argument is NOT an implementation of Question interface.");
+		
+		for(Question q : quests)
+			if(q.getClass().equals(cat))
+				ret.add(q);
+		
+		return ret;
 	}
 
 }

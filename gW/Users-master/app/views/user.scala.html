@@ -1,0 +1,11 @@
+@(user: User)
+
+<html>
+<h1>User</h1>
+<h2>Logged as User: @{user.id}</h2>
+<ul>
+ <li>Id: @{user.id} 
+ <li>Email: @user.email
+</ul>
+<a href="@routes.Application.listGames">Enter or create a game</a>
+</html>

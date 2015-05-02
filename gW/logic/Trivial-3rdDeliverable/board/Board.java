@@ -6,7 +6,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+import cheese.BlueCheese;
+import cheese.Cheese;
+import cheese.GreenCheese;
+import cheese.RedCheese;
+import cheese.YellowCheese;
 import player.Player;
+import box.AbstractBox;
 import box.BlueBox;
 import box.Box;
 import box.GreenBox;
@@ -19,7 +25,6 @@ public class Board {
 	
 	public int numberOfPlayers;
 	private Map<String, Box> boxes;
-	int counter;
 	private ArrayList<Box> finalMoves;
 	private Player[] players;
 	private Box startingBox;
@@ -27,9 +32,15 @@ public class Board {
 	private int indexOfActualPlayer;
 	private Player actualPlayer;
 	private Box[][] board;  
-	int prizeTypesIterator = 0;
+	int cheeseTypesIterator = 0;
 	private ArrayList<Box> normalBoxes;
+	private Cheese[] cheeseTypes;
 
+	//TODO: Erase this after testing process
+	public static void main(String[] args)
+	{
+		Board board = new Board(13, 4);
+	}
 	
 	public Board(int number, int numberOfPlayers) {
 		this.board = new Box[number][number];
@@ -37,28 +48,27 @@ public class Board {
 		players = new Player[numberOfPlayers];
 		fillNormalAndPrizesBoxesArray(number);
 		for(int i = 0;i<number;i++){
+			System.out.println();
 			for(int j = 0;j<number;j++){
 				
 				Box box = null;
 				if(checkPrintable(i,j))
 				{
-					//assignType(number, box); Aquí le asignabamos un valor,
-					// como ese método era feo, habrá que hacer otro
-					//que nos devuelve una instancia cualquiera
-					box = assignNewBox(i, j); //TODO (THIS TO_DO IS JUST TO MARK THIS PART TO REVISE)
-					//Debe mantener la estructura (en este sitio van los quesitos, en
-					//este otro van los tira otra vez... todo eso
+					box = assignNewBox(i, j);
 				}
 				
 				if(box!=null)
 					this.board[i][j] = box;
-				// TODO: MAYBE JUST ERASE IT, AS WE WILL DO THIS IN THE -GUI- PART
+				// TODO: MAYBE JUST ERASE THIS, AS WE WILL DO THIS IN THE -GUI- PART
 				// (PRESENTACIÓN) Construíamos el botón
 //				box.addActionListener(new ActionListener() {
 //					public void actionPerformed(ActionEvent e) {
 //						Principal.getGame().pressed(box);
 //					}
 //				});
+				//TODO: ERASE THIS 2 LINES AFTER TESTING PROCESS
+				else
+					System.out.print(" ");
 			}
 		
 			startingBox =  board[board.length/2][board.length/2];
@@ -158,29 +168,73 @@ public class Board {
 		return board;
 	}
 	
+	//TODO: Erase the Sysouts
 	private Box assignNewBox(int i, int j) {
 		if(isThrowAgainType(i, j))
+		{
+			System.out.print("T");
 			return new ThrowAgainBox();
+		}
 		else if(isCenter(i, j))
+		{
+			System.out.print("C");
 			return new MultiCheeseBox();
-		//TODO else if(isPrizeType(i, j))   WHAT?
-		//	       return ????  WE CAN'T RETURN A CHEESE...	
+		}
+		//TODO 
+		else if(isCheeseType(i, j))
+			return assignCheeseType();
 		
+		System.out.print("N");
 		return getRandomNormalBox();
 	}
 
+	//TODO: Erase the Sysouts
+	private Box assignCheeseType() 
+	{
+		Box box = new AbstractBox();
+		if(cheeseTypes[cheeseTypesIterator] instanceof BlueCheese)
+		{
+			box = new BlueBox();
+			box.setCheese(new BlueCheese());
+			cheeseTypesIterator++;
+			System.out.print("b");
+		}
+		else if(cheeseTypes[cheeseTypesIterator] instanceof GreenCheese)
+		{
+			box = new GreenBox();
+			box.setCheese(new BlueCheese());
+			cheeseTypesIterator++;
+			System.out.print("g");
+		}
+		else if(cheeseTypes[cheeseTypesIterator] instanceof RedCheese)
+		{
+			box = new RedBox();
+			box.setCheese(new BlueCheese());
+			cheeseTypesIterator++;
+			System.out.print("r");
+		}
+		else if(cheeseTypes[cheeseTypesIterator] instanceof YellowCheese)
+		{
+			box = new YellowBox();
+			box.setCheese(new BlueCheese());
+			cheeseTypesIterator++;
+			System.out.print("y");
+		}
+		return box;
+	}
 
 	private Box getRandomNormalBox() {
 		Random random = new Random();
 		int index = 0;
 		if(normalBoxes.size() > 1)
 			index = random.nextInt(normalBoxes.size());
+		Box chosenOne = normalBoxes.get(index);
 		normalBoxes.remove(index);
-		return normalBoxes.get(index);
+		return chosenOne;
 }
 
 
-	//TODO: MAYBE ERASE? THEY ARE DIFFICULT TO IMPLEMENT NOW...
+	//TODO: MAYBE ERASE? Or re-factor with Box.getRow() etc.?
 //	private Box getBoxAbove(int i, int j) 
 //	{
 //		if(i==0 || i==this.board.length/2 || i==this.board.length-1)
@@ -198,6 +252,7 @@ public class Board {
 	private void fillNormalAndPrizesBoxesArray(int number)
 	{
 		int numberOfNormalBoxes = (number*number) - ((number/2 - 1) * (number/2 - 1) * 4) - 13;
+		normalBoxes = new ArrayList<Box>();
 		
 		for(int i=0; i<numberOfNormalBoxes/4; i++)
 			normalBoxes.add(new BlueBox());
@@ -208,12 +263,12 @@ public class Board {
 		for(int i=0; i<numberOfNormalBoxes/4; i++)
 			normalBoxes.add(new YellowBox());
 		
-		//TODO WHAT DO WE DO WITH THE CHEESE TYPES?? THEY DON'T IMPLEMENT BOX
-//		prizeTypes = new BoxType[]{
-//				BoxType.blue_prize, 
-//				BoxType.green_prize, 
-//				BoxType.red_prize, 
-//				BoxType.yellow_prize};
+		
+		cheeseTypes = new Cheese[]{
+				new BlueCheese(), 
+				new GreenCheese(), 
+				new RedCheese(), 
+				new YellowCheese()};
 	}
 	
 	
@@ -224,7 +279,7 @@ public class Board {
 		return false;
 	}
 
-	private boolean isPrizeType(int i, int j) {
+	private boolean isCheeseType(int i, int j) {
 		if(i==0 && j==this.board.length/2 ||
 		   i==this.board.length/2 && j==0 ||
 		   i==this.board.length/2 && j==this.board.length-1 ||	

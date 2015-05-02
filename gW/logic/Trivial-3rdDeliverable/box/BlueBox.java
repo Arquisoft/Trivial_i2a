@@ -1,15 +1,18 @@
 package box;
 
 import question.GeographyQuestion;
+import question.QuestionFactory;
 
 public class BlueBox extends AbstractBox {
 	
-	private GeographyQuestion question;
+	private GeographyQuestion question = new GeographyQuestion();
 	
 	@Override
 	public boolean execute () {
-		//TODO: Auto-generated method stub
-		return false;
+		this.question = (GeographyQuestion) QuestionFactory
+				.getRandomQuestion(question.getClass());
+		//TODO deploy a dialog to answer the question
+		return true;
 	}
 
 }

@@ -8,4 +8,5 @@ public class HistoryQuestion extends AbstractQuestion {
 		super(question, answers, "history");
 	}
 
+	public HistoryQuestion () {}
 }

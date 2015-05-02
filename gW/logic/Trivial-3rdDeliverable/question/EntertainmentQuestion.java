@@ -8,4 +8,5 @@ public class EntertainmentQuestion extends AbstractQuestion {
 		super(question, answers, "entertainment");
 	}
 
+	public EntertainmentQuestion () {}
 }

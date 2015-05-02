@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -18,7 +19,10 @@ import org.json.simple.parser.ParseException;
  
 public class QuestionFactory {
 	
-	public static List<Question> createQuestions (File f) {
+	private static File f = new File("preguntas.json");
+	public static List<Question> questions = createQuestions(f);
+	
+	private static List<Question> createQuestions (File f) {
 		
 		List<Question> ret = new ArrayList<Question>();
 		String file = "[";
@@ -30,7 +34,7 @@ public class QuestionFactory {
 				file += s;
 			br.close();
 		}
-		catch (Exception e) {}
+		catch (Exception e) {e.printStackTrace();}
 		file += "]";
 		
 		try {
@@ -94,21 +98,29 @@ public class QuestionFactory {
 	 * @param cat, the category of the questions to get
 	 * @return a list with the questions of the category.
 	 */
-	public static <T> List<Question> getCategoryQuestions (List<Question> quests, Class<T> cat) {
+	private static List<Question> getCategoryQuestions (Class<?> cat) {
 		List<Question> ret = new ArrayList<>();
 		
 		if(cat==null)
-			return quests;
+			return questions;
 		
 		if(!Question.class.isAssignableFrom(cat) || cat.equals(Question.class))
 			throw new RuntimeException("The class that you are passing as an "
 					+ "argument is NOT an implementation of Question interface.");
 		
-		for(Question q : quests)
+		for(Question q : questions)
 			if(q.getClass().equals(cat))
 				ret.add(q);
 		
 		return ret;
+	}
+	
+	public static Question getRandomQuestion(Class<?> category) {
+		if(questions.size() == 0)
+			questions = createQuestions(f);
+		Random rand = new Random();
+		List<Question> q = getCategoryQuestions(category);
+		return q.get(rand.nextInt(q.size()));
 	}
 
 }

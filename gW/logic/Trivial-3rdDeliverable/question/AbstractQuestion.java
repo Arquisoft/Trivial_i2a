@@ -18,6 +18,8 @@ public class AbstractQuestion implements Question {
 		this.category = category;
 	}
 	
+	public AbstractQuestion() {	}
+
 	public String getCategory () {
 		return this.category;
 	}

@@ -1,14 +1,16 @@
 package box;
 
+import question.QuestionFactory;
 import question.ScienceQuestion;
 
 public class GreenBox extends AbstractBox {
 	
-	private ScienceQuestion question;
+	private ScienceQuestion question = new ScienceQuestion();
 	
 	@Override
 	public boolean execute () {
-		//TODO: Auto-generated method stub
+		this.question = (ScienceQuestion) QuestionFactory
+				.getRandomQuestion(question.getClass());
 		return false;
 	}
 

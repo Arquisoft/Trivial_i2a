@@ -8,4 +8,6 @@ public class GeographyQuestion extends AbstractQuestion {
 		super(question, answers, "geography");
 	}
 
+	public GeographyQuestion() { }
+
 }

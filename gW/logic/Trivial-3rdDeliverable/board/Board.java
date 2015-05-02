@@ -1,16 +1,10 @@
 package board;
  
 
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-
-import javax.swing.ImageIcon;
 
 import player.Player;
 import box.BlueBox;
@@ -46,12 +40,6 @@ public class Board {
 			for(int j = 0;j<number;j++){
 				
 				Box box = null;
-				// TODO: MAYBE JUST ERASE IT, AS WE WILL DO THIS IN THE -GUI- PART
-				//Dibujando la caja (PRESENTACIÓN)   
-//				box.setVisible(true);
-//				box.setColumn(j);
-//				box.setRow(i);
-
 				if(checkPrintable(i,j))
 				{
 					//assignType(number, box); Aquí le asignabamos un valor,
@@ -170,87 +158,7 @@ public class Board {
 		return board;
 	}
 	
-//	private Box assignType(int number, Box box) 
-//	{
-//		if(isThrowAgainType(number, box))
-//		{
-//			box.setType(BoxType.throwAgain);
-//			box.setBackground(Color.GRAY);
-//		}
-//		else if(isCenter(number, box))
-//		{
-//			box.setType(BoxType.center);
-//			box.setBackground(Color.MAGENTA);
-//		}
-//		else if(isPrizeType(number, box))
-//		{
-//			box.setType(prizeTypes[prizeTypesIterator]);
-//			prizeTypesIterator++;
-//			switch(box.getType())
-//			{
-//				case blue_prize:
-//					box.setBackground(Color.BLUE);
-//					box.setIcon(new ImageIcon(Board.class.getResource("/img/star.png")));
-//					break;
-//				case red_prize:
-//					box.setBackground(Color.RED);
-//					box.setIcon(new ImageIcon(Board.class.getResource("/img/star.png")));
-//					break;
-//				case yellow_prize:
-//					box.setBackground(Color.YELLOW);
-//					box.setIcon(new ImageIcon(Board.class.getResource("/img/star.png")));
-//					break;
-//				case green_prize:
-//					box.setBackground(Color.GREEN);
-//					box.setIcon(new ImageIcon(Board.class.getResource("/img/star.png")));
-//					break;
-//			default:
-//				break;
-//			}
-//		}
-//		else
-//		{
-//			int repetitionController = 10;
-//			Random random = new Random();
-//			int index = 0;
-//			if(boxTypes.size() > 1)
-//				while(repetitionController>0)
-//				{
-//					index = random.nextInt(boxTypes.size());
-//					box.setType(boxTypes.get(index));
-//					if(!box.getType().equals(getBoxTypeAtLeft(box, number)) &&
-//					   !box.getType().equals(getBoxTypeAbove(box, number)))
-//					{
-//						break;
-//					}
-//					repetitionController--;
-//				}
-//			box.setType(boxTypes.get(index));
-//			boxTypes.remove(index);
-//			
-//			switch(box.getType())
-//			{
-//			case blue_normal:
-//				box.setBackground(Color.BLUE);
-//				break;
-//			case red_normal:
-//				box.setBackground(Color.RED);
-//				break;
-//			case yellow_normal:
-//				box.setBackground(Color.YELLOW);
-//				break;
-//			case green_normal:
-//				box.setBackground(Color.GREEN);
-//				break;
-//			default:
-//				break;
-//			}
-//		}
-//	}
-
-	
-	private Box assignNewBox(int i, int j) 
-	{
+	private Box assignNewBox(int i, int j) {
 		if(isThrowAgainType(i, j))
 			return new ThrowAgainBox();
 		else if(isCenter(i, j))
@@ -345,15 +253,13 @@ public class Board {
 				i == this.board.length-1 || 
 				j == this.board.length-1 || 
 				i == this.board.length/2 || 
-				j == this.board.length/2 ) {
+				j == this.board.length/2 )
 			return true;
-		}
 		return false;
 	}
 	
 	
-	private List<Box> getAdjacentBoxes(Box box) 
-	{
+	private List<Box> getAdjacentBoxes(Box box) {
 		ArrayList<Box> array = new ArrayList<Box>();
 		int i = box.getRow();
 		int j = box.getColumn();
@@ -362,14 +268,17 @@ public class Board {
 		try {
 			addToArray(array, this.board[i - 1][j]);
 		} catch (Exception e) {}
+		
 		// DOWN
 		try {
 			addToArray(array, this.board[i + 1][j]);
 		} catch (Exception e) {}
+		
 		// LEFT
 		try {
 			addToArray(array, this.board[i][j - 1]);
 		} catch (Exception e) {}
+		
 		// RIGHT
 		try {
 			addToArray(array, this.board[i][j + 1]);
@@ -378,8 +287,7 @@ public class Board {
 		return array;
 	}
 
-	private void addToArray(ArrayList<Box> array, Box box) 
-	{
+	private void addToArray(ArrayList<Box> array, Box box) {
 		if(checkPrintable(box.getRow(), box.getColumn()))
 			array.add(box);
 	}

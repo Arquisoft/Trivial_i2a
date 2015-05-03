@@ -17,10 +17,18 @@ public class Game extends Model {
 	@Required
 	public String email;
 	public String password;
+	public Board board;
 
-	public Game(String email, String password) {
+	public Game(String email, String password,Board board) {
 		this.email = email;
-		this.password = password;
+		this.password = "password";
+	}
+	
+	public Game() {
+		this.password = "password";
+		this.board = new Board();
+		this.board.set(8);
+		this.board.fill(5);
 	}
 
 	public static Game findById(Long id) {

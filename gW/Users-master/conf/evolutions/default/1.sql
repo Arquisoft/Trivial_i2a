@@ -3,6 +3,10 @@
 
 # --- !Ups
 
+create table board (
+  number_of_players         integer)
+;
+
 create table game (
   id                        bigint not null,
   email                     varchar(255),
@@ -27,6 +31,8 @@ create sequence user_seq;
 # --- !Downs
 
 SET REFERENTIAL_INTEGRITY FALSE;
+
+drop table if exists board;
 
 drop table if exists game;
 

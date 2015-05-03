@@ -1,9 +1,128 @@
 @(game: Game)
 
 <html>
+<head>
+    <style>
+    .hidden {
+        visibility: hidden;
+    }
+    .redBox {
+    text-align: center;
+    background-color: red;
+    }
+    .blueBox {
+    text-align: center;
+    background-color: blue;
+    }
+    .greenBox {
+    text-align: center;
+    background-color: green;
+    }
+    .yellowBox {
+    text-align: center;
+    background-color: yellow;
+    }
+</style>
+
+</head>
+ <script type="text/javascript">
+	function mostrar( square ){
+	   var a = document.getElementById("0101");
+	    a.style.color = "blue";
+	}
+</script>
 <h1>Game</h1>
 <ul>
- <li>Id: @{game.id} 
+
+ <li>Id: @game.board.numberOfPlayers 
  <li>Email: @game.email
 </ul>
+<table class="table">
+					<tfoot></tfoot>
+					<thead></thead>
+					<tbody>
+						<tr>
+						    <td><button type="button" id="0101" class="redBox" onclick="mostrar(0101)" >1</button></td>
+						    <td><button type="button" id="1" class="blueBox" onclick="mostrar(1)" >2</button></td>
+						    <td><button type="button" id="1" class="greenBox" onclick="mostrar(1)" >3</button></td>
+						    
+						    <td><button type="button" id="1" class="yellowBox" onclick="mostrar(1)" >4</button></td>
+						    
+						    <td><button type="button" id="1" class="greenBox" onclick="mostrar(1)" >5</button></td>
+						    <td><button type="button" id="1" class="blueBox" onclick="mostrar(1)" >6</button></td>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >7</button></td>
+						</tr>
+						
+						<tr>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >1</button></td>
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >2</button></td>
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >3</button></td>
+						    
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >4</button></td>
+						    
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >5</button></td>
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >6</button></td>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >7</button></td>
+						</tr>
+						
+						<tr>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >1</button></td>
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >2</button></td>
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >3</button></td>
+						    
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >4</button></td>
+						    
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >5</button></td>
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >6</button></td>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >7</button></td>
+						</tr>
+						
+						<tr>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >1</button></td>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >2</button></td>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >3</button></td>
+						    
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >4</button></td>
+						    
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >5</button></td>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >6</button></td>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >7</button></td>
+						</tr>
+						
+						<tr>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >1</button></td>
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >2</button></td>
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >3</button></td>
+						    
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >4</button></td>
+						    
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >5</button></td>
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >6</button></td>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >7</button></td>
+						</tr>
+						
+						<tr>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >1</button></td>
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >2</button></td>
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >3</button></td>
+						    
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >4</button></td>
+						    
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >5</button></td>
+						    <td><button type="button" id="1" class="hidden" onclick="mostrar(1)" >6</button></td>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >7</button></td>
+						</tr>
+						
+						<tr>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >1</button></td>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >2</button></td>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >3</button></td>
+						    
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >4</button></td>
+						    
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >5</button></td>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >6</button></td>
+						    <td><button type="button" id="1" class="redBox" onclick="mostrar(1)" >7</button></td>
+						</tr>
+						    
 </html>

@@ -21,7 +21,7 @@ public class Game {
 	private State state;
 	private Dice dice = Dice.getInstance();
 	
-	private boolean finish = false;
+	public boolean finish = false;
 
 	private Game(Map<String, Box> list ) {
 		board = new Board(list);
@@ -35,8 +35,9 @@ public class Game {
 		
 	}
 	
-	private void finishGame() {
-		this.finish = false;
+	public void finishGame() {
+	    System.out.print("NAVAAAAAAAAAAAAAAAAAAAAAAAAAAAASss");
+		this.finish = true;
 	}
 	
 	public boolean isGameFinished() {
@@ -49,6 +50,10 @@ public class Game {
 			state = state.onGamePressed(this, boxPressed);
 			playerCanMove(board.getActualPlayer().getActualBox());
 		}
+	}
+	
+	public void pressed(int i,int j){
+	    pressed(board.getBoard()[i][j]);
 	}
 	
 	public void nextTurn()  {
@@ -79,9 +84,10 @@ public class Game {
 		for(int i=0; i<board.getBoard().length; i++)
 			for(int j=0; j<board.getBoard()[0].length; j++) {
 				Box b = list[i][j];
-				if(b!=null)
-				b.setPossibleMove(true);
-				b.setMovable(false);
+				if(b!=null){
+				    b.setPossibleMove(true);
+				    b.setMovable(false);
+				}
 			}
 	}
 	

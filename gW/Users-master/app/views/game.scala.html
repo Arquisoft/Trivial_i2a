@@ -22,6 +22,8 @@
     text-align: center;
     background-color: yellow;
     }
+    
+
 </style>
 
 </head>
@@ -36,6 +38,7 @@
 <li>Game: @game</li>
  <li>Id: @game.getGame().toString()</li>
  <li>Email: @game.email</li>
+ <li>Finish: @game.getGame().finish</li>
 </ul>
 <h1>List of users</h1>
 <table>
@@ -44,7 +47,7 @@
     @for(box <- boxes) {
     @if(box!=null) {
     @if(box.isMovable()) {
- <td><button type="button" class="@box.getClassHTML()" onclick="mostrar(0101)" style="border-width:thick">1</button></td>
+ <td><a href="@routes.API.gamePressed(game.getID(),box.getRow(),box.getColumn())"><button type="button" class="@box.getClassHTML()" id="0101" style="border-width:thick">1</button></a></td>
  } else{
     <td><button type="button" class="@box.getClassHTML()" onclick="mostrar(0101) " disabled>1</button></td>
  }

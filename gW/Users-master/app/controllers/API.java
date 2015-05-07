@@ -27,7 +27,7 @@ public class API extends Controller {
         Game game = GameModel.findById(id).getGame();
         System.out.println(game);
         System.out.println(game);
-         System.out.println("----------------------------------------------");
+        System.out.println("----------------------------------------------");
         System.out.println(id);
         System.out.println(GameModel.findById(id).toString());
         System.out.println("Primera");
@@ -35,6 +35,13 @@ public class API extends Controller {
         System.out.println("Segunda");
         System.out.println(GameModel.findById(id).getGame().toString());
         return redirect(routes.Application.listGame(id));
+    }
+    public static Result gamePressed(Long id,Integer row,Integer column){
+       Game game = GameModel.findById(id).getGame();
+        game.pressed(row,column);
+        System.out.println("chin choppin chin choppin" + row +"  "+column);
+        return redirect(routes.Application.listGame(id));
+        
     }
 
     public static Result showUserJson(Long id) {

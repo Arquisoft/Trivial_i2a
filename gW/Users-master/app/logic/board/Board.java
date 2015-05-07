@@ -55,6 +55,8 @@ public class Board {
 				if(checkPrintable(i,j))
 				{
 					box = assignNewBox(i, j);
+		            box.setRow(i);
+		            box.setColumn(j);
 				}
 				
 					this.board[i][j] = box;

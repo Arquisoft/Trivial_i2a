@@ -11,6 +11,7 @@ GET    /                        controllers.Application.showUsers()
 GET    /:id            			controllers.Application.showUser(id: Long)
 
 GET    /api/nextTurn            controllers.API.gameAction(id: Long)
+GET    /api/nava                controllers.API.gamePressed(id: Long,row: Integer,column: Integer)
 
 
 GET     /greeting/:name   		controllers.Application.greeting(name: String)

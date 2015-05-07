@@ -1,0 +1,61 @@
+@(game: GameModel)
+
+<html>
+<head>
+    <style>
+    .hidden {
+        visibility: hidden;
+    }
+    .redBox {
+    text-align: center;
+    background-color: red;
+    }
+    .blueBox {
+    text-align: center;
+    background-color: blue;
+    }
+    .greenBox {
+    text-align: center;
+    background-color: green;
+    }
+    .yellowBox {
+    text-align: center;
+    background-color: yellow;
+    }
+</style>
+
+</head>
+ <script type="text/javascript">
+	function mostrar( square ){
+	   var a = document.getElementById("0101");
+	    a.style.color = "blue";
+	}
+</script>
+<h1>Game</h1>
+<ul>
+<li>Game: @game</li>
+ <li>Id: @game.getGame().toString()</li>
+ <li>Email: @game.email</li>
+</ul>
+<h1>List of users</h1>
+<table>
+@for(boxes <- game.getGame().getBoard().getBoard()) {
+<tr>
+    @for(box <- boxes) {
+    @if(box!=null) {
+    @if(box.isMovable()) {
+ <td><button type="button" class="@box.getClassHTML()" onclick="mostrar(0101)" style="border-width:thick">1</button></td>
+ } else{
+    <td><button type="button" class="@box.getClassHTML()" onclick="mostrar(0101) " disabled>1</button></td>
+ }
+ } else{
+    <td>   </td>
+ }
+ 
+ }
+</tr>
+}
+    
+
+						 <a href="@routes.API.gameAction(game.getID())">Game Action</a>   
+</html>

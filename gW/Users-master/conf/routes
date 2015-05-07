@@ -1,0 +1,37 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+
+GET    /games                   controllers.Application.listGames()
+GET    /games/:id                controllers.Application.listGame(id: Long)
+
+GET    /                        controllers.Application.showUsers()
+GET    /:id            			controllers.Application.showUser(id: Long)
+
+GET    /api/nextTurn            controllers.API.gameAction(id: Long)
+
+
+GET     /greeting/:name   		controllers.Application.greeting(name: String)
+
+GET    /api/user            	controllers.API.showUsersJson()
+GET    /api/user/:id           	controllers.API.showUserJson(id: Long)
+PUT    /api/user/:id           	controllers.API.updateUser(id: Long)
+POST   /api/user            	controllers.API.newUser()
+POST   /api/user/delete/:id 	controllers.API.deleteUser(id: Long)
+DELETE /api/user/:id 			controllers.API.deleteUser(id: Long)
+
+GET    /api2/user            	controllers.API2.showUsersHATEOAS()
+GET    /api2/user/:id           controllers.API2.showUserHATEOAS(id: Long)
+
+POST   /api/game            	controllers.API.newGame()
+GET    /api/game            	controllers.API.showGamesJson()
+GET    /api/game/:id           	controllers.API.showGameJson(id: Long)
+
+GET    /api2/game            	controllers.API2.showGamesHATEOAS()
+GET    /api2/game/:id           controllers.API2.showGameHATEOAS(id: Long)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

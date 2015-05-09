@@ -1,0 +1,7 @@
+New log file opened at Sun Apr 26 22:59:22 CEST 2015 by 10832@usuario-PC
+Taking next connection to: 29748
+New client attempting to connect on port: 29749-29748
+  Address = /169.254.140.86:29748
+This client on port 29749 has uuid b87e8609-aeb4-4645-a3ba-95eeaec4a68a configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-b87e8609-aeb4-4645-a3ba-95eeaec4a68a
+Taking next connection to: 29748

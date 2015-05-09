@@ -1,0 +1,32 @@
+@(users: List[User], userForm: Form[User])
+
+@import helper._
+
+<html>
+<h1>List of users</h1>
+<table>
+@for(user <- users) {
+<tr>
+ <td>@user.id</td>
+ <td><a href="@routes.Application.showUser(user.id)">@user.email</a></td>
+ <td>@helper.form(routes.API.deleteUser(user.id)) {
+               <input type="image" 
+                      src="@{routes.Assets.at("images/delete.gif")}" 
+                      alt='Delete user'>
+         }
+  </td>
+</tr>
+}
+</table>
+
+<h2>New user</h2>
+    
+	@form(action = routes.API.newUser()) {
+	
+        @inputText(userForm("email")) 
+        
+        <input type="submit" value="Add">
+        
+    }    
+</html>
+

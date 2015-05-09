@@ -1,0 +1,132 @@
+{
+  "category" : "geography",
+  "title" : "",
+  "wording" : "Where is Oviedo?",
+  "options" : [ {
+    "wording" : "Spain",
+    "comment" : "",
+    "correct" : true
+  }, {
+    "wording" : "USA",
+    "comment" : "",
+    "correct" : false
+  }, {
+    "wording" : "Portugal",
+    "comment" : "",
+    "correct" : false
+  }, {
+    "wording" : "Argentina",
+    "comment" : "",
+    "correct" : false
+  } ]
+}
+{
+  "category" : "entertainment",
+  "title" : "",
+  "wording" : "In which TV program does Horatio Caine appears?",
+  "options" : [ {
+    "wording" : "NCIS: Los Angeles",
+    "comment" : "",
+    "correct" : false
+  }, {
+    "wording" : "CSI",
+    "comment" : "",
+    "correct" : true
+  }, {
+    "wording" : "The Voice",
+    "comment" : "",
+    "correct" : false
+  }, {
+    "wording" : "Big Bang",
+    "comment" : "",
+    "correct" : false
+  } ]
+}
+{
+  "category" : "history",
+  "title" : "",
+  "wording" : "When did WW2 start?",
+  "options" : [ {
+    "wording" : "1522",
+    "comment" : "",
+    "correct" : false
+  }, {
+    "wording" : "1936",
+    "comment" : "",
+    "correct" : false
+  }, {
+    "wording" : "1939",
+    "comment" : "",
+    "correct" : true
+  }, {
+    "wording" : "1942",
+    "comment" : "",
+    "correct" : false
+  } ]
+}
+{
+  "category" : "artliterature",
+  "title" : "",
+  "wording" : "Who was Pablo Picasso?",
+  "options" : [ {
+    "wording" : "Singer",
+    "comment" : "",
+    "correct" : false
+  }, {
+    "wording" : "Politician",
+    "comment" : "",
+    "correct" : false
+  }, {
+    "wording" : "Guitarist",
+    "comment" : "",
+    "correct" : false
+  }, {
+    "wording" : "Painter",
+    "comment" : "",
+    "correct" : true
+  } ]
+}
+{
+  "category" : "science",
+  "title" : "",
+  "wording" : "Who invented the bulb?",
+  "options" : [ {
+    "wording" : "Edison",
+    "comment" : "",
+    "correct" : true
+  }, {
+    "wording" : "Copernicus",
+    "comment" : "",
+    "correct" : false
+  }, {
+    "wording" : "Aston Kutcher",
+    "comment" : "",
+    "correct" : false
+  }, {
+    "wording" : "Bohr",
+    "comment" : "",
+    "correct" : false
+  } ]
+}
+{
+  "category" : "sports",
+  "title" : "",
+  "wording" : "Which is the name of Messi?",
+  "options" : [ {
+    "wording" : "Carlinhos",
+    "comment" : "",
+    "correct" : false
+  }, {
+    "wording" : "Freddy",
+    "comment" : "",
+    "correct" : false
+  }, {
+    "wording" : "Lionel",
+    "comment" : "",
+    "correct" : true
+  }, {
+    "wording" : "Luis Antonio",
+    "comment" : "",
+    "correct" : false
+  } ]
+}

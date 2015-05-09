@@ -1,0 +1,5 @@
+package inputLanguages
+
+trait InputLanguage {
+
+}

@@ -1,0 +1,26 @@
+@(games: List[Game], gameForm: Form[Game])
+
+@import helper._
+
+<html>
+<h1>List of games</h1>
+<table>
+@for(game <- games) {
+<tr>
+ <td>@game.id</td>
+ <td><a href="">Enter game @game.id</a></td>
+ <td><a href="@routes.Application.listGame(game.id)">@game.email</a></td>
+</tr>
+}
+</table>
+
+<h2>New game</h2>
+    
+	@form(action = routes.API.newGame()) {
+	
+        @inputText(gameForm("email")) 
+        
+        <input type="submit" value="Add">
+        
+    }    
+</html>

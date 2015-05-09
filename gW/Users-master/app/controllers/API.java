@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import models.User;
 import models.GameModel;
 import game.Game;
+import question.Question;
 import board.Board;
 import play.*;
 import play.data.Form;
@@ -38,9 +39,30 @@ public class API extends Controller {
     }
     public static Result gamePressed(Long id,Integer row,Integer column){
        Game game = GameModel.findById(id).getGame();
-        game.pressed(row,column);
+        boolean b = game.pressed(row,column);
+        
         System.out.println("chin choppin chin choppin" + row +"  "+column);
-        return redirect(routes.Application.listGame(id));
+        
+            return redirect(routes.Application.listGame(id));
+        
+        
+    }
+    
+    public static Result answerQuestion(Long id, String correctAnswer, String myAnswer){
+       Game game = GameModel.findById(id).getGame();
+        boolean b = correctAnswer.compareTo(myAnswer)==0;
+        
+         System.out.println(b);
+         
+         game.setActualQuestion(null);
+         
+         if(b)
+            ;
+         else
+             game.nextTurn();
+        
+            return redirect(routes.Application.listGame(id));
+        
         
     }
 

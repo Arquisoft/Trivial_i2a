@@ -2,7 +2,7 @@ package box;
 
 import java.lang.reflect.Constructor;
 import java.util.Random;
-
+import game.Game;
 
 public class MultiCheeseBox extends AbstractBox {
 
@@ -15,7 +15,7 @@ public class MultiCheeseBox extends AbstractBox {
 							   };
 	
 	@Override
-	public boolean execute () {
+	public boolean execute (Game game) {
 		Class<?> x = boxes[rand.nextInt(boxes.length)];
 		Constructor<?> ctor;
 		try {
@@ -25,11 +25,11 @@ public class MultiCheeseBox extends AbstractBox {
 			e.printStackTrace();
 		}
 		
-		return this.box.execute();
+		return this.box.execute(game);
 	}
 
 @Override
 	public String getClassHTML(){
-	    return "redBox";
+	    return "centerBox";
 	}
 }

@@ -1,6 +1,7 @@
 package box;
 
 import cheese.Cheese;
+import game.Game;
 
 public interface Box {
 	
@@ -12,7 +13,7 @@ public interface Box {
 	public Cheese getCheese();
 	public void setCheese(Cheese cheese);
 	
-	public boolean execute(); //true if the player plays again
+	public boolean execute(Game game); //true if the player plays again
 
 	public void setPossibleMove(boolean b);
 	public boolean isPossibleMove();

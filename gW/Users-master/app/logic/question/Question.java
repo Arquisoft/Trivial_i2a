@@ -14,4 +14,5 @@ public interface Question {
 
 	void answer(Game game);
 
+    public boolean checkAnswer (String ans);
 }

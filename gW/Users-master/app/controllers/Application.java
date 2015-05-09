@@ -30,9 +30,7 @@ public class Application extends Controller {
     }
     
     public static Result listGame(Long id) {
-        System.out.println("ID de el juego es:"+id);
         return ok(game.render(GameModel.findById(id)));
-        
     }
 
     static Form<User>  	  userForm     = Form.form(User.class);

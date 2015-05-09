@@ -13,6 +13,8 @@ GET    /:id            			controllers.Application.showUser(id: Long)
 GET    /api/nextTurn            controllers.API.gameAction(id: Long)
 GET    /api/nava                controllers.API.gamePressed(id: Long,row: Integer,column: Integer)
 
+GET    /api/navanava            controllers.API.answerQuestion(id: Long, rightAnswer: String, myAnswer: String)
+
 
 GET     /greeting/:name   		controllers.Application.greeting(name: String)
 

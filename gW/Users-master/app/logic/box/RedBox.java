@@ -1,15 +1,22 @@
 package box;
 
+import question.EntertainmentQuestion;
+import question.QuestionFactory;
+import game.Game;
 
 public class RedBox extends AbstractBox {
 	
+	private EntertainmentQuestion question = new EntertainmentQuestion();
 	
 	@Override
-	public boolean execute () {
+	public boolean execute (Game game) {
+		this.question = (EntertainmentQuestion) QuestionFactory
+				.getRandomQuestion(question.getClass());
+		setActualQuestion(question, game);
 		return false;
 	}
 
-@Override
+    @Override
 	public String getClassHTML(){
 	    return "redBox";
 	}

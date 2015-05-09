@@ -1,6 +1,8 @@
 package box;
 
 import cheese.Cheese;
+import game.Game;
+import question.Question;
 
 public abstract class AbstractBox implements Box {
 
@@ -26,13 +28,11 @@ public abstract class AbstractBox implements Box {
 	public boolean isMovable(){
 	    return movable;
 	}
-
-	@Override
-	public boolean execute() {
-		//Default implementation for a 
-		//throw-again box
-		return true;
+	
+	public void setActualQuestion(Question question, Game game){
+	    game.setActualQuestion(question);
 	}
+
 
 	@Override
 	public int getRow() {

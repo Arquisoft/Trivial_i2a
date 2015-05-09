@@ -22,7 +22,14 @@
     text-align: center;
     background-color: yellow;
     }
-    
+    .throwAgainBox {
+    text-align: center;
+    background-color: grey;
+    }
+    .centerBox {
+    text-align: center;
+    background-color: pink;
+    }
 
 </style>
 
@@ -40,15 +47,18 @@
  <li>Email: @game.email</li>
  <li>Finish: @game.getGame().finish</li>
 </ul>
-<h1>List of users</h1>
-<table>
-@for(boxes <- game.getGame().getBoard().getBoard()) {
-<tr>
-    @for(box <- boxes) {
-    @if(box!=null) {
-    @if(box.isMovable()) {
- <td><a href="@routes.API.gamePressed(game.getID(),box.getRow(),box.getColumn())"><button type="button" class="@box.getClassHTML()" id="0101" style="border-width:thick">1</button></a></td>
- } else{
+
+@if(game.getGame().getActualQuestion()==null){
+<h1>Turn of player @game.getGame().getBoard().getActualPlayer().getName()</h1>
+<h2>Dice: @(game.getGame().getDiceValue()+1)</h2>
+    <table>
+    @for(boxes <- game.getGame().getBoard().getBoard()) {
+    <tr>
+        @for(box <- boxes) {
+            @if(box!=null) {
+                 @if(box.isMovable()) {
+                    <td><a href="@routes.API.gamePressed(game.getID(),box.getRow(),box.getColumn())"><button type="button" class="@box.getClassHTML()" id="0101" style="border-width:thick">1</button></a></td>
+                    } else{
     <td><button type="button" class="@box.getClassHTML()" onclick="mostrar(0101) " disabled>1</button></td>
  }
  } else{
@@ -58,7 +68,18 @@
  }
 </tr>
 }
-    
+</table>
+    } else{
+        <table>
+        <tr><td>@game.getGame().getActualQuestion().getQuestion()</td></tr>
+        @for(answer <- game.getGame().getActualQuestion().getAnswers().entrySet()){
+       <tr><td> <a href="@routes.API.answerQuestion(game.getID(), game.getGame().getActualQuestion().getRightAnswer(),answer.getKey())">
+       <button type="button" class="greyBox"  style="border-width:thick">@answer.getKey()</button></a></td></tr>
+        }
+   </table>
+    }
 
 						 <a href="@routes.API.gameAction(game.getID())">Game Action</a>   
+						 <br/>
+						 Question: @game.getGame().getActualQuestion()
 </html>

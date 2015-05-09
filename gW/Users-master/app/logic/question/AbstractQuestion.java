@@ -19,6 +19,12 @@ public class AbstractQuestion implements Question {
 	}
 	
 	public AbstractQuestion() {	}
+	
+	public boolean checkAnswer (String ans) {
+	//Since no one can modify the answer string, we
+	//don't need to do it with a compareTo.
+	return getRightAnswer().compareTo(ans)==0;
+}
 
 	public String getCategory () {
 		return this.category;

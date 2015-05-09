@@ -12,7 +12,7 @@ public class Dice {
 	private Dice () {}
 	
 	public int throwDice () {
-		this.value = rand.nextInt(MAX_VALUE)+1;
+		this.value = rand.nextInt(MAX_VALUE);
 		return value;
 	}
 	

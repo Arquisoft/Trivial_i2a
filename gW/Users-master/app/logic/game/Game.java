@@ -11,11 +11,20 @@ import state.TraversingBoardState;
 import board.Board;
 import board.Dice;
 import box.Box;
+import question.Question;
 
 @Entity
 public class Game {
     
+    private Question actualQuestion;
     
+    public Question getActualQuestion(){
+        return this.actualQuestion;
+    }
+    
+    public void setActualQuestion(Question question){
+        this.actualQuestion = question;
+    }
 
 	private Board board;
 	private State state;
@@ -44,16 +53,19 @@ public class Game {
 		return this.finish;
 	}
 
-	public void pressed(Box boxPressed) {
+	public boolean pressed(Box boxPressed) {
 		if(boxPressed!=null) {
 			cleanPossibleMovements();
-			state = state.onGamePressed(this, boxPressed);
+			boolean b = state.onGamePressed(this, boxPressed);
 			playerCanMove(board.getActualPlayer().getActualBox());
+			return b;
 		}
+		
+		return false;
 	}
 	
-	public void pressed(int i,int j){
-	    pressed(board.getBoard()[i][j]);
+	public boolean pressed(int i,int j){
+	        return  pressed(board.getBoard()[i][j]);
 	}
 	
 	public void nextTurn()  {

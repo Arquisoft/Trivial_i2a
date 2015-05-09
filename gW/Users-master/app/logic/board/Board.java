@@ -110,6 +110,7 @@ public class Board {
 		{
 			players[i] = new Player("Player "+String.valueOf(i+1));
 			players[i].setActualBox(startingBox);
+			players[i].setName(String.valueOf(i+1));
 		}
 		
 		indexOfActualPlayer = 0;

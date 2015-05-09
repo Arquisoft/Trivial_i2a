@@ -1,6 +1,7 @@
 
 import cheese.Cheese;
 import javax.persistence.*;
+import game.Game;
 
 import play.db.ebean.*;
 import play.data.format.*;

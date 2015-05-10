@@ -93,3 +93,7 @@ The following quality attributes have been identified:
   o	The core game engine must be reusable to develop the same game with different GUIs.
   o	As the logic is completely separated from thew visual, it coul be used with other boards
   o	Also, the logic could be used for another game
+
+-	Reliability.
+  o	The movements of the piece must be correct.
+  o	No confusions between the piece of one player and the piece of another player

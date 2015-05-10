@@ -70,3 +70,10 @@ The following quality attributes have been identified:
 
 -	Modifiability
   o	Easy introduction of new question types and puntuation algorithms.
+
+-	Performance
+  o	Since it is a end-user application, the application must ensure that:
+    	There is no lag in the Graphical User Interface (GUI).
+    	The questions must be loaded from the database at a reasonable speed so that the user doesn’t have to wait for them.
+    	It works perfectly as a web application.
+

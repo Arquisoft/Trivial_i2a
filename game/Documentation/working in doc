@@ -80,3 +80,4 @@ The following quality attributes have been identified:
 -	Security
   o	The stats of the game must be accesible only to privileged users.
   o	No useres without priveleges can access the stats of the game.
+

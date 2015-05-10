@@ -1,5 +1,5 @@
-New log file opened at Sun May 10 14:55:50 CEST 2015 by 3152@Admin-PC
-jvm 3152@Admin-PC
+New log file opened at Sun May 10 15:40:14 CEST 2015 by 2676@Admin-PC
+jvm 2676@Admin-PC
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.25-b02
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\project, returning: (users-master-build)
 Loading project definition from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@7186788a, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@418f70e0, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -65,787 +65,198 @@ Set current project to Users (in build file:/C:/Users/Admin/Desktop/ASW/Trivial_
 > iflast shell
 > server-send-ready-for-request
 > server-handle-next-server-request
-> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@6eff0438, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java)
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java)
-
-Recompiling all 45 sources: invalidated sources (45) exceeded 50.0% of all sources
-Read from stdout: Compiling 8 Scala sources and 37 Java sources to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
-Compiling 8 Scala sources and 37 Java sources to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Running cached compiler 20ae1bb1, interfacing (CompilerInterface) with Scala compiler version 2.11.1
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jre1.8.0_25\lib\resources.jar;C:\Program Files\Java\jre1.8.0_25\lib\rt.jar;C:\Program Files\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_25\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_25\lib\jce.jar;C:\Program Files\Java\jre1.8.0_25\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_25\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_25\classes;C:\Users\Admin\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
-	-classpath
-	C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes;C:\Users\Admin\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Admin\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Admin\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Admin\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Admin\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Admin\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Admin\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Admin\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Admin\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Admin\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Admin\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Admin\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Admin\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Admin\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Admin\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Admin\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Admin\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Admin\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Admin\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Admin\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Admin\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Admin\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Admin\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Admin\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Admin\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Admin\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Admin\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Admin\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Admin\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Admin\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Admin\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Admin\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Admin\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Admin\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Admin\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Admin\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Admin\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Admin\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar;C:\Users\Admin\.ivy2\cache\com.googlecode.json-simple\json-simple\jars\json-simple-1.1.jar
-Scala compilation took 8.41994548 s
-Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:6:  error: AnsweringQuestionsState is not abstract and does not override abstract method onGamePressed(Game,Box) in State
-C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:6:  error: AnsweringQuestionsState is not abstract and does not override abstract method onGamePressed(Game,Box) in State
-Read from stdout: public class AnsweringQuestionsState implements State {
-Read from stdout: ^
-public class AnsweringQuestionsState implements State {
-       ^
-Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:9:  error: onGamePressed(Game,Box) in AnsweringQuestionsState cannot implement onGamePressed(Game,Box) in State
-C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:9:  error: onGamePressed(Game,Box) in AnsweringQuestionsState cannot implement onGamePressed(Game,Box) in State
-Read from stdout: 	public State onGamePressed(Game game, Box boxPressed) {
-Read from stdout: 	             ^
-	public State onGamePressed(Game game, Box boxPressed) {
-	             ^
-Read from stdout: return type State is not compatible with boolean
-Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:8:  error: method does not override or implement a method from a supertype
-return type State is not compatible with boolean
-C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:8:  error: method does not override or implement a method from a supertype
-Read from stdout: 	@Override
-Read from stdout: 	^
-	@Override
-	^
-Read from stdout: Note: Some input files use unchecked or unsafe operations.
-Note: Some input files use unchecked or unsafe operations.
-Read from stdout: Note: Recompile with -Xlint:unchecked for details.
-Note: Recompile with -Xlint:unchecked for details.
-Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
-(compile:compileIncremental) javac returned nonzero exit code
-Total time: 10 s, completed 10-may-2015 14:56:06
-> server-post-command-error-handler
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@3e4ac027, check cycles: false
-Total time: 0 s, completed 10-may-2015 14:56:06
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@37f7d8d3, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java)
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java)
-
-Recompiling all 45 sources: invalidated sources (45) exceeded 50.0% of all sources
-Read from stdout: Compiling 8 Scala sources and 37 Java sources to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
-Compiling 8 Scala sources and 37 Java sources to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Running cached compiler 423ebaf9, interfacing (CompilerInterface) with Scala compiler version 2.11.1
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jre1.8.0_25\lib\resources.jar;C:\Program Files\Java\jre1.8.0_25\lib\rt.jar;C:\Program Files\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_25\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_25\lib\jce.jar;C:\Program Files\Java\jre1.8.0_25\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_25\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_25\classes;C:\Users\Admin\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
-	-classpath
-	C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes;C:\Users\Admin\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Admin\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Admin\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Admin\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Admin\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Admin\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Admin\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Admin\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Admin\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Admin\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Admin\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Admin\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Admin\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Admin\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Admin\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Admin\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Admin\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Admin\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Admin\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Admin\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Admin\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Admin\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Admin\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Admin\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Admin\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Admin\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Admin\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Admin\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Admin\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Admin\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Admin\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Admin\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Admin\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Admin\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Admin\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Admin\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Admin\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Admin\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar;C:\Users\Admin\.ivy2\cache\com.googlecode.json-simple\json-simple\jars\json-simple-1.1.jar
-Scala compilation took 3.766842617 s
-Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:6:  error: AnsweringQuestionsState is not abstract and does not override abstract method onGamePressed(Game,Box) in State
-C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:6:  error: AnsweringQuestionsState is not abstract and does not override abstract method onGamePressed(Game,Box) in State
-Read from stdout: public class AnsweringQuestionsState implements State {
-Read from stdout: ^
-public class AnsweringQuestionsState implements State {
-       ^
-Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:9:  error: onGamePressed(Game,Box) in AnsweringQuestionsState cannot implement onGamePressed(Game,Box) in State
-C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:9:  error: onGamePressed(Game,Box) in AnsweringQuestionsState cannot implement onGamePressed(Game,Box) in State
-Read from stdout: 	public State onGamePressed(Game game, Box boxPressed) {
-Read from stdout: 	             ^
-	public State onGamePressed(Game game, Box boxPressed) {
-	             ^
-Read from stdout: return type State is not compatible with boolean
-Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:8:  error: method does not override or implement a method from a supertype
-return type State is not compatible with boolean
-C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:8:  error: method does not override or implement a method from a supertype
-Read from stdout: 	@Override
-Read from stdout: 	^
-	@Override
-	^
-Read from stdout: Note: Some input files use unchecked or unsafe operations.
-Note: Some input files use unchecked or unsafe operations.
-Read from stdout: Note: Recompile with -Xlint:unchecked for details.
-Note: Recompile with -Xlint:unchecked for details.
-Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
-(compile:compileIncremental) javac returned nonzero exit code
-Total time: 6 s, completed 10-may-2015 14:56:11
-> server-post-command-error-handler
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@18f53cef, check cycles: false
-Total time: 0 s, completed 10-may-2015 14:56:11
-> server-post-command-cleanup
-> server-handle-next-server-request
 > compile
 Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@66174def, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java)
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java)
-
-Recompiling all 45 sources: invalidated sources (45) exceeded 50.0% of all sources
-Read from stdout: Compiling 8 Scala sources and 37 Java sources to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
-Compiling 8 Scala sources and 37 Java sources to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Running cached compiler 634466a9, interfacing (CompilerInterface) with Scala compiler version 2.11.1
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jre1.8.0_25\lib\resources.jar;C:\Program Files\Java\jre1.8.0_25\lib\rt.jar;C:\Program Files\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_25\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_25\lib\jce.jar;C:\Program Files\Java\jre1.8.0_25\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_25\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_25\classes;C:\Users\Admin\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
-	-classpath
-	C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes;C:\Users\Admin\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Admin\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Admin\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Admin\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Admin\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Admin\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Admin\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Admin\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Admin\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Admin\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Admin\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Admin\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Admin\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Admin\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Admin\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Admin\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Admin\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Admin\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Admin\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Admin\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Admin\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Admin\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Admin\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Admin\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Admin\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Admin\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Admin\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Admin\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Admin\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Admin\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Admin\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Admin\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Admin\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Admin\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Admin\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Admin\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Admin\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Admin\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar;C:\Users\Admin\.ivy2\cache\com.googlecode.json-simple\json-simple\jars\json-simple-1.1.jar
-Scala compilation took 3.414825434 s
-Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:6:  error: AnsweringQuestionsState is not abstract and does not override abstract method onGamePressed(Game,Box) in State
-C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:6:  error: AnsweringQuestionsState is not abstract and does not override abstract method onGamePressed(Game,Box) in State
-Read from stdout: public class AnsweringQuestionsState implements State {
-Read from stdout: ^
-public class AnsweringQuestionsState implements State {
-       ^
-Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:9:  error: onGamePressed(Game,Box) in AnsweringQuestionsState cannot implement onGamePressed(Game,Box) in State
-C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:9:  error: onGamePressed(Game,Box) in AnsweringQuestionsState cannot implement onGamePressed(Game,Box) in State
-Read from stdout: 	public State onGamePressed(Game game, Box boxPressed) {
-Read from stdout: 	             ^
-	public State onGamePressed(Game game, Box boxPressed) {
-	             ^
-Read from stdout: return type State is not compatible with boolean
-Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:8:  error: method does not override or implement a method from a supertype
-return type State is not compatible with boolean
-C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java:8:  error: method does not override or implement a method from a supertype
-Read from stdout: 	@Override
-Read from stdout: 	^
-	@Override
-	^
-Read from stdout: Note: Some input files use unchecked or unsafe operations.
-Note: Some input files use unchecked or unsafe operations.
-Read from stdout: Note: Recompile with -Xlint:unchecked for details.
-Note: Recompile with -Xlint:unchecked for details.
-Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
-(compile:compileIncremental) javac returned nonzero exit code
-Total time: 5 s, completed 10-may-2015 14:56:22
-> server-post-command-error-handler
-> server-post-command-cleanup
-> server-handle-next-server-request
-> compile
-Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@605c48b9, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java)
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java, C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java)
-
-Recompiling all 45 sources: invalidated sources (45) exceeded 50.0% of all sources
-Read from stdout: Compiling 8 Scala sources and 37 Java sources to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
-Compiling 8 Scala sources and 37 Java sources to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Running cached compiler 4a348ad2, interfacing (CompilerInterface) with Scala compiler version 2.11.1
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jre1.8.0_25\lib\resources.jar;C:\Program Files\Java\jre1.8.0_25\lib\rt.jar;C:\Program Files\Java\jre1.8.0_25\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_25\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_25\lib\jce.jar;C:\Program Files\Java\jre1.8.0_25\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_25\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_25\classes;C:\Users\Admin\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
-	-classpath
-	C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes;C:\Users\Admin\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Admin\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Admin\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Admin\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Admin\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.2.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Admin\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Admin\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Admin\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Admin\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Admin\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Admin\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Admin\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Admin\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Admin\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Admin\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Admin\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Admin\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Admin\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Admin\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Admin\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Admin\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Admin\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Admin\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Admin\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Admin\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Admin\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Admin\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Admin\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Admin\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Admin\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Admin\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Admin\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Admin\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Admin\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Admin\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Admin\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Admin\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Admin\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Admin\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Admin\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar;C:\Users\Admin\.ivy2\cache\com.googlecode.json-simple\json-simple\jars\json-simple-1.1.jar
-Scala compilation took 2.793656601 s
-Read from stdout: Note: Some input files use unchecked or unsafe operations.
-Note: Some input files use unchecked or unsafe operations.
-Read from stdout: Note: Recompile with -Xlint:unchecked for details.
-Note: Recompile with -Xlint:unchecked for details.
-Java compilation took 1.379663983 s
-Java analysis took 0.281414161 s
-Java compile + analysis took 1.683196186 s
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Dice.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\RedCheese.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\HistoryQuestion.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\Question.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-None of the modified names appears in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala. This dependency is not being considered for invalidation.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\AbstractCheese.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java source file has the following regular definitions changed:
-	notify, wait, GameGenerator, equals, getGame, notifyAll, <init>, toString, getClass, games, hashCode.
-All member reference dependencies will be considered within this context.
-Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameGenerator.java
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala source file has the following regular definitions changed:
-	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, users, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\YellowCheese.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\AbstractQuestion.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java source file has the following regular definitions changed:
-	execute, Box, setColumn, setRow, getColumn, setPossibleMove, getRow.
-All member reference dependencies will be considered within this context.
-Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Box.java
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\index.template.scala source file has the following regular definitions changed:
-	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, index, productElement, hashCode.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\GreenBox.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java source file has the following regular definitions changed:
-	notify, Assets, routes$ref, wait, routes, equals, routes$javascript, notifyAll, <init>, Application, toString, API, getClass, API2, hashCode.
-All member reference dependencies will be considered within this context.
-The following modified names cause invalidation of C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala: Set(routes, equals, <init>, API)
-Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java
-The following modified names cause invalidation of C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala: Set(routes, <init>, Application, API)
-The following modified names cause invalidation of C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala: Set(routes, <init>, Application)
-The following modified names cause invalidation of C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala: Set(Assets, routes, <init>)
-The following modified names cause invalidation of C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala: Set(Assets, routes, <init>, Application, API)
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\GameModel.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-None of the modified names appears in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala. This dependency is not being considered for invalidation.
-None of the modified names appears in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala. This dependency is not being considered for invalidation.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\EntertainmentQuestion.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\ThrowAgainBox.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java source file has the following regular definitions changed:
-	notify, wait, onGamePressed, equals, notifyAll, TraversingBoardState, <init>, toString, getClass, hashCode.
-All member reference dependencies will be considered within this context.
-Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\GeographyQuestion.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\BlueCheese.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\User.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-None of the modified names appears in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala. This dependency is not being considered for invalidation.
-None of the modified names appears in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala. This dependency is not being considered for invalidation.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\ScienceQuestion.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\GreenCheese.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-None of the modified names appears in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala. This dependency is not being considered for invalidation.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-None of the modified names appears in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala. This dependency is not being considered for invalidation.
-None of the modified names appears in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala. This dependency is not being considered for invalidation.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java source file has the following regular definitions changed:
-	notify, wait, AnsweringQuestionsState, onGamePressed, equals, notifyAll, <init>, toString, getClass, hashCode.
-All member reference dependencies will be considered within this context.
-Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\AnsweringQuestionsState.java
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\Application.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-None of the modified names appears in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala. This dependency is not being considered for invalidation.
-None of the modified names appears in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala. This dependency is not being considered for invalidation.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala source file has the following regular definitions changed:
-	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, game, ne, eq, productIterator, ##, finalize, productElement, hashCode.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\MultiCheeseBox.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala source file has the following regular definitions changed:
-	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, main, productPrefix, notifyAll, readResolve, isInstanceOf, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala source file has the following regular definitions changed:
-	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, user, eq, productIterator, ##, finalize, productElement, hashCode.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API2.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-None of the modified names appears in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala. This dependency is not being considered for invalidation.
-None of the modified names appears in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala. This dependency is not being considered for invalidation.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\State.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\YellowBox.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java source file has the following regular definitions changed:
-	addPropertyChangeListener, notify, _ebean_setFieldIntercept, idType, cancel, findPagingList, refresh, removePropertyChangeListener, findUnique, findFutureRowCount, nextId, findFutureList, setParameter, wait, server, deleteManyToManyAssociations, setListener, Board, setId, equals, getMaxRows, _ebean_createCopy, serverName, findVisit, numberOfPlayers, all, setReadOnly, set, Model$Finder, _ebean_setEmbeddedLoaded, a, query, _ebean_getIntercept, setTimeout, ref, getFirstRow, setQuery, setOrder, _ebean_getFieldNames, byId, setAutofetch, _ebean_getField, notifyAll, _ebean_isEmbeddedNewOrDirty, setUseQueryCache, filter, setRawSql, select, getExpressionFactory, filterMany, _ebean_getMarker, setUseCache, <init>, on, isForUpdate, findSet, saveManyToManyAssociations, getRawSql, order, fill, _ebean_newInstance, findRowCount, orderBy, setMaxRows, findFutureIds, delete, findIds, fetch, copy, setLoadBeanCache, toString, getGeneratedSql, isAutofetchTuned, setMapKey, setBufferFetchSizeHint, where, setFirstRow, setOrderBy, findIterate, getClass, update, type, save, having, setDistinct, findList, _ebean_setField, setBackgroundFetchAfter, setForUpdate, _ebean_intercept, hashCode, findMap, _ebean_getFieldIntercept.
-All member reference dependencies will be considered within this context.
-Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\models\Board.java
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\BlueBox.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala source file has the following regular definitions changed:
-	updateUser, notify, ReverseAPI, wait, newGame, $asInstanceOf, equals, showUser, ReverseAPI2, asInstanceOf, synchronized, listGame, $isInstanceOf, ReverseAssets, showUserJson, notifyAll, showUsers, isInstanceOf, <init>, at, showGamesJson, showGameHATEOAS, ==, showUserHATEOAS, clone, showUsersHATEOAS, deleteUser, listGames, greeting, showUsersJson, toString, !=, gameAction, answerQuestion, getClass, newUser, showGameJson, ne, showGamesHATEOAS, eq, ReverseApplication, ##, finalize, hashCode, gamePressed.
-All member reference dependencies will be considered within this context.
-The following modified names cause invalidation of C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala: Set(equals, <init>, ==, !=, answerQuestion, gamePressed)
-Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\controllers\routes.java
-The following modified names cause invalidation of C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala: Set(newGame, listGame, <init>)
-The following modified names cause invalidation of C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\user.template.scala: Set(<init>, listGames)
-The following modified names cause invalidation of C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\main.template.scala: Set(<init>, at)
-The following modified names cause invalidation of C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\users.template.scala: Set(showUser, <init>, at, deleteUser, newUser)
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\board\Board.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-None of the modified names appears in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala. This dependency is not being considered for invalidation.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\RedBox.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_routing.scala source file has the following regular definitions changed:
-	controllers_API_showUsersJson8_invoker, notify, controllers_Application_listGame1_invoker, controllers_API_newGame16_route, badRequest, controllers_API2_showUsersHATEOAS14_route, wait, controllers_Application_greeting7_route, $asInstanceOf, controllers_API_showGamesJson17_route, routes, controllers_API2_showUserHATEOAS15_invoker, createInvoker, controllers_API_showGamesJson17_invoker, equals, prefix, controllers_API_answerQuestion6_route, controllers_API2_showGamesHATEOAS19_invoker, controllers_API2_showGameHATEOAS20_route, controllers_API_deleteUser13_invoker, asInstanceOf, documentation, controllers_API2_showGamesHATEOAS19_route, controllers_API2_showUsersHATEOAS14_invoker, synchronized, controllers_API_newUser11_invoker, controllers_API_deleteUser12_route, $isInstanceOf, controllers_API_gameAction4_invoker, handlerFor, controllers_API_gamePressed5_route, controllers_API_gamePressed5_invoker, controllers_API_showUserJson9_invoker, controllers_API_showGameJson18_invoker, controllers_API2_showUserHATEOAS15_route, controllers_API_showUsersJson8_route, controllers_Assets_at21_invoker, controllers_Application_showUsers2_route, controllers_API_showGameJson18_route, _prefix, notifyAll, isInstanceOf, controllers_Application_listGames0_invoker, controllers_API_answerQuestion6_invoker, controllers_Application_listGame1_route, controllers_API_showUserJson9_route, controllers_API_gameAction4_route, controllers_Application_showUser3_invoker, ==, clone, controllers_Application_showUser3_route, controllers_Application_greeting7_invoker, Routes, controllers_API_newGame16_invoker, toString, controllers_API_updateUser10_route, controllers_API_newUser11_route, controllers_Assets_at21_route, !=, fakeValue, getClass, setPrefix, controllers_API_updateUser10_invoker, controllers_API2_showGameHATEOAS20_invoker, ne, call, controllers_Application_showUsers2_invoker, controllers_API_deleteUser12_invoker, controllers_Application_listGames0_route, eq, defaultPrefix, ##, finalize, hashCode, controllers_API_deleteUser13_route.
-All member reference dependencies will be considered within this context.
-The following modified names cause invalidation of C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\src_managed\main\routes_reverseRouting.scala: Set(prefix, _prefix, Routes, getClass, defaultPrefix)
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\Box.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-None of the modified names appears in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala. This dependency is not being considered for invalidation.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\box\AbstractBox.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\game\Game.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-None of the modified names appears in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\game.template.scala. This dependency is not being considered for invalidation.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\cheese\Cheese.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala source file has the following regular definitions changed:
-	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, games, eq, productIterator, ##, finalize, productElement, hashCode.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java...
-Invalidating (transitively) by inheritance from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java...
-Initial set of included nodes: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java)
-The C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\question\QuestionFactory.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-New invalidations:
-	Set()
-Initial set of included nodes: Set()
-Previously invalidated, but (transitively) depend on new invalidations:
-	Set()
-All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Total time: 7 s, completed 10-may-2015 15:02:43
-> server-post-command-cleanup
-> server-handle-next-server-request
-> backgroundRun
-Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@73dcf545, check cycles: false
-Total time: 0 s, completed 10-may-2015 15:02:46
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/*:playForkConfig
-Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@10a60d5c, check cycles: false
-Total time: 0 s, completed 10-may-2015 15:02:51
-> server-post-command-cleanup
-> server-handle-next-server-request
-> root/playForkNotifyStart http://localhost:9000
-Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@5468632c, check cycles: false
-Total time: 0 s, completed 10-may-2015 15:02:52
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@f5afe7f, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@1e115569, check cycles: false
 
 Initial source changes: 
 	removed:Set()
 	added: Set()
-	modified: Set()
+	modified: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
+Initial directly invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
 
 Sources indirectly invalidated by:
 	product: Set()
 	binary dep: Set()
 	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\conf\application.conf,C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes\application.conf)
-	(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\conf\evolutions,C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes\evolutions)
-	(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\conf\preguntas.json,C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes\preguntas.json)
-	(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\conf\routes,C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes\routes)
-	(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\conf\evolutions\default,C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes\evolutions\default)
-	(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\conf\evolutions\default\1.sql,C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes\evolutions\default\1.sql)
-Total time: 3 s, completed 10-may-2015 15:02:55
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@3b763d9f, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\conf\application.conf,C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes\application.conf)
-	(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\conf\evolutions,C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes\evolutions)
-	(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\conf\preguntas.json,C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes\preguntas.json)
-	(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\conf\routes,C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes\routes)
-	(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\conf\evolutions\default,C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes\evolutions\default)
-	(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\conf\evolutions\default\1.sql,C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes\evolutions\default\1.sql)
-Total time: 0 s, completed 10-may-2015 15:03:04
-> server-post-command-cleanup
-> server-handle-next-server-request
-> compile
-Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@29094531, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\player\Player.java)
+All initially invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
 
 Read from stdout: Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
 Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
-Java compilation took 0.779131995 s
-Java analysis took 0.024181213 s
-Java compile + analysis took 0.830147416 s
-New invalidations:
-	Set()
-Initial set of included nodes: Set()
-Previously invalidated, but (transitively) depend on new invalidations:
-	Set()
-All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Total time: 1 s, completed 10-may-2015 15:09:58
-> server-post-command-cleanup
-> server-handle-next-server-request
-> backgroundRun
-Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@37de8d69, check cycles: false
-Total time: 0 s, completed 10-may-2015 15:10:01
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/*:playForkConfig
-Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@5d3d550, check cycles: false
-Total time: 0 s, completed 10-may-2015 15:10:04
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                             ^
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                                              ^
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 2 s, completed 10-may-2015 15:40:22
+> server-post-command-error-handler
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@4962179e, check cycles: false
-Invalidating C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes\player\Player.class: stamp changed from lastModified(1431262960438) to lastModified(1431263398170)
+Running task... Cancel: sbt.server.ServerTaskCancellation@5d22021c, check cycles: false
 
 Initial source changes: 
 	removed:Set()
 	added: Set()
-	modified: Set()
+	modified: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
 Removed products: Set()
 External API changes: API Changes: Set()
-Modified binary dependencies: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes\player\Player.class)
-Initial directly invalidated sources: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
 
 Sources indirectly invalidated by:
 	product: Set()
-	binary dep: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java)
+	binary dep: Set()
 	external source: Set()
-All initially invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\logic\state\TraversingBoardState.java)
+All initially invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
 
 Read from stdout: Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
 Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
-Java compilation took 0.795566128 s
-Java analysis took 0.029507727 s
-Java compile + analysis took 0.848258349 s
-New invalidations:
-	Set()
-Initial set of included nodes: Set()
-Previously invalidated, but (transitively) depend on new invalidations:
-	Set()
-All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Total time: 1 s, completed 10-may-2015 15:11:08
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                             ^
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                                              ^
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 1 s, completed 10-may-2015 15:40:23
+> server-post-command-error-handler
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@1b649794, check cycles: false
-Total time: 0 s, completed 10-may-2015 15:11:08
+Running task... Cancel: sbt.server.ServerTaskCancellation@54c6f731, check cycles: false
+Total time: 0 s, completed 10-may-2015 15:40:23
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@4f05edd2, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                             ^
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                                              ^
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 1 s, completed 10-may-2015 15:40:24
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@39625498, check cycles: false
+Total time: 0 s, completed 10-may-2015 15:40:24
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@42a2ef72, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                             ^
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                                              ^
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 1 s, completed 10-may-2015 15:40:25
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@4b7f0c3e, check cycles: false
+
+Canceling execution...
+Task java.util.concurrent.ExecutorCompletionService$QueueingFuture@5cde6270 rejected from java.util.concurrent.ThreadPoolExecutor@6ca77a70[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 111]
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ExecutorCompletionService$QueueingFuture@5cde6270 rejected from java.util.concurrent.ThreadPoolExecutor@6ca77a70[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 111]
+Use 'last' for the full log.
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@235c874b, check cycles: false
+registered more than once? Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/,root)),Select(ConfigKey(compile)),Global,Global),compile)))
+registered more than once? Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/,root)),Select(ConfigKey(compile)),Global,Global),compile)))
+Use 'last' for the full log.
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@105e81df, check cycles: false
+Total time: 0 s, completed 10-may-2015 15:43:59
 > server-post-command-cleanup
 > server-handle-next-server-request
 Done executing sbt server engine, result Right(Exit(0))
@@ -854,4 +265,4 @@ Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
-Closing the 3152@Admin-PC logs at Sun May 10 15:11:10 CEST 2015, goodbye.
+Closing the 2676@Admin-PC logs at Sun May 10 15:44:02 CEST 2015, goodbye.

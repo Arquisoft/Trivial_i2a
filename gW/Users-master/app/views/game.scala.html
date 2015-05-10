@@ -86,12 +86,23 @@
 <center>
 <h1 style="color:#dddddd">Game</h1>
 <ul>
- <li style="color:#dddddd">Name: @game.email</li>
+ <li style="color:#dddddd">Name: @game.gameName</li>
 </ul>
-
+ @if(game.getGame().getBoard().getActualPlayer().hasWon()) {
+    <h1 style="color:#d4ce46">Player @game.getGame().getBoard().getActualPlayer().getName() has won</h1>
+ } else {
+ }
+ @if(game.getGame().hasSomeoneWon()) {
+ <h1 style="color:#d4ce46">CONGRATULATIONS</h1>
+ <a style="color:#d4ce46" href="@routes.Application.listGames">Play a new game</a>
+ }else{
+ 
+ 
 @if(game.getGame().getActualQuestion()==null){
 <h1 style="color:#d4ce46">Turn of player @game.getGame().getBoard().getActualPlayer().getName()</h1>
 <h2 style="color:#dddddd">Dice: @(game.getGame().getDiceValue()+1)</h2>
+<h3>Points @game.getGame().getBoard().getActualPlayer().quesitos.size()</h3>
+
     <table>
     @for(boxes <- game.getGame().getBoard().getBoard()) {
     <tr>
@@ -127,6 +138,7 @@
        <button type="button" class="greyBox"  style="border-width:thick">@answer.getKey()</button></a></center></td></tr>
         }
    </table>
+    }
     }
     </center>
     </body>

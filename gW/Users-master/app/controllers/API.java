@@ -11,6 +11,8 @@ import models.GameModel;
 import game.Game;
 import question.Question;
 import board.Board;
+import box.Box;
+import cheese.Cheese;
 import play.*;
 import play.data.Form;
 import play.libs.Json;
@@ -51,13 +53,17 @@ public class API extends Controller {
     public static Result answerQuestion(Long id, String correctAnswer, String myAnswer){
        Game game = GameModel.findById(id).getGame();
         boolean b = correctAnswer.compareTo(myAnswer)==0;
-        
+        Box box = game.getBoard().getActualPlayer().getActualBox();
+        Cheese quesito = box.getCheese();
          System.out.println(b);
          game.setActualQuestion(null);
          
          if(b){
-            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
-            game.hasSomeoneWon();
+             
+            if(quesito!=null){
+                game.getBoard().getActualPlayer().addQuesito(quesito);
+                game.hasSomeoneWon();
+            }
          }
          else
              game.nextTurn();

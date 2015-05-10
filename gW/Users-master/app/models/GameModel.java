@@ -17,7 +17,7 @@ public class GameModel extends Model {
 	public Long id;
 
 	@Required
-	public String email;
+	public String gameName;
 	public String password;
 	public Game game;
 
@@ -25,8 +25,8 @@ public class GameModel extends Model {
 	    return id;
 	}
 
-	public GameModel(String email, String password, Game game) {
-		this.email = email;
+	public GameModel(String gameName, String password, Game game) {
+		this.gameName = gameName;
 		this.password = "password";
 		this.game = game;
 		System.out.println("Print constructor lleno");
@@ -40,12 +40,12 @@ public class GameModel extends Model {
 	    this.game =  game;
 	}
 	
-	public String getEmail(){
-	    return email;
+	public String getGameName(){
+	    return gameName;
 	}
 	
-	public void setEmail(String email){
-	    this.email = email;
+	public void setGameName(String gameName){
+	    this.gameName = gameName;
 	}
 	
 	public GameModel() {

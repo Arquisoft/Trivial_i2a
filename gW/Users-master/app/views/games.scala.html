@@ -9,7 +9,7 @@
 <tr>
  <td>@game.id</td>
  <td><a href="">Enter game @game.id</a></td>
- <td><a href="@routes.Application.listGame(game.id)">@game.email</a></td>
+ <td><a href="@routes.Application.listGame(game.id)">@game.gameName</a></td>
 </tr>
 }
 </table>
@@ -18,7 +18,7 @@
     
 	@form(action = routes.API.newGame()) {
 	
-        @inputText(gameForm("email")) 
+        @inputText(gameForm("gameName")) 
         
         <input type="submit" value="Add">
         

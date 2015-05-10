@@ -10,7 +10,7 @@ public class Player {
 	
 	private Box actualBox;
 	private String name;
-	private List<Cheese> quesitos = new ArrayList<>();
+	public List<Cheese> quesitos = new ArrayList<>();
 	
 	public boolean addQuesito (Cheese quesito) {
 	    System.out.println("freshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");

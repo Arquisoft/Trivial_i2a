@@ -9,7 +9,7 @@ create table board (
 
 create table game_model (
   id                        bigint not null,
-  email                     varchar(255),
+  game_name                 varchar(255),
   password                  varchar(255),
   constraint pk_game_model primary key (id))
 ;

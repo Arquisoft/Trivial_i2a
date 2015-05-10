@@ -7,11 +7,7 @@ import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import models.User;
-<<<<<<< HEAD
-import models.Game;
-=======
 import models.GameModel;
->>>>>>> origin/CrisIntegration
 import play.*;
 import play.data.Form;
 import play.libs.Json;
@@ -64,22 +60,14 @@ public class API2 extends Controller {
 		return ok(userJson);
 	}
 	
-<<<<<<< HEAD
-	static Form<Game>  	  gameForm     = Form.form(Game.class);
-=======
 	static Form<GameModel>  	  gameForm     = Form.form(GameModel.class);
->>>>>>> origin/CrisIntegration
 	
 	public static Result showGamesHATEOAS() {
 		JsonNodeFactory factory = JsonNodeFactory.instance;
 	    ArrayNode result = new ArrayNode(factory);
-<<<<<<< HEAD
-	    for (Game user: Game.all()) {
-=======
 	    for (GameModel user: GameModel.all()) {
->>>>>>> origin/CrisIntegration
 	      ObjectNode countryJson = Json.newObject();
-	      countryJson.put("email", user.email);
+	      countryJson.put("gameName", user.gameName);
 	      countryJson.put("password", user.password);
 	      ArrayNode links = new ArrayNode(factory);
 	      ObjectNode self = Json.newObject();
@@ -96,13 +84,9 @@ public class API2 extends Controller {
 	public static Result showGameHATEOAS(Long id) {
 		JsonNodeFactory factory = JsonNodeFactory.instance;
 		
-<<<<<<< HEAD
-		Game user = Game.findById(id);
-=======
 		GameModel user = GameModel.findById(id);
->>>>>>> origin/CrisIntegration
 	    ObjectNode userJson = Json.newObject();
-	    userJson.put("email", user.email);
+	    userJson.put("gameName", user.gameName);
 	    userJson.put("password", user.password);
 	    ArrayNode links = new ArrayNode(factory);
 	    ObjectNode self = Json.newObject();

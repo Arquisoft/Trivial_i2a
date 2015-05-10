@@ -15,18 +15,12 @@ libraryDependencies ++= Seq(
   "info.cukes" % "cucumber-guice" % "1.1.5" % "test",
   "info.cukes" % "cucumber-java" % "1.1.8" % "test",
   "info.cukes" % "cucumber-junit" % "1.1.8" % "test",
-<<<<<<< HEAD
-  "org.assertj" % "assertj-core" % "2.0.0" % "test"
-=======
   "org.assertj" % "assertj-core" % "2.0.0" % "test",
   "com.googlecode.json-simple" % "json-simple" % "1.1"
->>>>>>> origin/CrisIntegration
 )
 
 
 
-<<<<<<< HEAD
-=======
 fork in run := true
 
 fork in run := true
@@ -39,5 +33,4 @@ fork in run := true
 
 fork in run := true
 
->>>>>>> origin/CrisIntegration
 fork in run := true

@@ -10,14 +10,11 @@ GET    /games/:id                controllers.Application.listGame(id: Long)
 GET    /                        controllers.Application.showUsers()
 GET    /:id            			controllers.Application.showUser(id: Long)
 
-<<<<<<< HEAD
-=======
 GET    /api/nextTurn            controllers.API.gameAction(id: Long)
 GET    /api/nava                controllers.API.gamePressed(id: Long,row: Integer,column: Integer)
 
 GET    /api/navanava            controllers.API.answerQuestion(id: Long, rightAnswer: String, myAnswer: String)
 
->>>>>>> origin/CrisIntegration
 
 GET     /greeting/:name   		controllers.Application.greeting(name: String)
 

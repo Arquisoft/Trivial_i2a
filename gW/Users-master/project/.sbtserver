@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-#Server Startup at 2015-04-30T23:54+0000
-#Fri May 01 01:54:28 CEST 2015
-server.uri=http\://0.0.0.0\:53939
-=======
-#Server Startup at 2015-05-10T13:44+0000
-#Sun May 10 15:44:08 CEST 2015
-server.uri=http\://0.0.0.0\:54962
->>>>>>> origin/CrisIntegration
+#Server Startup at 2015-05-10T21:14+0000
+#Sun May 10 23:14:39 CEST 2015
+server.uri=http\://0.0.0.0\:60197

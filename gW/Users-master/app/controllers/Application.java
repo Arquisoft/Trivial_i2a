@@ -1,11 +1,7 @@
 package controllers;
 
 import models.User;
-<<<<<<< HEAD
-import models.Game;
-=======
 import models.GameModel;
->>>>>>> origin/CrisIntegration
 import play.*;
 import play.data.Form;
 import play.mvc.*;
@@ -30,17 +26,6 @@ public class Application extends Controller {
     }
     
     public static Result listGames() {
-<<<<<<< HEAD
-        return ok(games.render(Game.all(),gameForm));
-    }
-    
-    public static Result listGame(Long id) {
-        return ok(game.render(Game.findById(id)));
-    }
-
-    static Form<User>  	  userForm     = Form.form(User.class);
-    static Form<Game>  	  gameForm     = Form.form(Game.class);
-=======
         return ok(games.render(GameModel.all(),gameForm));
     }
     
@@ -50,5 +35,4 @@ public class Application extends Controller {
 
     static Form<User>  	  userForm     = Form.form(User.class);
     static Form<GameModel>  	  gameForm     = Form.form(GameModel.class);
->>>>>>> origin/CrisIntegration
 }

@@ -7,16 +7,12 @@ import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import models.User;
-<<<<<<< HEAD
-import models.Game;
-=======
 import models.GameModel;
+import box.Box;
+import cheese.Cheese;
 import game.Game;
 import question.Question;
 import board.Board;
-import box.Box;
-import cheese.Cheese;
->>>>>>> origin/CrisIntegration
 import play.*;
 import play.data.Form;
 import play.libs.Json;
@@ -29,8 +25,6 @@ public class API extends Controller {
     public static Result showUsersJson() {
         return ok(Json.toJson(User.all()));
     }
-<<<<<<< HEAD
-=======
     
     public static Result gameAction(Long id){
         Game game = GameModel.findById(id).getGame();
@@ -65,11 +59,10 @@ public class API extends Controller {
          game.setActualQuestion(null);
          
          if(b){
-             
-            if(quesito!=null){
-                game.getBoard().getActualPlayer().addQuesito(quesito);
-                game.hasSomeoneWon();
-            }
+             if(quesito!=null){
+               game.getBoard().getActualPlayer().addQuesito(quesito);
+               game.hasSomeoneWon();
+           }
          }
          else
              game.nextTurn();
@@ -78,7 +71,6 @@ public class API extends Controller {
         
         
     }
->>>>>>> origin/CrisIntegration
 
     public static Result showUserJson(Long id) {
         return ok(Json.toJson(User.findById(id)));
@@ -104,10 +96,6 @@ public class API extends Controller {
     static Form<User>  	  userForm     = Form.form(User.class);
     
     public static Result newGame() {
-<<<<<<< HEAD
-    	Game game = gameForm.bindFromRequest().get();
-    	game.save();
-=======
     	GameModel game = gameForm.bindFromRequest().get();
     	game.setGame(new Game(new Board(9, 4)));
     	game.save();
@@ -115,20 +103,10 @@ public class API extends Controller {
     	System.out.println(game);
     	System.out.println(game.getID());
     	System.out.println(game.getGame());
->>>>>>> origin/CrisIntegration
     	return redirect(routes.Application.listGames());
     }
     
     public static Result showGamesJson() {
-<<<<<<< HEAD
-        return ok(Json.toJson(Game.all()));
-    }
-
-    public static Result showGameJson(Long id) {
-        return ok(Json.toJson(Game.findById(id)));
-    }
-    static Form<Game>  	  gameForm     = Form.form(Game.class);
-=======
         return ok(Json.toJson(GameModel.all()));
     }
 
@@ -136,5 +114,4 @@ public class API extends Controller {
         return ok(Json.toJson(GameModel.findById(id)));
     }
     static Form<GameModel>  	  gameForm     = Form.form(GameModel.class);
->>>>>>> origin/CrisIntegration
 }

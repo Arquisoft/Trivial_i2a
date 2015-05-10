@@ -81,3 +81,6 @@ The following quality attributes have been identified:
   o	The stats of the game must be accesible only to privileged users.
   o	No useres without priveleges can access the stats of the game.
 
+-	Testability
+  o	The reliability of the system must be easy to test, since it  guarantees that the movements of the piece are correctly done.
+  o	The system must take into account that this is a multiplayer web game, so no confusions between users.

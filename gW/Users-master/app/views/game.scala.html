@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @(game: Game)
 
 <html>
@@ -6,4 +7,150 @@
  <li>Id: @{game.id} 
  <li>Email: @game.email
 </ul>
+=======
+@(game: GameModel)
+
+<html>
+<head>
+    <style>
+    .hidden {
+        visibility: hidden;
+    }
+    .black {
+    text-align: center;
+    background-color: black;
+    height: 30;
+    width: 30;
+    }
+    .redBox {
+    text-align: center;
+    background-color: red;
+    height: 30;
+    width: 30;
+    }
+    .redBoxCheese {
+    text-align: center;
+    height: 30;
+    width:30;
+    background: linear-gradient(red, white);
+    }
+    .blueBox {
+    text-align: center;
+    background-color: blue;
+    height: 30;
+    width: 30;
+    }
+    .blueBoxCheese {
+    text-align: center;
+    background: linear-gradient(blue, white);
+    height: 30;
+    width: 30;
+    }
+    .greenBox {
+    text-align: center;
+    background-color: green;
+    height: 30;
+    width: 30;
+    }
+    .greenBoxCheese {
+    text-align: center;
+    background: linear-gradient(green, white);
+    height: 30;
+    width: 30;
+    }
+    .yellowBox {
+    text-align: center;
+    background-color: yellow;
+    height: 30;
+    width: 30;
+    }
+    .yellowBoxCheese {
+    text-align: center;
+    background: linear-gradient(yellow, white);
+    height: 30;
+    width: 30;
+    }
+    .throwAgainBox {
+    text-align: center;
+    background-color: grey;
+    height: 30;
+    width: 30;
+    }
+    .centerBox {
+    text-align: center;
+    background-color: pink;
+    height: 30;
+    width: 30;
+    }
+
+</style>
+
+</head>
+ <script type="text/javascript">
+	function mostrar( square ){
+	   var a = document.getElementById("0101");
+	    a.style.color = "blue";
+	}
+</script>
+<body bgcolor="#111111" >
+<center>
+<h1 style="color:#dddddd">Game</h1>
+<ul>
+ <li style="color:#dddddd">Name: @game.gameName</li>
+</ul>
+ @if(game.getGame().getBoard().getActualPlayer().hasWon()) {
+    <h1 style="color:#d4ce46">Player @game.getGame().getBoard().getActualPlayer().getName() has won</h1>
+ } else {
+ }
+ @if(game.getGame().hasSomeoneWon()) {
+ <h1 style="color:#d4ce46">CONGRATULATIONS</h1>
+ <a style="color:#d4ce46" href="@routes.Application.listGames">Play a new game</a>
+ }else{
+ 
+ 
+@if(game.getGame().getActualQuestion()==null){
+<h1 style="color:#d4ce46">Turn of player @game.getGame().getBoard().getActualPlayer().getName()</h1>
+<h2 style="color:#dddddd">Dice: @(game.getGame().getDiceValue()+1)</h2>
+<h3>Points @game.getGame().getBoard().getActualPlayer().quesitos.size()</h3>
+
+    <table>
+    @for(boxes <- game.getGame().getBoard().getBoard()) {
+    <tr>
+        @for(box <- boxes) {
+            @if(box!=null) {
+                @if(box.equals(game.getGame().getBoard().getActualPlayer().getActualBox())) {
+                    @if(box.isMovable()) {
+                    <td><a href="@routes.API.gamePressed(game.getID(),box.getRow(),box.getColumn())"><button type="button" class="black" id="0101" style="border-width:thick; border-color:#d4ce46"> </button></a></td>
+                    } else{
+    <td><button type="button" class="@box.getClassHTML()"  style="border-color:#d4ce46" disabled> </button></td>
+ }
+                } else {
+                    @if(box.isMovable()) {
+                    <td><a href="@routes.API.gamePressed(game.getID(),box.getRow(),box.getColumn())"><button type="button" class="@box.getClassHTML()" id="0101" style="border-width:thick; border-color:#d4ce46"> </button></a></td>
+                    } else{
+    <td><button type="button" class="@box.getClassHTML()"  style="border-color:#d4ce46" disabled> </button></td>
+ }
+                }
+                 
+ } else{
+    <td>   </td>
+ }
+ 
+ }
+</tr>
+}
+</table>
+    } else{
+        <table>
+        <tr><td style="color:#dddddd">@game.getGame().getActualQuestion().getQuestion()</td></tr>
+        @for(answer <- game.getGame().getActualQuestion().getAnswers().entrySet()){
+       <tr><td><center> <a href="@routes.API.answerQuestion(game.getID(), game.getGame().getActualQuestion().getRightAnswer(),answer.getKey())">
+       <button type="button" class="greyBox"  style="border-width:thick">@answer.getKey()</button></a></center></td></tr>
+        }
+   </table>
+    }
+    }
+    </center>
+    </body>
+>>>>>>> origin/CrisIntegration
 </html>

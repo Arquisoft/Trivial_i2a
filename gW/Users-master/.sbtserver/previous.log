@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 New log file opened at Fri May 01 01:32:39 CEST 2015 by 5884@Admin-PC
 jvm 5884@Admin-PC
+=======
+New log file opened at Sun May 10 15:40:14 CEST 2015 by 2676@Admin-PC
+jvm 2676@Admin-PC
+>>>>>>> origin/CrisIntegration
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.25-b02
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -7,16 +12,26 @@ Starting event engine
 Starting sbt command engine
 Waiting for sbt command engine
 Command engine arguments=List()
+<<<<<<< HEAD
 Command engine baseDirectory=C:\Users\Admin\Desktop\Users-master\Users-master
+=======
+Command engine baseDirectory=C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master
+>>>>>>> origin/CrisIntegration
 Command engine initial remaining commands List(--initialize, onFailure load-failed, boot, server-send-ready-for-request, server-handle-next-server-request)
 > --initialize
 > initialize
 > onFailure load-failed
 > boot
 > reload
+<<<<<<< HEAD
 [Loading] Scanning directory C:\Users\Admin\Desktop\Users-master\Users-master\project
 [Loading] Found non-root projects 
 [Loading] Done in C:\Users\Admin\Desktop\Users-master\Users-master\project, returning: ()
+=======
+[Loading] Scanning directory C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\project
+[Loading] Found non-root projects 
+[Loading] Done in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\project, returning: ()
+>>>>>>> origin/CrisIntegration
 deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))))
   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.JUnitXmlReportPlugin)
 sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
@@ -25,9 +40,15 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin) not found List(sbt.plugins.JUnitXmlReportPlugin)
   :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin) not found List()
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+<<<<<<< HEAD
 [Loading] Done in C:\Users\Admin\Desktop\Users-master\Users-master\project, returning: (users-master-build)
 Loading project definition from C:\Users\Admin\Desktop\Users-master\Users-master\project
 Running task... Cancel: sbt.TaskCancellationStrategy$Null$@307c46ba, check cycles: false
+=======
+[Loading] Done in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\project, returning: (users-master-build)
+Loading project definition from C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\project
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@418f70e0, check cycles: false
+>>>>>>> origin/CrisIntegration
 
 Initial source changes: 
 	removed:Set()
@@ -46,7 +67,11 @@ All initially invalidated sources: Set()
 
 Copy resource mappings: 
 	
+<<<<<<< HEAD
 [Loading] Scanning directory C:\Users\Admin\Desktop\Users-master\Users-master
+=======
+[Loading] Scanning directory C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master
+>>>>>>> origin/CrisIntegration
 [Loading] Found root project root w/ remaining 
 deducing auto plugins based on known facts Set(Atom(play.PlayJava), Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(play.Play))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.SerializersPlugin))), Clause(Atom(play.Play),Set(Atom(com.typesafe.sbt.webdriver.SbtWebDriver))), Clause(Atom(play.Play),Set(Atom(play.twirl.sbt.SbtTwirl))), Clause(Atom(play.Play),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(play.PlayJava),Set(Atom(play.Play))), Clause(Atom(play.PlayScala),Set(Atom(play.Play))), Clause(Atom(play.twirl.sbt.SbtTwirl),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(com.typesafe.sbt.webdriver.SbtWebDriver),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(sbt.plugins.BackgroundRunPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.coffeescript.SbtCoffeeScript),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.less.SbtLess),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.jshint.SbtJSHint),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.rjs.SbtRjs),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.digest.SbtDigest),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.sbt.mocha.SbtMocha),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(And(Set(Atom(sbt.plugins.BackgroundRunPlugin), Atom(play.Play), Atom(sbt.plugins.SerializersPlugin))),Set(Atom(play.sbt.forkrun.PlayForkRun))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.webdriver.SbtWebDriver))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.InteractionServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SendEventServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SerializersPlugin))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.coffeescript.SbtCoffeeScript))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.less.SbtLess))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jshint.SbtJSHint))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.rjs.SbtRjs))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.digest.SbtDigest))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.mocha.SbtMocha)))))
   :: deduced result: Matched(sbt.plugins.CorePlugin,play.PlayJava,sbt.plugins.InteractionServicePlugin,sbt.plugins.SendEventServicePlugin,play.Play,sbt.plugins.SerializersPlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,com.typesafe.sbt.jse.SbtJsTask,play.twirl.sbt.SbtTwirl,com.typesafe.sbt.webdriver.SbtWebDriver,com.typesafe.sbt.jshint.SbtJSHint,sbt.plugins.JUnitXmlReportPlugin,com.typesafe.sbt.mocha.SbtMocha,com.typesafe.sbt.less.SbtLess,com.typesafe.sbt.web.SbtWeb,com.typesafe.sbt.rjs.SbtRjs,com.typesafe.sbt.jse.SbtJsEngine,com.typesafe.sbt.coffeescript.SbtCoffeeScript,sbt.plugins.BackgroundRunPlugin,com.typesafe.sbt.digest.SbtDigest,play.sbt.forkrun.PlayForkRun)
@@ -58,6 +83,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, play.PlayJava, sbt.plugins.Interaction
   :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.digest.SbtDigest, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, com.typesafe.sbt.jshint.SbtJSHint, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, sbt.plugins.BackgroundRunPlugin, play.Play) not found List(play.PlayJava, play.sbt.forkrun.PlayForkRun)
   :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.digest.SbtDigest, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, com.typesafe.sbt.jshint.SbtJSHint, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, sbt.plugins.BackgroundRunPlugin, play.Play, play.PlayJava, play.sbt.forkrun.PlayForkRun) not found List()
   :: sorted deduced result: List(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.digest.SbtDigest, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, com.typesafe.sbt.jshint.SbtJSHint, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, sbt.plugins.BackgroundRunPlugin, play.Play, play.PlayJava, play.sbt.forkrun.PlayForkRun)
+<<<<<<< HEAD
 [Loading] Done in C:\Users\Admin\Desktop\Users-master\Users-master, returning: (root)
 Set current project to Users (in build file:/C:/Users/Admin/Desktop/Users-master/Users-master/)
 Reapplying settings...
@@ -68,20 +94,41 @@ Set current project to Users (in build file:/C:/Users/Admin/Desktop/Users-master
 > {file:/C:/Users/Admin/Desktop/Users-master/Users-master/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
 Running task... Cancel: sbt.server.ServerTaskCancellation@5f780023, check cycles: false
+=======
+[Loading] Done in C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master, returning: (root)
+Set current project to Users (in build file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/)
+Reapplying settings...
+Set current project to Users (in build file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/)
+> iflast shell
+> server-send-ready-for-request
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@1e115569, check cycles: false
+>>>>>>> origin/CrisIntegration
 
 Initial source changes: 
 	removed:Set()
 	added: Set()
+<<<<<<< HEAD
 	modified: Set()
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
 Initial directly invalidated sources: Set()
+=======
+	modified: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+>>>>>>> origin/CrisIntegration
 
 Sources indirectly invalidated by:
 	product: Set()
 	binary dep: Set()
 	external source: Set()
+<<<<<<< HEAD
 All initially invalidated sources: Set()
 
 Total time: 1 s, completed 01-may-2015 1:32:45
@@ -96,20 +143,56 @@ Total time: 0 s, completed 01-may-2015 1:32:45
 > {file:/C:/Users/Admin/Desktop/Users-master/Users-master/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
 Running task... Cancel: sbt.server.ServerTaskCancellation@15eae438, check cycles: false
+=======
+All initially invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                             ^
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                                              ^
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 2 s, completed 10-may-2015 15:40:22
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@5d22021c, check cycles: false
+>>>>>>> origin/CrisIntegration
 
 Initial source changes: 
 	removed:Set()
 	added: Set()
+<<<<<<< HEAD
 	modified: Set()
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
 Initial directly invalidated sources: Set()
+=======
+	modified: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+>>>>>>> origin/CrisIntegration
 
 Sources indirectly invalidated by:
 	product: Set()
 	binary dep: Set()
 	external source: Set()
+<<<<<<< HEAD
 All initially invalidated sources: Set()
 
 Total time: 1 s, completed 01-may-2015 1:32:46
@@ -362,20 +445,62 @@ Total time: 1 s, completed 01-may-2015 1:41:32
 > compile
 Evaluating tasks: compile:compile
 Running task... Cancel: sbt.server.ServerTaskCancellation@6a93934b, check cycles: false
+=======
+All initially invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                             ^
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                                              ^
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 1 s, completed 10-may-2015 15:40:23
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@54c6f731, check cycles: false
+Total time: 0 s, completed 10-may-2015 15:40:23
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@4f05edd2, check cycles: false
+>>>>>>> origin/CrisIntegration
 
 Initial source changes: 
 	removed:Set()
 	added: Set()
+<<<<<<< HEAD
 	modified: Set(C:\Users\Admin\Desktop\Users-master\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala)
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
 Initial directly invalidated sources: Set(C:\Users\Admin\Desktop\Users-master\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala)
+=======
+	modified: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+>>>>>>> origin/CrisIntegration
 
 Sources indirectly invalidated by:
 	product: Set()
 	binary dep: Set()
 	external source: Set()
+<<<<<<< HEAD
 All initially invalidated sources: Set(C:\Users\Admin\Desktop\Users-master\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala)
 
 Read from stdout: Compiling 1 Scala source to C:\Users\Admin\Desktop\Users-master\Users-master\target\scala-2.11\classes...
@@ -449,20 +574,62 @@ Total time: 0 s, completed 01-may-2015 1:43:45
 > compile
 Evaluating tasks: compile:compile
 Running task... Cancel: sbt.server.ServerTaskCancellation@2b7345d3, check cycles: false
+=======
+All initially invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                             ^
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                                              ^
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 1 s, completed 10-may-2015 15:40:24
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@39625498, check cycles: false
+Total time: 0 s, completed 10-may-2015 15:40:24
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@42a2ef72, check cycles: false
+>>>>>>> origin/CrisIntegration
 
 Initial source changes: 
 	removed:Set()
 	added: Set()
+<<<<<<< HEAD
 	modified: Set(C:\Users\Admin\Desktop\Users-master\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala)
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
 Initial directly invalidated sources: Set(C:\Users\Admin\Desktop\Users-master\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala)
+=======
+	modified: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+>>>>>>> origin/CrisIntegration
 
 Sources indirectly invalidated by:
 	product: Set()
 	binary dep: Set()
 	external source: Set()
+<<<<<<< HEAD
 All initially invalidated sources: Set(C:\Users\Admin\Desktop\Users-master\Users-master\target\scala-2.11\twirl\main\views\html\games.template.scala)
 
 Read from stdout: Compiling 1 Scala source to C:\Users\Admin\Desktop\Users-master\Users-master\target\scala-2.11\classes...
@@ -572,10 +739,33 @@ Caused by: java.lang.InterruptedException: sleep interrupted
 	at sbt.BackgroundThreadPool$BackgroundRunnable.run(AbstractBackgroundJobService.scala:68)
 	... 3 more
 Total time: 0 s, completed 01-may-2015 1:53:03
+=======
+All initially invalidated sources: Set(C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\target\scala-2.11\classes...
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ')' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                             ^
+Read from stdout: C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+C:\Users\Admin\Desktop\ASW\Trivial_i2a\Trivial_i2a\gW\Users-master\app\controllers\API.java:59:  error: ';' expected
+Read from stdout: game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+Read from stdout: ^
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+                                                                              ^
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 1 s, completed 10-may-2015 15:40:25
+> server-post-command-error-handler
+>>>>>>> origin/CrisIntegration
 > server-post-command-cleanup
 > server-handle-next-server-request
 > compile
 Evaluating tasks: compile:compile
+<<<<<<< HEAD
 Running task... Cancel: sbt.server.ServerTaskCancellation@1a35e815, check cycles: false
 
 Initial source changes: 
@@ -644,6 +834,30 @@ Sources indirectly invalidated by:
 All initially invalidated sources: Set()
 
 Total time: 0 s, completed 01-may-2015 1:54:19
+=======
+Running task... Cancel: sbt.server.ServerTaskCancellation@4b7f0c3e, check cycles: false
+
+Canceling execution...
+Task java.util.concurrent.ExecutorCompletionService$QueueingFuture@5cde6270 rejected from java.util.concurrent.ThreadPoolExecutor@6ca77a70[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 111]
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ExecutorCompletionService$QueueingFuture@5cde6270 rejected from java.util.concurrent.ThreadPoolExecutor@6ca77a70[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 111]
+Use 'last' for the full log.
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@235c874b, check cycles: false
+registered more than once? Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/,root)),Select(ConfigKey(compile)),Global,Global),compile)))
+registered more than once? Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/,root)),Select(ConfigKey(compile)),Global,Global),compile)))
+Use 'last' for the full log.
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Admin/Desktop/ASW/Trivial_i2a/Trivial_i2a/gW/Users-master/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@105e81df, check cycles: false
+Total time: 0 s, completed 10-may-2015 15:43:59
+>>>>>>> origin/CrisIntegration
 > server-post-command-cleanup
 > server-handle-next-server-request
 Done executing sbt server engine, result Right(Exit(0))
@@ -652,4 +866,8 @@ Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
+<<<<<<< HEAD
 Closing the 5884@Admin-PC logs at Fri May 01 01:54:21 CEST 2015, goodbye.
+=======
+Closing the 2676@Admin-PC logs at Sun May 10 15:44:02 CEST 2015, goodbye.
+>>>>>>> origin/CrisIntegration

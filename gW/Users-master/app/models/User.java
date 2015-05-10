@@ -17,6 +17,17 @@ public class User extends Model {
 	@Required
 	public String email;
 	public String password;
+<<<<<<< HEAD
+=======
+	
+	public String getEmail(){
+	    return email;
+	}
+	
+	public void setEmail(String email){
+	    this.email = email;
+	}
+>>>>>>> origin/CrisIntegration
 
 	public User(String email, String password) {
 		this.email = email;

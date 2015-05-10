@@ -109,3 +109,4 @@ The system has to face certain risks that have to be identified:
 
 -	Guarantee no confusions between players: This is very importante: Also related to the reliability attributes.
 
+-	Time to end movements calculations: This is related to the performance attribute. All computers must be able to perform the calculations instantaneously for a good user experience.

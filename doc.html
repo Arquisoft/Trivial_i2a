@@ -1,1 +1,153 @@
-DOC
+<h2>Documentation</h2>
+
+If you want to download our documentation, click the link:
+
+<p>
+  <b>- <span style="color:#000077">Index page of the documentation:</span> <a href="https://github.com/Arquisoft/Trivial_i2a/blob/master/game/Documentation/Documentation.docx">Documentation</a></b>
+</p>
+
+
+The problem
+Once we delevelop the system that can obtain the questions  and the prototype of the Trivial game, 
+the NoGame company decided to develop the same game, but with some modifications. The marketing 
+department og the NoGame has observed that the Trivial game can have a greater impact if it came 
+be used through the Web, where users can connect and play between them.
+
+The previous logic of the game could be reused, but we added a new layer that allows players to connect to the web,
+create a new game and play with it. 
+
+The company also want that the players will be registered in the web in a very simple way, that allows them to
+know the historical data. Furthermore, when a user is connected, should be able to know if other users 
+are connected to invite them to participate in a game. 
+
+One the users accept to play a game, it should be in a very similar way that the desktop one. However, it is a web game,
+so it is possible that a player loses its connection to the web, and leaves it without any notification. 
+The system should deal with these problems.
+
+Given that the company expects to have a big number of users, the architecture 
+must be scalable and offer good answer times to the actions of the connected users.
+
+The company wants that the solution has a separation between the game logic and the user interface so they can
+experiment with different visualization types. The company is also interested in a web based solution that works 
+in different devices so they expect a solution that follows the responsive design principles and web standards.
+
+It is a prototype, and it is expected a web application that can manages games and players. The game logic, as I said,
+should be separately of the rest of the application. In the prototype, it is possible to restrict the system so in each 
+game there can only be one player
+
+
+
+Methodology
+The study of the architecture will follow the Attribute-Driven Design (ADD) (Bass, et al., 2003) and the 
+standard of the SEI (ANSI/IEEE 1471, 2000). 
+
+
+
+Stakeholders	
+The first step is to contextualize the problem and identify the stakeholders. 
+This project will be named “Trivial Game” (TG), so that the context of references and stakeholders can be determined.
+The client is a company named NoGame.
+
+
+In this case, the stakeholders are:
+•	People in charge of NoGame.
+•	Development team of the TG.
+•	Players of the TG.
+•	Privileged users that can access the game stats.
+
+
+People in charge of NoGame
+These are the directors of the corporation, in charge of the budget, from which they allocate funds for the project.
+They have to ensure that the project remains with a low cost and that can be ended before the given deadline.
+
+
+Deployment team
+This team will be in charge of developing the system based on the architecture.
+
+Some of their objectives are:
+•	Low technological intensity of the project, in order to obtain a controlled and predictable development process. 
+•	Profitable project, that is to say, a project that can be developed with the established budget with a rate of
+  profitability that makes it attractive for the development. 
+
+
+
+Identification of the quality attributes
+The following quality attributes have been identified:
+-	Availability: 
+  o	The system must be played any time.
+  o	The web page in charge of suppert the game must be available.
+
+-	Modifiability
+  o	Easy introduction of new question types and puntuation algorithms.
+
+-	Performance
+  o	Since it is a end-user application, the application must ensure that:
+    	There is no lag in the Graphical User Interface (GUI).
+    	The questions must be loaded from the database at a reasonable speed so that the user doesn’t have to wait for them.
+    	It works perfectly as a web application.
+
+-	Security
+  o	The stats of the game must be accesible only to privileged users.
+  o	No useres without priveleges can access the stats of the game.
+
+-	Testability
+  o	The reliability of the system must be easy to test, since it  guarantees that the movements of the piece are 
+    correctly done.
+  o	The system must take into account that this is a multiplayer web game, so no confusions between users.
+
+-	Usability
+  o	The system must provide some ways to ease game playing to handicaped people (for example, tooltips for blind people).
+  o	The colors used are so different, so colour-blind people shoul be able to play with it.
+
+-	Reusability
+  o	The core game engine must be reusable to develop the same game with different GUIs.
+  o	As the logic is completely separated from thew visual, it coul be used with other boards
+  o	Also, the logic could be used for another game
+
+-	Reliability.
+  o	The movements of the piece must be correct.
+  o	No confusions between the piece of one player and the piece of another player
+
+
+
+First approach to the solution
+
+Risks related to the solution
+The system has to face certain risks that have to be identified:
+
+-	Guarantee the reliability of the calculations of the movements: This is related to the reliability attribute.
+
+-	Guarantee no confusions between players: This is very importante: Also related to the reliability attributes.
+
+-	Time to end movements calculations: This is related to the performance attribute. All computers must be able to 
+  perform the calculations instantaneously for a good user experience.
+
+-	Knowledge about if a player leave the game, because it connection is lost
+
+-	Easiness of acceptance by clients’ computers. The system must not impose complex configurations in order 
+  to be installed or used and must work in different computers and operating systems.
+  o	It shoul be interesting to focus the game to everty people, that ism, no complex instalation and work of the game.
+
+
+In order to solve the aforementioned tasks, a series of approaches have been proposed:
+
+-	Guarantee the reliability of the calculations of the movements. Intensive testing must guarantee that all posible
+  movements are correctly calculated.
+
+-	Time to end movement calculations. A prototype created and tested in different computers showed that any
+  common computer with a processor faster that 1  GHz and more than 512 MB of memory can run the game without any
+  performance issue.
+
+-	Easiness of acceptance by clients’ computers. The configuration required for installation must be minimal. The 
+  parameters required for playing the game must also be minimal, being the board size the only required parameter.
+
+-	Well working in the web : The prototyped should works perfectly using the web as the main platform. A user should
+  be able to register and play online.
+
+
+
+Impact of the solution
+The chosen solution has added new quality attributes, and two new stakeholders: the players of the TG and the 
+  privileged users of the TG.
+
+These stakeholders have special characteristics, since they have no representatives in the team.

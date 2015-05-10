@@ -88,3 +88,8 @@ The following quality attributes have been identified:
 -	Usability
   o	The system must provide some ways to ease game playing to handicaped people (for example, tooltips for blind people).
   o	The colors used are so different, so colour-blind people shoul be able to play with it.
+
+-	Reusability
+  o	The core game engine must be reusable to develop the same game with different GUIs.
+  o	As the logic is completely separated from thew visual, it coul be used with other boards
+  o	Also, the logic could be used for another game

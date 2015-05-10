@@ -20,6 +20,8 @@ public class BlueBox extends AbstractBox {
 	
 	@Override
 	public String getClassHTML(){
+	    if(getCheese()!=null)
+	        return "blueBoxCheese";
 	    return "blueBox";
 	}
 

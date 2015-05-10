@@ -18,6 +18,8 @@ public class RedBox extends AbstractBox {
 
     @Override
 	public String getClassHTML(){
+	    if(getCheese()!=null)
+	        return "redBoxCheese";
 	    return "redBox";
 	}
 }

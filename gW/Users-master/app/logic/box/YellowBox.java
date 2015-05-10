@@ -18,6 +18,8 @@ public class YellowBox extends AbstractBox {
 
     @Override
 	public String getClassHTML(){
+	    if(getCheese()!=null)
+	        return "yellowBoxCheese";
 	    return "yellowBox";
 	}
 }

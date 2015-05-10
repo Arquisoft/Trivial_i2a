@@ -190,8 +190,7 @@ public class Board {
 		System.out.print("N");
 		return getRandomNormalBox();
 	}
-
-	//TODO: Erase the Sysouts
+	
 	private Box assignCheeseType() 
 	{
 		Box box = null;
@@ -200,28 +199,24 @@ public class Board {
 			box = new BlueBox();
 			box.setCheese(new BlueCheese());
 			cheeseTypesIterator++;
-			System.out.print("b");
 		}
 		else if(cheeseTypes[cheeseTypesIterator] instanceof GreenCheese)
 		{
 			box = new GreenBox();
-			box.setCheese(new BlueCheese());
+			box.setCheese(new GreenCheese());
 			cheeseTypesIterator++;
-			System.out.print("g");
 		}
 		else if(cheeseTypes[cheeseTypesIterator] instanceof RedCheese)
 		{
 			box = new RedBox();
-			box.setCheese(new BlueCheese());
+			box.setCheese(new RedCheese());
 			cheeseTypesIterator++;
-			System.out.print("r");
 		}
 		else if(cheeseTypes[cheeseTypesIterator] instanceof YellowCheese)
 		{
 			box = new YellowBox();
-			box.setCheese(new BlueCheese());
+			box.setCheese(new YellowCheese());
 			cheeseTypesIterator++;
-			System.out.print("y");
 		}
 		return box;
 	}
@@ -234,23 +229,7 @@ public class Board {
 		Box chosenOne = normalBoxes.get(index);
 		normalBoxes.remove(index);
 		return chosenOne;
-}
-
-
-	//TODO: MAYBE ERASE? Or re-factor with Box.getRow() etc.?
-//	private Box getBoxAbove(int i, int j) 
-//	{
-//		if(i==0 || i==this.board.length/2 || i==this.board.length-1)
-//			return null;
-//		return this.board[i-1][j];
-//	}
-//
-//	private Box getBoxAtLeft(int i, int j) 
-//	{
-//		if(j==0 || j==this.board.length/2 || j==this.board.length-1)
-//			return null;
-//		return board[i][j-1];
-//	}
+    }
 
 	private void fillNormalAndPrizesBoxesArray(int number)
 	{

@@ -19,6 +19,8 @@ public class GreenBox extends AbstractBox {
 	
 	@Override
 	public String getClassHTML(){
+	    if(getCheese()!=null)
+	        return "greenBoxCheese";
 	    return "greenBox";
 	}
 

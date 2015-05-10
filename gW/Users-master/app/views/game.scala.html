@@ -6,29 +6,71 @@
     .hidden {
         visibility: hidden;
     }
+    .black {
+    text-align: center;
+    background-color: black;
+    height: 30;
+    width: 30;
+    }
     .redBox {
     text-align: center;
     background-color: red;
+    height: 30;
+    width: 30;
+    }
+    .redBoxCheese {
+    text-align: center;
+    height: 30;
+    width:30;
+    background: linear-gradient(red, white);
     }
     .blueBox {
     text-align: center;
     background-color: blue;
+    height: 30;
+    width: 30;
+    }
+    .blueBoxCheese {
+    text-align: center;
+    background: linear-gradient(blue, white);
+    height: 30;
+    width: 30;
     }
     .greenBox {
     text-align: center;
     background-color: green;
+    height: 30;
+    width: 30;
+    }
+    .greenBoxCheese {
+    text-align: center;
+    background: linear-gradient(green, white);
+    height: 30;
+    width: 30;
     }
     .yellowBox {
     text-align: center;
     background-color: yellow;
+    height: 30;
+    width: 30;
+    }
+    .yellowBoxCheese {
+    text-align: center;
+    background: linear-gradient(yellow, white);
+    height: 30;
+    width: 30;
     }
     .throwAgainBox {
     text-align: center;
     background-color: grey;
+    height: 30;
+    width: 30;
     }
     .centerBox {
     text-align: center;
     background-color: pink;
+    height: 30;
+    width: 30;
     }
 
 </style>
@@ -40,27 +82,35 @@
 	    a.style.color = "blue";
 	}
 </script>
-<h1>Game</h1>
+<body bgcolor="#111111" >
+<center>
+<h1 style="color:#dddddd">Game</h1>
 <ul>
-<li>Game: @game</li>
- <li>Id: @game.getGame().toString()</li>
- <li>Email: @game.email</li>
- <li>Finish: @game.getGame().finish</li>
+ <li style="color:#dddddd">Name: @game.email</li>
 </ul>
 
 @if(game.getGame().getActualQuestion()==null){
-<h1>Turn of player @game.getGame().getBoard().getActualPlayer().getName()</h1>
-<h2>Dice: @(game.getGame().getDiceValue()+1)</h2>
+<h1 style="color:#d4ce46">Turn of player @game.getGame().getBoard().getActualPlayer().getName()</h1>
+<h2 style="color:#dddddd">Dice: @(game.getGame().getDiceValue()+1)</h2>
     <table>
     @for(boxes <- game.getGame().getBoard().getBoard()) {
     <tr>
         @for(box <- boxes) {
             @if(box!=null) {
-                 @if(box.isMovable()) {
-                    <td><a href="@routes.API.gamePressed(game.getID(),box.getRow(),box.getColumn())"><button type="button" class="@box.getClassHTML()" id="0101" style="border-width:thick">1</button></a></td>
+                @if(box.equals(game.getGame().getBoard().getActualPlayer().getActualBox())) {
+                    @if(box.isMovable()) {
+                    <td><a href="@routes.API.gamePressed(game.getID(),box.getRow(),box.getColumn())"><button type="button" class="black" id="0101" style="border-width:thick; border-color:#d4ce46"> </button></a></td>
                     } else{
-    <td><button type="button" class="@box.getClassHTML()" onclick="mostrar(0101) " disabled>1</button></td>
+    <td><button type="button" class="@box.getClassHTML()"  style="border-color:#d4ce46" disabled> </button></td>
  }
+                } else {
+                    @if(box.isMovable()) {
+                    <td><a href="@routes.API.gamePressed(game.getID(),box.getRow(),box.getColumn())"><button type="button" class="@box.getClassHTML()" id="0101" style="border-width:thick; border-color:#d4ce46"> </button></a></td>
+                    } else{
+    <td><button type="button" class="@box.getClassHTML()"  style="border-color:#d4ce46" disabled> </button></td>
+ }
+                }
+                 
  } else{
     <td>   </td>
  }
@@ -71,15 +121,13 @@
 </table>
     } else{
         <table>
-        <tr><td>@game.getGame().getActualQuestion().getQuestion()</td></tr>
+        <tr><td style="color:#dddddd">@game.getGame().getActualQuestion().getQuestion()</td></tr>
         @for(answer <- game.getGame().getActualQuestion().getAnswers().entrySet()){
-       <tr><td> <a href="@routes.API.answerQuestion(game.getID(), game.getGame().getActualQuestion().getRightAnswer(),answer.getKey())">
-       <button type="button" class="greyBox"  style="border-width:thick">@answer.getKey()</button></a></td></tr>
+       <tr><td><center> <a href="@routes.API.answerQuestion(game.getID(), game.getGame().getActualQuestion().getRightAnswer(),answer.getKey())">
+       <button type="button" class="greyBox"  style="border-width:thick">@answer.getKey()</button></a></center></td></tr>
         }
    </table>
     }
-
-						 <a href="@routes.API.gameAction(game.getID())">Game Action</a>   
-						 <br/>
-						 Question: @game.getGame().getActualQuestion()
+    </center>
+    </body>
 </html>

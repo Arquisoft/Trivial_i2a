@@ -21,3 +21,7 @@ must be scalable and offer good answer times to the actions of the connected use
 The company wants that the solution has a separation between the game logic and the user interface so they can
 experiment with different visualization types. The company is also interested in a web based solution that works 
 in different devices so they expect a solution that follows the responsive design principles and web standards.
+
+It is a prototype, and it is expected a web application that can manages games and players. The game logic, as I said,
+should be separately of the rest of the application. In the prototype, it is possible to restrict the system so in each 
+game there can only be one player

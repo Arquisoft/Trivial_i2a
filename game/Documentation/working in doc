@@ -4,7 +4,7 @@ the NoGame company decided to develop the same game, but with some modifications
 department og the NoGame has observed that the Trivial game can have a greater impact if it came 
 be used through the Web, where users can connect and play between them.
 
-The previous logc of the game could be reused, but we added a new layer that allows players to connect to the web,
+The previous logic of the game could be reused, but we added a new layer that allows players to connect to the web,
 create a new game and play with it. 
 
 The company also want that the players will be registered in the web in a very simple way, that allows them to

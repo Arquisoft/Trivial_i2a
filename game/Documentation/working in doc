@@ -14,3 +14,6 @@ are connected to invite them to participate in a game.
 One the users accept to play a game, it should be in a very similar way that the desktop one. However, it is a web game,
 so it is possible that a player loses its connection to the web, and leaves it without any notification. 
 The system should deal with these problems.
+
+Given that the company expects to have a big number of users, the architecture 
+must be scalable and offer good answer times to the actions of the connected users.

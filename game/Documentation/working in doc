@@ -104,3 +104,5 @@ First approach to the solution
 
 Risks related to the solution
 The system has to face certain risks that have to be identified:
+
+-	Guarantee the reliability of the calculations of the movements: This is related to the reliability attribute.

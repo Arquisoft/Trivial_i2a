@@ -57,8 +57,8 @@ This team will be in charge of developing the system based on the architecture.
 
 Some of their objectives are:
 •	Low technological intensity of the project, in order to obtain a controlled and predictable development process. 
-•	Profitable project, that is to say, a project that can be developed with the established budget with a rate of profitability
-  that makes it attractive for the development. 
+•	Profitable project, that is to say, a project that can be developed with the established budget with a rate of
+  profitability that makes it attractive for the development. 
 
 
 
@@ -82,7 +82,8 @@ The following quality attributes have been identified:
   o	No useres without priveleges can access the stats of the game.
 
 -	Testability
-  o	The reliability of the system must be easy to test, since it  guarantees that the movements of the piece are correctly done.
+  o	The reliability of the system must be easy to test, since it  guarantees that the movements of the piece are 
+    correctly done.
   o	The system must take into account that this is a multiplayer web game, so no confusions between users.
 
 -	Usability
@@ -109,7 +110,8 @@ The system has to face certain risks that have to be identified:
 
 -	Guarantee no confusions between players: This is very importante: Also related to the reliability attributes.
 
--	Time to end movements calculations: This is related to the performance attribute. All computers must be able to perform the calculations instantaneously for a good user experience.
+-	Time to end movements calculations: This is related to the performance attribute. All computers must be able to 
+  perform the calculations instantaneously for a good user experience.
 
 -	Knowledge about if a player leave the game, because it connection is lost
 

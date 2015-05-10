@@ -5,7 +5,7 @@ department og the NoGame has observed that the Trivial game can have a greater i
 be used through the Web, where users can connect and play between them.
 
 The previous logc of the game could be reused, but we added a new layer that allows players to connect to the web,
-create a new game and play with it.
+create a new game and play with it. 
 
 The company also want that the players will be registered in the web in a very simple way, that allows them to
 know the historical data. Furthermore, when a user is connected, should be able to know if other users 

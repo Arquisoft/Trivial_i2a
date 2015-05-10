@@ -25,3 +25,10 @@ in different devices so they expect a solution that follows the responsive desig
 It is a prototype, and it is expected a web application that can manages games and players. The game logic, as I said,
 should be separately of the rest of the application. In the prototype, it is possible to restrict the system so in each 
 game there can only be one player
+
+
+
+Methodology
+The study of the architecture will follow the Attribute-Driven Design (ADD) (Bass, et al., 2003) and the 
+standard of the SEI (ANSI/IEEE 1471, 2000). 
+

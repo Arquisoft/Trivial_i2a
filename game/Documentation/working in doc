@@ -17,3 +17,7 @@ The system should deal with these problems.
 
 Given that the company expects to have a big number of users, the architecture 
 must be scalable and offer good answer times to the actions of the connected users.
+
+The company wants that the solution has a separation between the game logic and the user interface so they can
+experiment with different visualization types. The company is also interested in a web based solution that works 
+in different devices so they expect a solution that follows the responsive design principles and web standards.

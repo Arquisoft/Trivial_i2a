@@ -66,10 +66,10 @@ The client is a company named NoGame.
 
 
 <p>In this case, the stakeholders are:</p>
-•	<li>People in charge of NoGame.</li>
-•	<li>Development team of the TG.</li>
-•	<li>Players of the TG.</li>
-•	<li>Privileged users that can access the game stats.</li>
+	<li>People in charge of NoGame.</li>
+	<li>Development team of the TG.</li>
+	<li>Players of the TG.</li>
+	<li>Privileged users that can access the game stats.</li>
 
 
 <h4>People in charge of NoGame</h4>
@@ -79,92 +79,93 @@ They have to ensure that the project remains with a low cost and that can be end
 </p>
 
 <h4>Deployment team</h4>
-This team will be in charge of developing the system based on the architecture.
+<p>This team will be in charge of developing the system based on the architecture.</p>
 
-Some of their objectives are:
-•	Low technological intensity of the project, in order to obtain a controlled and predictable development process. 
-•	Profitable project, that is to say, a project that can be developed with the established budget with a rate of
-  profitability that makes it attractive for the development. 
+<p>Some of their objectives are:</p>
+<li> Low technological intensity of the project, in order to obtain a controlled and predictable development process. </li>
+<li> Profitable project, that is to say, a project that can be developed with the established budget with a rate of
+  profitability that makes it attractive for the development. </li>
 
 
 
-Identification of the quality attributes
-The following quality attributes have been identified:
--	Availability: 
+<h4>Identification of the quality attributes</h4>
+<p>The following quality attributes have been identified:</p>
+<li>Avalability: </li>
   o	The system must be played any time.
   o	The web page in charge of suppert the game must be available.
 
--	Modifiability
+<li>	Modifiability</li>
   o	Easy introduction of new question types and puntuation algorithms.
 
--	Performance
+<li>	Performance </li>
   o	Since it is a end-user application, the application must ensure that:
     	There is no lag in the Graphical User Interface (GUI).
     	The questions must be loaded from the database at a reasonable speed so that the user doesn’t have to wait for them.
     	It works perfectly as a web application.
 
--	Security
+<li>	Security </li>
   o	The stats of the game must be accesible only to privileged users.
   o	No useres without priveleges can access the stats of the game.
 
--	Testability
+<li>	Testability </li>
   o	The reliability of the system must be easy to test, since it  guarantees that the movements of the piece are 
     correctly done.
   o	The system must take into account that this is a multiplayer web game, so no confusions between users.
 
--	Usability
+<li>	Usability </li>
   o	The system must provide some ways to ease game playing to handicaped people (for example, tooltips for blind people).
   o	The colors used are so different, so colour-blind people shoul be able to play with it.
 
--	Reusability
+<li>	Reusability </li>
   o	The core game engine must be reusable to develop the same game with different GUIs.
   o	As the logic is completely separated from thew visual, it coul be used with other boards
   o	Also, the logic could be used for another game
 
--	Reliability.
+<li>	Reliability. </li>
   o	The movements of the piece must be correct.
   o	No confusions between the piece of one player and the piece of another player
 
 
 
-First approach to the solution
+<h4>First approach to the solution</h4>
 
-Risks related to the solution
-The system has to face certain risks that have to be identified:
+<h6>Risks related to the solution</h6>
+<p>The system has to face certain risks that have to be identified:</p>
 
--	Guarantee the reliability of the calculations of the movements: This is related to the reliability attribute.
+<li>	Guarantee the reliability of the calculations of the movements: This is related to the reliability attribute. </li>
 
--	Guarantee no confusions between players: This is very importante: Also related to the reliability attributes.
+<li>	Guarantee no confusions between players: This is very importante: Also related to the reliability attributes. </li>
 
--	Time to end movements calculations: This is related to the performance attribute. All computers must be able to 
-  perform the calculations instantaneously for a good user experience.
+<li>	Time to end movements calculations: This is related to the performance attribute. All computers must be able to 
+  perform the calculations instantaneously for a good user experience. </li>
 
--	Knowledge about if a player leave the game, because it connection is lost
+<li>	Knowledge about if a player leave the game, because it connection is lost </li>
 
--	Easiness of acceptance by clients’ computers. The system must not impose complex configurations in order 
-  to be installed or used and must work in different computers and operating systems.
+<li>	Easiness of acceptance by clients’ computers. The system must not impose complex configurations in order 
+  to be installed or used and must work in different computers and operating systems.</li>
   o	It shoul be interesting to focus the game to everty people, that ism, no complex instalation and work of the game.
 
 
-In order to solve the aforementioned tasks, a series of approaches have been proposed:
+<p>In order to solve the aforementioned tasks, a series of approaches have been proposed:</p>
 
--	Guarantee the reliability of the calculations of the movements. Intensive testing must guarantee that all posible
-  movements are correctly calculated.
+<li>	Guarantee the reliability of the calculations of the movements. Intensive testing must guarantee that all posible
+  movements are correctly calculated. </li>
 
--	Time to end movement calculations. A prototype created and tested in different computers showed that any
+<li>	Time to end movement calculations. A prototype created and tested in different computers showed that any
   common computer with a processor faster that 1  GHz and more than 512 MB of memory can run the game without any
-  performance issue.
+  performance issue. </li>
 
--	Easiness of acceptance by clients’ computers. The configuration required for installation must be minimal. The 
-  parameters required for playing the game must also be minimal, being the board size the only required parameter.
+<li>	Easiness of acceptance by clients’ computers. The configuration required for installation must be minimal. The 
+  parameters required for playing the game must also be minimal, being the board size the only required parameter. </li>
 
--	Well working in the web : The prototyped should works perfectly using the web as the main platform. A user should
-  be able to register and play online.
+<li>	Well working in the web : The prototyped should works perfectly using the web as the main platform. A user should
+  be able to register and play online. </li>
 
 
 
-Impact of the solution
+<h4>Impact of the solution</h4>
+<p>
 The chosen solution has added new quality attributes, and two new stakeholders: the players of the TG and the 
-  privileged users of the TG.
+  privileged users of the TG. </p>
 
-These stakeholders have special characteristics, since they have no representatives in the team.
+<p>These stakeholders have special characteristics, since they have no representatives in the team.</p>

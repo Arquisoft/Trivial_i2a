@@ -84,3 +84,7 @@ The following quality attributes have been identified:
 -	Testability
   o	The reliability of the system must be easy to test, since it  guarantees that the movements of the piece are correctly done.
   o	The system must take into account that this is a multiplayer web game, so no confusions between users.
+
+-	Usability
+  o	The system must provide some ways to ease game playing to handicaped people (for example, tooltips for blind people).
+  o	The colors used are so different, so colour-blind people shoul be able to play with it.

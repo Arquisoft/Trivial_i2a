@@ -126,4 +126,6 @@ In order to solve the aforementioned tasks, a series of approaches have been pro
 
 -	Time to end movement calculations. A prototype created and tested in different computers showed that any common computer with a processor faster that 1  GHz and more than 512 MB of memory can run the game without any performance issue.
 
+-	Easiness of acceptance by clients’ computers. The configuration required for installation must be minimal. The parameters required for playing the game must also be minimal, being the board size the only required parameter.
+
 

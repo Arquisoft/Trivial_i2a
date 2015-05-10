@@ -106,3 +106,6 @@ Risks related to the solution
 The system has to face certain risks that have to be identified:
 
 -	Guarantee the reliability of the calculations of the movements: This is related to the reliability attribute.
+
+-	Guarantee no confusions between players: This is very importante: Also related to the reliability attributes.
+

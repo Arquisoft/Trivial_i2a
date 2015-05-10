@@ -128,4 +128,6 @@ In order to solve the aforementioned tasks, a series of approaches have been pro
 
 -	Easiness of acceptance by clients’ computers. The configuration required for installation must be minimal. The parameters required for playing the game must also be minimal, being the board size the only required parameter.
 
+-	Well working in the web : The prototyped should works perfectly using the web as the main platform. A user should be able to register and play online.
+
 

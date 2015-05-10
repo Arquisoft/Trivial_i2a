@@ -122,12 +122,17 @@ The system has to face certain risks that have to be identified:
 
 In order to solve the aforementioned tasks, a series of approaches have been proposed:
 
--	Guarantee the reliability of the calculations of the movements. Intensive testing must guarantee that all posible movements are correctly calculated.
+-	Guarantee the reliability of the calculations of the movements. Intensive testing must guarantee that all posible
+  movements are correctly calculated.
 
--	Time to end movement calculations. A prototype created and tested in different computers showed that any common computer with a processor faster that 1  GHz and more than 512 MB of memory can run the game without any performance issue.
+-	Time to end movement calculations. A prototype created and tested in different computers showed that any
+  common computer with a processor faster that 1  GHz and more than 512 MB of memory can run the game without any
+  performance issue.
 
--	Easiness of acceptance by clients’ computers. The configuration required for installation must be minimal. The parameters required for playing the game must also be minimal, being the board size the only required parameter.
+-	Easiness of acceptance by clients’ computers. The configuration required for installation must be minimal. The 
+  parameters required for playing the game must also be minimal, being the board size the only required parameter.
 
--	Well working in the web : The prototyped should works perfectly using the web as the main platform. A user should be able to register and play online.
+-	Well working in the web : The prototyped should works perfectly using the web as the main platform. A user should
+  be able to register and play online.
 
 

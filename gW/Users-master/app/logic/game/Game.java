@@ -77,7 +77,7 @@ public class Game {
 		}
 	}
 
-	private boolean hasSomeoneWon() {
+	public boolean hasSomeoneWon() {
 		for(Player player: board.getPlayers())
 			if(player.hasWon())
 				finishGame();

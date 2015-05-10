@@ -13,6 +13,7 @@ public class Player {
 	private List<Cheese> quesitos = new ArrayList<>();
 	
 	public boolean addQuesito (Cheese quesito) {
+	    System.out.println("freshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
 		for(Cheese c : quesitos)
 			if(c.getClass().equals(quesito.getClass()))
 					return false;
@@ -21,6 +22,7 @@ public class Player {
 	}
 	
 	public boolean hasWon() {
+	    System.out.println("has won " + quesitos.size());
 		return quesitos.size() == 4;
 	}
 

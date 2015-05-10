@@ -53,11 +53,12 @@ public class API extends Controller {
         boolean b = correctAnswer.compareTo(myAnswer)==0;
         
          System.out.println(b);
-         
          game.setActualQuestion(null);
          
-         if(b)
-            ;
+         if(b){
+            game.getBoard().getActualPlayer().addQuesito(pass the quesito here);
+            game.hasSomeoneWon();
+         }
          else
              game.nextTurn();
         
